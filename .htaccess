@@ -1,0 +1,13 @@
+DirectoryIndex index.html index.php
+
+# If you want to redirect old .php requests to .html
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L,QSA]
+
+# Redirect .php to .html if both exist
+RewriteCond %{REQUEST_FILENAME} ^(.*)\.php$
+RewriteCond %1.html -f
+RewriteRule ^(.*)\.php$ $1.html [R=301,L]

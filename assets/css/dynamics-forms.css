@@ -1,0 +1,104 @@
+
+/* ============================================
+   Dynamics Form Overrides for Cornwall Brand
+   ============================================ */
+
+/* Apply brand fonts and base styles */
+.marketingForm {
+  font-family: var(--font-sans);
+  color: var(--cornwall-charcoal);
+  line-height: 1.6;
+}
+
+/* Labels */
+.marketingForm label {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--cornwall-stone);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Inputs, Textareas, Selects */
+.marketingForm input,
+.marketingForm textarea,
+.marketingForm select {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  font-size: 1rem;
+  font-family: var(--font-sans);
+  box-sizing: border-box;
+}
+
+.marketingForm input::placeholder,
+.marketingForm textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Textarea height */
+.marketingForm textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Dropdown styling */
+.marketingForm select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 6.7L0.15 0.85L0.85 0.15L6 5.29L11.15 0.15L11.85 0.85L6 6.7Z' fill='%23FFFFFF'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+}
+
+/* Submit Button */
+.marketingForm .submitButton {
+  background-color: var(--cornwall-blush);
+  color: var(--cornwall-navy);
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.marketingForm .submitButton:hover {
+  transform: scale(1.02);
+  background-color: #D19595;
+}
+
+/* Container alignment */
+[data-layout="true"] {
+  max-width: 32rem; /* Matches placeholder max width */
+  background: transparent;
+  margin: 0 auto;
+}
+
+/* Error messages */
+.marketingForm .error {
+  color: #ffdddd;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .marketingForm input,
+  .marketingForm textarea,
+  .marketingForm select {
+    font-size: 0.95rem;
+    padding: 0.65rem 0.9rem;
+  }
+
+  .marketingForm .submitButton {
+    font-size: 1rem;
+    padding: 0.85rem;
+  }
+}
