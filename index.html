@@ -586,7 +586,7 @@ On the day, from start to finish, Mike and Rob were incredibly polite, organised
 </section>
 
 <!-- ============================================
-     CONTACT CTA - CORRECTED VERSION
+     CONTACT CTA
      ============================================ -->
 <section id="contact" class="py-20 bg-gradient-to-br from-cornwall-navy to-cornwall-sage text-white">
   <div class="container mx-auto px-4 text-center">
@@ -601,8 +601,8 @@ On the day, from start to finish, Mike and Rob were incredibly polite, organised
       <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
         <h3 class="text-2xl font-serif mb-6">Start Your Story</h3>
 
-        <!-- Corrected Form - No action, method="POST" -->
-        <form id="cwp-contact-form" method="POST" class="space-y-4">
+        <!-- Custom Jekyll Form -->
+        <form id="cwp-contact-form" class="space-y-4" novalidate="">
           <div class="grid md:grid-cols-2 gap-4">
             <div>
               <input id="cwp-name" name="cwp-name" type="text" placeholder="Your Name" required="" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:border-cornwall-blush" />
@@ -624,8 +624,7 @@ On the day, from start to finish, Mike and Rob were incredibly polite, organised
           <input type="hidden" id="cwp-leadsubtype" name="cwp-leadsubtype" value="Wedding" />
           <input type="hidden" id="recaptchaToken" name="recaptchaToken" />
 
-          <!-- Submit Button -->
-          <button type="submit" class="w-full bg-cornwall-blush text-cornwall-navy py-4 rounded-lg font-semibold text-lg hover:scale-[1.02] transition-transform duration-300">
+          <button type="submit" class="w-full btn-accent py-4 rounded-lg font-semibold text-lg hover:scale-[1.02] transition-transform duration-300">
             Begin Your Journey
           </button>
         </form>
@@ -638,78 +637,39 @@ On the day, from start to finish, Mike and Rob were incredibly polite, organised
   </div>
 </section>
 
-<!-- Dynamics FormCapture Script - CORRECTED VERSION -->
-<script src="https://cxppusa1formui01cdnsa01-endpoint.azureedge.net/gbr/FormCapture/FormCapture.bundle.js"></script>
+<!-- Dynamics FormCapture Script -->
+<script>
+https://cxppusa1formui01cdnsa01-endpoint.azureedge.net/gbr/FormCapture/FormCapture.bundle.js</script>
 
 <script>
-// Wait for page to load
-document.addEventListener('DOMContentLoaded', function() {
-  const form = document.getElementById('cwp-contact-form');
-  const submitBtn = form.querySelector('button[type="submit"]');
-  
-  // Add loading state
-  form.addEventListener('submit', async function(e) {
-    e.preventDefault(); // Prevent default form submission
-    
-    // Disable button and show loading
-    const originalText = submitBtn.textContent;
-    submitBtn.textContent = 'Sending...';
-    submitBtn.disabled = true;
-    
-    try {
-      // Get reCAPTCHA token
-      const recaptchaToken = await grecaptcha.execute('6LdxMT4sAAAAABmz9eBSv6mqGceS02lT9yhJkXou', { 
-        action: 'submit' 
-      });
-      
-      // Set the token in the hidden field
-      document.getElementById('recaptchaToken').value = recaptchaToken;
-      
-      // Prepare form data for Dynamics
-      const formData = new FormData(form);
-      const serializedData = {};
-      
-      // Map form fields to Dynamics fields
-      const mappings = [
-        { FormFieldName: "#cwp-name", DataverseFieldName: "lastname" },
-        { FormFieldName: "#cwp-email", DataverseFieldName: "emailaddress1" },
-        { FormFieldName: "#cwp-description", DataverseFieldName: "description" },
-        { FormFieldName: "#cwp-subject", DataverseFieldName: "subject" },
-        { FormFieldName: "#recaptchaToken", DataverseFieldName: "mlp_recaptcha" }
-      ];
-      
-      // Check if Dynamics FormCapture is loaded
-      if (typeof d365mktformcapture !== 'undefined') {
+  d365mktformcapture.waitForElement("#cwp-contact-form").then((form) => {
+    const mappings = [
+      { FormFieldName: "#cwp-name", DataverseFieldName: "lastname" },
+      { FormFieldName: "#cwp-email", DataverseFieldName: "emailaddress1" },
+      { FormFieldName: "#cwp-description", DataverseFieldName: "description" },
+      { FormFieldName: "#cwp-subject", DataverseFieldName: "subject" },
+      { FormFieldName: "#recaptchaToken", DataverseFieldName: "mlp_recaptcha" } // optional custom field
+    ];
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      grecaptcha.execute('6LdxMT4sAAAAABmz9eBSv6mqGceS02lT9yhJkXou', { action: 'submit' }).then((token) => {
+        document.getElementById('recaptchaToken').value = token;
+
         const serializedForm = d365mktformcapture.serializeForm(form, mappings);
         const payload = serializedForm.SerializedForm.build();
-        
+
         const captureConfig = {
           FormId: "3d97b58b-fbe7-f011-8406-6045bd12f634",
           FormApiUrl: "https://public-gbr.mkt.dynamics.com/api/v1.0/orgs/28d99f2b-d568-f011-858a-0022481a2aa9/landingpageforms"
         };
-        
-        // Submit to Dynamics
-        const result = await d365mktformcapture.submitForm(captureConfig, payload);
-        
-        // Success message
-        alert("Thank you! Your enquiry has been submitted successfully.");
-        form.reset();
-        
-      } else {
-        console.error('Dynamics FormCapture not loaded');
-        alert('There was an error submitting the form. Please try again.');
-      }
-      
-    } catch (error) {
-      console.error('Form submission error:', error);
-      alert('There was an error submitting the form. Please try again.');
-    } finally {
-      // Reset button state
-      submitBtn.textContent = originalText;
-      submitBtn.disabled = false;
-    }
+
+        d365mktformcapture.submitForm(captureConfig, payload);
+        alert("Thank you! Your enquiry has been submitted.");
+      });
+    }, true);
   });
-});
 </script>
 
 
