@@ -57,11 +57,11 @@ Write-Host "`n📂 Creating output directory structure..." -ForegroundColor Cyan
 # First, clear existing WebP directory if you want fresh generation
 if (Test-Path $WebpOutput) {
     Write-Host "  Removing existing WebP files..." -ForegroundColor Yellow
-    Remove-Item -Path "$WebpOutput\*" -Recurse -Force
+    #Remove-Item -Path "$WebpOutput\*" -Recurse -Force
 }
 
 # Create main output directory
-New-Item -ItemType Directory -Force -Path $WebpOutput | Out-Null
+#New-Item -ItemType Directory -Force -Path $WebpOutput | Out-Null
 
 # 5. Process each file
 Write-Host "`n🔄 Converting to WebP (Quality: $Quality)..." -ForegroundColor Cyan

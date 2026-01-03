@@ -1,17 +1,96 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://cornwallweddingphotography.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://cornwallweddingphotography.com/" rel="alternate" type="text/html" /><updated>2026-01-03T21:40:11+00:00</updated><id>https://cornwallweddingphotography.com/feed.xml</id><title type="html">Cornwall Wedding Photography - authentic wedding stories</title><subtitle>Premium Cornwall wedding photography capturing timeless, authentic stories along the coast. Experience heartfelt storytelling with Mike &amp; Rob.</subtitle><author><name>Mike Lister</name><email>hello@cornwallweddingphotography.com</email></author><entry><title type="html">Welcome to Jekyll!</title><link href="https://cornwallweddingphotography.com/2025/11/05/welcome-to-jekyll/" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2025-11-05T07:45:48+00:00</published><updated>2025-11-05T07:45:48+00:00</updated><id>https://cornwallweddingphotography.com/2025/11/05/welcome-to-jekyll</id><content type="html" xml:base="https://cornwallweddingphotography.com/2025/11/05/welcome-to-jekyll/"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://cornwallweddingphotography.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://cornwallweddingphotography.com/" rel="alternate" type="text/html" /><updated>2026-01-03T23:52:23+00:00</updated><id>https://cornwallweddingphotography.com/feed.xml</id><title type="html">Cornwall Wedding Photography - authentic wedding stories</title><subtitle>Premium Cornwall wedding photography capturing timeless, authentic stories along the coast. Experience heartfelt storytelling with Mike &amp; Rob.</subtitle><author><name>Mike Lister</name><email>hello@cornwallweddingphotography.com</email></author><entry><title type="html">The Ultimate Guide to Planning Your Perfect Cornwall Wedding</title><link href="https://cornwallweddingphotography.com/Planning-Your-Perfect-Cornwall-Wedding" rel="alternate" type="text/html" title="The Ultimate Guide to Planning Your Perfect Cornwall Wedding" /><published>2026-01-03T00:00:00+00:00</published><updated>2026-01-03T00:00:00+00:00</updated><id>https://cornwallweddingphotography.com/Planning-Your-Perfect-Cornwall-Wedding</id><content type="html" xml:base="https://cornwallweddingphotography.com/Planning-Your-Perfect-Cornwall-Wedding"><![CDATA[<p><em>After photographing over 120 weddings across Cornwall’s stunning coastline, I’ve gathered the insights every couple needs for their perfect day.</em></p>
 
-<p>Jekyll requires blog post files to be named according to the following format:</p>
+<p>There’s something truly magical about a Cornish wedding. The dramatic cliffs, golden beaches, and historic venues create a backdrop unlike anywhere else in the UK. But planning a wedding here comes with unique considerations that can make or break your day.</p>
 
-<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
+<h2 id="why-cornwall-weddings-are-special">Why Cornwall Weddings Are Special</h2>
 
-<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+<p>Cornwall isn’t just a location; it’s a feeling. The moment you step onto a Cornish cliff top as the sun sets over the Atlantic, you understand why couples travel from across the country to say “I do” here.</p>
 
-<p>Jekyll also offers powerful support for code snippets:</p>
+<blockquote>
+  <p>“Cornwall doesn’t just host your wedding - it becomes part of your love story. The sea, the light, the landscape all weave themselves into your memories.”</p>
+</blockquote>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+<h3 id="the-coastal-advantage">The Coastal Advantage</h3>
+<ul>
+  <li><strong>Natural Beauty:</strong> Every venue comes with a built-in backdrop</li>
+  <li><strong>Unique Venues:</strong> From castle ruins to converted engine houses</li>
+  <li><strong>Light Quality:</strong> Cornwall’s light is legendary among photographers</li>
+</ul>
 
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name>Mike Lister</name><email>hello@cornwallweddingphotography.com</email></author><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://cornwallweddingphotography.com/assets/images/brand/og-default.jpg" /><media:content medium="image" url="https://cornwallweddingphotography.com/assets/images/brand/og-default.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<h2 id="choosing-your-cornwall-wedding-venue">Choosing Your Cornwall Wedding Venue</h2>
+
+<p>This is arguably the most important decision you’ll make. The venue sets the tone for everything from guest experience to photography.</p>
+
+<h3 id="coastal-vs-countryside">Coastal vs. Countryside</h3>
+<div class="tip-box">
+<strong>Pro Tip:</strong> Consider your guest list when choosing between coastal and countryside venues. Coastal venues often involve more travel but offer incredible photo opportunities.
+</div>
+
+<p><strong>Coastal Venues</strong> like St Michael’s Mount or Trebah Garden offer:</p>
+<ul>
+  <li>Dramatic sea views</li>
+  <li>Easy access for beach photos</li>
+  <li>Potential weather challenges</li>
+  <li>Often more expensive</li>
+</ul>
+
+<p><strong>Countryside Venues</strong> such as Boconnoc Estate provide:</p>
+<ul>
+  <li>Sheltered locations</li>
+  <li>Traditional Cornish charm</li>
+  <li>Easier logistics</li>
+  <li>Beautiful gardens</li>
+</ul>
+
+<h3 id="top-5-cornwall-venues-we-love">Top 5 Cornwall Venues We Love</h3>
+<ol>
+  <li><strong>Trebah Garden</strong> - Tropical paradise with private beach</li>
+  <li><strong>Bodmin Jail</strong> - Unique, atmospheric conversion</li>
+  <li><strong>The Cornwall Hotel</strong> - Luxury with spa facilities</li>
+  <li><strong>St Enodoc Church</strong> - Iconic coastal church</li>
+  <li><strong>Pentillie Castle</strong> - Romantic riverside setting</li>
+</ol>
+
+<h2 id="navigating-cornwalls-weather">Navigating Cornwall’s Weather</h2>
+
+<p>Let’s be honest - Cornwall’s weather can be unpredictable. But with the right planning, even rain can add to your wedding story.</p>
+
+<h3 id="seasonal-considerations">Seasonal Considerations</h3>
+
+<p><strong>Spring (March-May)</strong></p>
+<ul>
+  <li>Pros: Wildflowers, fewer tourists, reasonable prices</li>
+  <li>Cons: Unpredictable weather, cooler temperatures</li>
+  <li><strong>Photography tip:</strong> Spring light is soft and romantic - perfect for portraits</li>
+</ul>
+
+<p><strong>Summer (June-August)</strong></p>
+<ul>
+  <li>Pros: Warmest weather, long evenings</li>
+  <li>Cons: Peak tourist season, higher prices</li>
+  <li><strong>Photography tip:</strong> Golden hour lasts longer - schedule couple photos accordingly</li>
+</ul>
+
+<p><strong>Autumn (September-November)</strong></p>
+<ul>
+  <li>Pros: Dramatic skies, autumn colors, fewer crowds</li>
+  <li>Cons: Shorter days, potential storms</li>
+  <li><strong>Photography tip:</strong> Moody autumn light creates incredible atmosphere</li>
+</ul>
+
+<p><strong>Winter (December-February)</strong></p>
+<ul>
+  <li>Pros: Cosy venues, dramatic coastal scenery</li>
+  <li>Cons: Limited daylight, potential venue closures</li>
+  <li><strong>Photography tip:</strong> Embrace the mood - winter weddings have incredible atmosphere</li>
+</ul>
+
+<h3 id="weather-backup-plans">Weather Backup Plans</h3>
+<p>Every Cornwall wedding needs a Plan B. Here’s what to consider:</p>
+
+<p>```yaml
+backup_options:
+  indoor_ceremony: “Check if your venue has indoor options”
+  marquee_hire: “Always have a wet weather option”
+  umbrellas: “Pretty ones can become photo props!”
+  timeline_flexibility: “Build in buffer time for weather changes”</p>]]></content><author><name>Mike Lister</name><email>hello@cornwallweddingphotography.com</email></author><category term="Wedding Tips" /><category term="cornwall" /><category term="wedding" /><category term="photography" /><category term="venues" /><category term="planning" /><category term="weather" /><category term="coastal" /><summary type="html"><![CDATA[Discover essential tips for planning a memorable Cornwall wedding, from choosing coastal venues to navigating unpredictable weather and creating stunning photographs that last a lifetime.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://cornwallweddingphotography.com/assets/images/photos/cornwall-wedding-photography-church-ceremony-farm-reception-cornwall-009.jpg" /><media:content medium="image" url="https://cornwallweddingphotography.com/assets/images/photos/cornwall-wedding-photography-church-ceremony-farm-reception-cornwall-009.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
