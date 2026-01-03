@@ -1,0 +1,53 @@
+trigger:
+  tags:
+    include:
+      - publish
+
+pr: none
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+- group: vg-github-pages
+
+steps:
+- checkout: self
+  clean: true
+
+- task: UseRubyVersion@0
+  inputs:
+    versionSpec: '3.2.9'
+  displayName: 'Use Ruby 3.2.9'
+
+- script: |
+    gem install bundler
+    bundle install
+  displayName: 'Install Ruby gems'
+
+- script: |
+    bundle exec jekyll build
+  displayName: 'Build Jekyll site'
+
+- script: |
+    echo "Cloning GitHub Pages repo"
+    git clone https://$(github-username):$(github-pages-token)@github.com/$(github-pages-repo).git gh-pages
+
+    echo "Replacing site contents"
+    rm -rf gh-pages/*
+    cp -r _site/* gh-pages/
+
+    cd gh-pages
+
+    if [ -z "$(git status --porcelain)" ]; then
+      echo "No changes to publish"
+      exit 0
+    fi
+
+    git config user.name "Azure DevOps"
+    git config user.email "azure-devops@users.noreply.github.com"
+
+    git add .
+    git commit -m "Publish site from Azure DevOps ($(Build.SourceVersion))"
+    git push
+  displayName: 'Publish to GitHub Pages'

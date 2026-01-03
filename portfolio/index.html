@@ -9,12 +9,12 @@
     <meta name="description" content="Explore our Cornwall wedding photography portfolio. See real weddings from St Michael's Mount, Trebah Garden, Watergate Bay, and other beautiful Cornish venues.">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="http://localhost:4000/portfolio/">
+    <link rel="canonical" href="https://cornwallweddingphotography.com/portfolio/">
     
     <!-- Open Graph -->
     <meta property="og:title" content="Cornwall Wedding Photography Portfolio | Mike & Rob | Cornwall Wedding Photography - authentic wedding stories">
     <meta property="og:description" content="Explore our Cornwall wedding photography portfolio. See real weddings from St Michael's Mount, Trebah Garden, Watergate Bay, and other beautiful Cornish venues.">
-    <meta property="og:url" content="http://localhost:4000/portfolio/">
+    <meta property="og:url" content="https://cornwallweddingphotography.com/portfolio/">
     <meta property="og:type" content="website">
     
     <!-- Google Fonts -->
@@ -60,16 +60,16 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Explore our Cornwall wedding photography portfolio. See real weddings from St Michael’s Mount, Trebah Garden, Watergate Bay, and other beautiful Cornish venues." />
 <meta property="og:description" content="Explore our Cornwall wedding photography portfolio. See real weddings from St Michael’s Mount, Trebah Garden, Watergate Bay, and other beautiful Cornish venues." />
-<link rel="canonical" href="http://localhost:4000/portfolio/" />
-<meta property="og:url" content="http://localhost:4000/portfolio/" />
+<link rel="canonical" href="https://cornwallweddingphotography.com/portfolio/" />
+<meta property="og:url" content="https://cornwallweddingphotography.com/portfolio/" />
 <meta property="og:site_name" content="Cornwall Wedding Photography - authentic wedding stories" />
-<meta property="og:image" content="http://localhost:4000/assets/images/brand/og-default.jpg" />
+<meta property="og:image" content="https://cornwallweddingphotography.com/assets/images/brand/og-default.jpg" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="http://localhost:4000/assets/images/brand/og-default.jpg" />
+<meta property="twitter:image" content="https://cornwallweddingphotography.com/assets/images/brand/og-default.jpg" />
 <meta property="twitter:title" content="Cornwall Wedding Photography Portfolio Mike &amp; Rob" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Mike Lister"},"description":"Explore our Cornwall wedding photography portfolio. See real weddings from St Michael’s Mount, Trebah Garden, Watergate Bay, and other beautiful Cornish venues.","headline":"Cornwall Wedding Photography Portfolio Mike &amp; Rob","image":"http://localhost:4000/assets/images/brand/og-default.jpg","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/brand/logo.png"},"name":"Mike Lister"},"url":"http://localhost:4000/portfolio/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Mike Lister"},"description":"Explore our Cornwall wedding photography portfolio. See real weddings from St Michael’s Mount, Trebah Garden, Watergate Bay, and other beautiful Cornish venues.","headline":"Cornwall Wedding Photography Portfolio Mike &amp; Rob","image":"https://cornwallweddingphotography.com/assets/images/brand/og-default.jpg","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://cornwallweddingphotography.com/assets/images/brand/logo.png"},"name":"Mike Lister"},"url":"https://cornwallweddingphotography.com/portfolio/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -191,16 +191,24 @@
         <!-- ============================================
      HERO - PORTFOLIO PAGE
      ============================================ -->
-<section class="relative py-20 bg-gradient-to-br from-cornwall-navy to-cornwall-sage/30 text-white overflow-hidden">
-  <!-- Background pattern -->
-  <div class="absolute inset-0 opacity-10">
-    <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-cornwall-blush/20 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+<section class="relative py-20 bg-cornwall-navy text-white overflow-hidden">
+  <!-- Hero Background Image -->
+  <div class="absolute inset-0 z-0">
+    <picture class="block w-full h-full">
+      <source srcset="/assets/images/webp/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-014.webp" type="image/webp" width="1920" height="1080" />
+      <img src="/assets/images/photos/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-014.jpg" alt="Cornwall wedding photography portfolio - capturing love stories along the coast" width="1920" height="1080" loading="eager" class="w-full h-full object-cover opacity-30" decoding="async" />
+    </picture>
+    <!-- Background pattern overlay -->
+    <div class="absolute inset-0 opacity-20 bg-gradient-to-b from-cornwall-navy via-cornwall-navy/70 to-cornwall-navy"></div>
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-cornwall-blush/20 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cornwall-sage/10 rounded-full blur-3xl"></div>
+    </div>
   </div>
   
   <div class="container mx-auto px-4 relative z-10">
     <div class="max-w-4xl mx-auto text-center">
-      <span class="inline-block px-4 py-2 bg-white/20 rounded-full text-sm mb-6">
+      <span class="inline-block px-4 py-2 bg-white/20 rounded-full text-sm mb-6 backdrop-blur-sm">
         📸 CORNWALL WEDDING GALLERY
       </span>
       <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6">
@@ -212,10 +220,70 @@
         captured along the Cornish coast over the past 11+ years.
       </p>
       <div class="flex flex-wrap justify-center gap-3">
-        <span class="px-4 py-2 bg-white/10 rounded-full text-sm">Coastal Weddings</span>
-        <span class="px-4 py-2 bg-white/10 rounded-full text-sm">Historic Venues</span>
-        <span class="px-4 py-2 bg-white/10 rounded-full text-sm">Beach Ceremonies</span>
-        <span class="px-4 py-2 bg-white/10 rounded-full text-sm">Country Houses</span>
+        <span class="px-4 py-2 bg-white/10 rounded-full text-sm backdrop-blur-sm">Coastal Weddings</span>
+        <span class="px-4 py-2 bg-white/10 rounded-full text-sm backdrop-blur-sm">Historic Venues</span>
+        <span class="px-4 py-2 bg-white/10 rounded-full text-sm backdrop-blur-sm">Beach Ceremonies</span>
+        <span class="px-4 py-2 bg-white/10 rounded-full text-sm backdrop-blur-sm">Country Houses</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     PORTFOLIO INTRO & SALES MESSAGE
+     ============================================ -->
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-serif text-cornwall-navy mb-6">
+        Invest in Memories, Not Just Photos
+      </h2>
+      <p class="text-lg text-gray-700 mb-8">
+        Every image in this portfolio represents a unique love story we've had the privilege to preserve. 
+        These are more than pictures—they're emotional time capsules that couples revisit for decades.
+      </p>
+      
+      <!-- Value Proposition Box -->
+      <div class="bg-cornwall-stone/50 rounded-2xl p-8 mb-12 border border-cornwall-sage/20">
+        <h3 class="text-2xl font-serif text-cornwall-navy mb-4">Why Choose Cornwall Wedding Photography?</h3>
+        <div class="grid md:grid-cols-2 gap-6 text-left">
+          <div class="flex items-start">
+            <div class="flex-shrink-0 w-10 h-10 bg-cornwall-sage/20 rounded-full flex items-center justify-center mr-4">
+              <span class="text-cornwall-sage">🎯</span>
+            </div>
+            <div>
+              <h4 class="font-semibold text-cornwall-navy mb-1">Unobtrusive Coverage</h4>
+              <p class="text-sm text-gray-600">Capture natural moments while you enjoy your day</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <div class="flex-shrink-0 w-10 h-10 bg-cornwall-blush/20 rounded-full flex items-center justify-center mr-4">
+              <span class="text-cornwall-blush">⏱️</span>
+            </div>
+            <div>
+              <h4 class="font-semibold text-cornwall-navy mb-1">3-Week Turnaround</h4>
+              <p class="text-sm text-gray-600">Receive your complete gallery in just three weeks</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <div class="flex-shrink-0 w-10 h-10 bg-cornwall-sage/20 rounded-full flex items-center justify-center mr-4">
+              <span class="text-cornwall-sage">🏠</span>
+            </div>
+            <div>
+              <h4 class="font-semibold text-cornwall-navy mb-1">Local Cornwall Experts</h4>
+              <p class="text-sm text-gray-600">11+ years photographing across all of Cornwall</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <div class="flex-shrink-0 w-10 h-10 bg-cornwall-blush/20 rounded-full flex items-center justify-center mr-4">
+              <span class="text-cornwall-blush">📖</span>
+            </div>
+            <div>
+              <h4 class="font-semibold text-cornwall-navy mb-1">Storybook Albums</h4>
+              <p class="text-sm text-gray-600">Heirloom-quality albums included in every package</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -224,136 +292,237 @@
 <!-- ============================================
      PORTFOLIO FILTER
      ============================================ -->
-<section class="py-12 bg-white sticky top-0 z-30 shadow-sm">
+<section class="py-8 bg-cornwall-stone sticky top-0 z-30 shadow-sm">
   <div class="container mx-auto px-4">
-    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
       <!-- Filter Buttons -->
-      <div class="flex flex-wrap gap-3">
-        <button data-filter="all" class="portfolio-filter px-5 py-2 bg-cornwall-navy text-white rounded-full text-sm font-semibold hover:bg-cornwall-navy/90 transition-colors active">
+      <div class="flex flex-wrap gap-2">
+        <button data-filter="all" class="portfolio-filter px-4 py-2 bg-cornwall-navy text-white rounded-full text-sm font-semibold hover:bg-cornwall-navy/90 transition-colors active">
           All Photos
         </button>
-        <button data-filter="coastal" class="portfolio-filter px-5 py-2 bg-cornwall-stone text-gray-700 rounded-full text-sm font-semibold hover:bg-cornwall-sage hover:text-white transition-colors">
+        <button data-filter="coastal" class="portfolio-filter px-4 py-2 bg-white text-gray-700 rounded-full text-sm font-semibold hover:bg-cornwall-sage hover:text-white transition-colors">
           🌊 Coastal
         </button>
-        <button data-filter="venues" class="portfolio-filter px-5 py-2 bg-cornwall-stone text-gray-700 rounded-full text-sm font-semibold hover:bg-cornwall-sage hover:text-white transition-colors">
+        <button data-filter="venues" class="portfolio-filter px-4 py-2 bg-white text-gray-700 rounded-full text-sm font-semibold hover:bg-cornwall-sage hover:text-white transition-colors">
           🏰 Venues
         </button>
-        <button data-filter="details" class="portfolio-filter px-5 py-2 bg-cornwall-stone text-gray-700 rounded-full text-sm font-semibold hover:bg-cornwall-sage hover:text-white transition-colors">
+        <button data-filter="details" class="portfolio-filter px-4 py-2 bg-white text-gray-700 rounded-full text-sm font-semibold hover:bg-cornwall-blush hover:text-white transition-colors">
           💝 Details
         </button>
-        <button data-filter="couples" class="portfolio-filter px-5 py-2 bg-cornwall-stone text-gray-700 rounded-full text-sm font-semibold hover:bg-cornwall-sage hover:text-white transition-colors">
+        <button data-filter="couples" class="portfolio-filter px-4 py-2 bg-white text-gray-700 rounded-full text-sm font-semibold hover:bg-cornwall-blush hover:text-white transition-colors">
           👰 Couples
         </button>
-        <button data-filter="golden-hour" class="portfolio-filter px-5 py-2 bg-cornwall-stone text-gray-700 rounded-full text-sm font-semibold hover:bg-cornwall-blush hover:text-white transition-colors">
+        <button data-filter="golden-hour" class="portfolio-filter px-4 py-2 bg-white text-gray-700 rounded-full text-sm font-semibold hover:bg-cornwall-sand hover:text-cornwall-navy transition-colors">
           🌅 Golden Hour
         </button>
       </div>
       
       <!-- Counter -->
-      <div class="text-gray-600 text-sm">
-        <span id="photo-count">24</span> Photos • <span id="venue-count">8</span> Venues
+      <div class="text-gray-600 text-sm font-medium">
+        <span id="photo-count">24</span> Photos • <span id="venue-count">6</span> Venues
       </div>
     </div>
   </div>
 </section>
 
 <!-- ============================================
-     MASONRY PORTFOLIO GRID
+     MASONRY PORTFOLIO GRID WITH REAL IMAGES
      ============================================ -->
 <section class="py-12 bg-white">
   <div class="container mx-auto px-4">
     <!-- Portfolio Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolio-grid">
       
-      <!-- Image 1 - Large Feature -->
-      <div class="portfolio-item group" data-category="coastal venues golden-hour">
+      <!-- Image 1: St Ives Harbour Hotel - Large Feature -->
+      <div class="portfolio-item group" data-category="coastal venues golden-hour couples">
         <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-96">
-          <img src="/assets/images/portfolio/st-michaels-sunset.jpg" alt="Wedding at St Michael's Mount during golden hour" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-lightbox="portfolio" data-title="St Michael's Mount • Golden Hour Portraits" data-venue="St Michael's Mount" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-st-ives-harbour-hotel-and-spa-st-ives-cornwall-011.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-st-ives-harbour-hotel-and-spa-st-ives-cornwall-011.jpg" alt="Bride and groom embracing with Cornish sea backdrop at St Ives Harbour Hotel" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+          <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
             <div class="flex items-center gap-2 mb-2">
-              <span class="px-2 py-1 bg-cornwall-blush rounded text-xs">Golden Hour</span>
-              <span class="px-2 py-1 bg-cornwall-sage rounded text-xs">Coastal</span>
+              <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Golden Hour</span>
+              <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Coastal</span>
             </div>
-            <h3 class="font-serif text-xl">St Michael's Mount Sunset</h3>
-            <p class="text-sm opacity-90">Historic castle venue at golden hour</p>
+            <h3 class="font-serif text-xl mb-1">St Ives Harbour Hotel</h3>
+            <p class="text-sm opacity-90">Sunset embrace with sea backdrop</p>
           </div>
         </div>
       </div>
       
-      <!-- Image 2 -->
-      <div class="portfolio-item group" data-category="details">
+      <!-- Image 2: Church Ceremony Details -->
+      <div class="portfolio-item group" data-category="details venues">
         <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-64">
-          <img src="/assets/images/portfolio/wedding-rings.jpg" alt="Wedding rings on driftwood at Cornwall beach" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-lightbox="portfolio" data-title="Beach Wedding Details • Watergate Bay" data-venue="Watergate Bay" />
+          <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-church-ceremony-farm-reception-cornwall-013.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-church-ceremony-farm-reception-cornwall-013.jpg" alt="Confetti celebration outside Cornish church ceremony" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
           <div class="absolute top-4 right-4">
-            <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded text-xs font-semibold">
-              Details
+            <span class="px-3 py-1.5 bg-white/90 text-cornwall-navy rounded-full text-xs font-semibold shadow">
+              🎉 Celebration
             </span>
           </div>
         </div>
       </div>
       
-      <!-- Image 3 -->
-      <div class="portfolio-item group" data-category="couples venues">
+      <!-- Image 3: Tredudwell Manor First Dance -->
+      <div class="portfolio-item group" data-category="couples venues golden-hour">
         <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-80">
-          <img src="/assets/images/portfolio/trebah-garden-couple.jpg" alt="Couple in Trebah Garden" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-lightbox="portfolio" data-title="Trebah Garden • Romantic Couple Portraits" data-venue="Trebah Garden" />
+          <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-020.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-020.jpg" alt="First dance at Tredudwell Manor with dress swirling" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
           <div class="absolute top-4 left-4">
-            <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded text-xs font-semibold">
-              Trebah Garden
+            <span class="px-3 py-1.5 bg-white/90 text-cornwall-navy rounded-full text-xs font-semibold shadow">
+              💃 First Dance
             </span>
           </div>
         </div>
       </div>
       
-      <!-- Image 4 -->
-      <div class="portfolio-item group" data-category="coastal golden-hour">
+      <!-- Image 4: St Ives Harbour Hotel Couple -->
+      <div class="portfolio-item group" data-category="couples coastal">
         <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-72">
-          <img src="/assets/images/portfolio/beach-ceremony.jpg" alt="Beach wedding ceremony at Watergate Bay" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-lightbox="portfolio" data-title="Watergate Bay • Beach Ceremony" data-venue="Watergate Bay" />
+          <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-st-ives-harbour-hotel-and-spa-st-ives-cornwall-017.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-st-ives-harbour-hotel-and-spa-st-ives-cornwall-017.jpg" alt="Couple sharing intimate moment at St Ives Harbour Hotel" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
         </div>
       </div>
       
-      <!-- Image 5 -->
-      <div class="portfolio-item group" data-category="details couples">
+      <!-- Image 5: Tredudwell Manor Confetti -->
+      <div class="portfolio-item group" data-category="details golden-hour">
         <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-64">
-          <img src="/assets/images/portfolio/first-dance.jpg" alt="First dance in a Cornwall barn" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-lightbox="portfolio" data-title="First Dance • Tredudwell Manor" data-venue="Tredudwell Manor" />
+          <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-023.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-023.jpg" alt="Confetti celebration at Tredudwell Manor" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
           <div class="absolute bottom-4 left-4">
-            <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded text-xs font-semibold">
-              First Dance
+            <span class="px-3 py-1.5 bg-white/90 text-cornwall-navy rounded-full text-xs font-semibold shadow">
+              ✨ Golden Hour
             </span>
           </div>
         </div>
       </div>
       
-      <!-- Image 6 - Large Feature -->
-      <div class="portfolio-item group" data-category="venues golden-hour">
+      <!-- Image 6: Church Ceremony Couple - Large Feature -->
+      <div class="portfolio-item group" data-category="couples venues">
         <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-96">
-          <img src="/assets/images/portfolio/boconnoc-estate.jpg" alt="Boconnoc Estate wedding venue" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-lightbox="portfolio" data-title="Boconnoc Estate • Country House Wedding" data-venue="Boconnoc Estate" />
+          <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-church-ceremony-farm-reception-cornwall-014.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-church-ceremony-farm-reception-cornwall-014.jpg" alt="Bride and groom walking down church path in Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
           <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
             <div class="flex items-center gap-2 mb-2">
-              <span class="px-2 py-1 bg-cornwall-sage rounded text-xs">Country House</span>
-              <span class="px-2 py-1 bg-cornwall-blush rounded text-xs">Golden Hour</span>
+              <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Country House</span>
+              <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Emotional</span>
             </div>
-            <h3 class="font-serif text-xl">Boconnoc Estate</h3>
-            <p class="text-sm opacity-90">Historic country house venue</p>
+            <h3 class="font-serif text-xl mb-1">Cornish Countryside</h3>
+            <p class="text-sm opacity-90">Church ceremony in rural Cornwall</p>
           </div>
         </div>
       </div>
       
-      <!-- Add more images following this pattern... -->
+      <!-- Image 7: St Agnes Quiet Moment -->
+      <div class="portfolio-item group" data-category="couples coastal golden-hour">
+        <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-80">
+          <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-st-ives-harbour-hotel-and-spa-st-ives-cornwall-014.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-st-ives-harbour-hotel-and-spa-st-ives-cornwall-014.jpg" alt="Couple enjoying quiet moment together in St Agnes" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+          <div class="absolute bottom-4 left-4">
+            <span class="px-3 py-1.5 bg-white/90 text-cornwall-navy rounded-full text-xs font-semibold shadow">
+              💕 Intimate
+            </span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Image 8: Tredudwell Manor Details -->
+      <div class="portfolio-item group" data-category="details venues">
+        <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-72">
+          <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-014.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-014.jpg" alt="Tredudwell Manor wedding details and venue" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+        </div>
+      </div>
       
     </div>
     
-    <!-- Load More Button -->
-    <div class="text-center mt-16">
-      <button id="load-more" class="bg-cornwall-navy text-white px-8 py-3 rounded-lg font-semibold hover:bg-cornwall-navy/90 transition-colors">
-        Load More Photos
-      </button>
+    <!-- Call to Action Box -->
+    <div class="max-w-3xl mx-auto mt-16 bg-gradient-to-r from-cornwall-sage/20 to-cornwall-blush/20 rounded-2xl p-8 border border-cornwall-sage/30">
+      <div class="text-center">
+        <h3 class="text-2xl font-serif text-cornwall-navy mb-4">
+          See Your Story Here
+        </h3>
+        <p class="text-gray-700 mb-6">
+          This portfolio represents just a glimpse of the love stories we've preserved. 
+          Imagine your unique moments captured with the same artistry and emotion.
+        </p>
+        <a href="#portfolio-enquiry" class="inline-flex items-center bg-cornwall-navy text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cornwall-navy/90 hover:scale-105 transition-all duration-300 group shadow-lg">
+          <span>Start Your Cornwall Story</span>
+          <svg class="w-5 h-5 ml-3 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+          </svg>
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ============================================
-     FEATURED VENUES
+     FEATURED VENUES (From Your References)
      ============================================ -->
 <section class="py-20 bg-cornwall-stone">
   <div class="container mx-auto px-4">
@@ -367,102 +536,197 @@
       </p>
     </div>
     
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="bg-white rounded-xl p-6 text-center hover:shadow-xl transition-shadow duration-300">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+      <!-- Venues from your references -->
+      <div class="bg-white rounded-xl p-6 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
         <div class="w-16 h-16 bg-cornwall-sage/20 rounded-full flex items-center justify-center mx-auto mb-4">
           <span class="text-2xl">🏰</span>
         </div>
         <h3 class="font-serif text-xl text-cornwall-navy mb-2">St Michael's Mount</h3>
-        <p class="text-gray-600 text-sm">Tidal island castle venue</p>
+        <p class="text-gray-600 text-sm mb-3">Tidal island castle venue</p>
+        <span class="inline-block px-3 py-1 bg-cornwall-sage/10 text-cornwall-sage text-xs rounded-full">Historic</span>
       </div>
       
-      <div class="bg-white rounded-xl p-6 text-center hover:shadow-xl transition-shadow duration-300">
+      <div class="bg-white rounded-xl p-6 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
         <div class="w-16 h-16 bg-cornwall-blush/20 rounded-full flex items-center justify-center mx-auto mb-4">
           <span class="text-2xl">🌿</span>
         </div>
         <h3 class="font-serif text-xl text-cornwall-navy mb-2">Trebah Garden</h3>
-        <p class="text-gray-600 text-sm">Subtropical paradise garden</p>
+        <p class="text-gray-600 text-sm mb-3">Subtropical paradise garden</p>
+        <span class="inline-block px-3 py-1 bg-cornwall-blush/10 text-cornwall-blush text-xs rounded-full">Garden</span>
       </div>
       
-      <div class="bg-white rounded-xl p-6 text-center hover:shadow-xl transition-shadow duration-300">
+      <div class="bg-white rounded-xl p-6 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
         <div class="w-16 h-16 bg-cornwall-sage/20 rounded-full flex items-center justify-center mx-auto mb-4">
           <span class="text-2xl">🏖️</span>
         </div>
         <h3 class="font-serif text-xl text-cornwall-navy mb-2">Watergate Bay</h3>
-        <p class="text-gray-600 text-sm">Two-mile sandy beach</p>
+        <p class="text-gray-600 text-sm mb-3">Two-mile sandy beach</p>
+        <span class="inline-block px-3 py-1 bg-cornwall-sage/10 text-cornwall-sage text-xs rounded-full">Coastal</span>
       </div>
       
-      <div class="bg-white rounded-xl p-6 text-center hover:shadow-xl transition-shadow duration-300">
+      <div class="bg-white rounded-xl p-6 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
         <div class="w-16 h-16 bg-cornwall-blush/20 rounded-full flex items-center justify-center mx-auto mb-4">
           <span class="text-2xl">🏡</span>
         </div>
         <h3 class="font-serif text-xl text-cornwall-navy mb-2">Tredudwell Manor</h3>
-        <p class="text-gray-600 text-sm">Historic country house</p>
+        <p class="text-gray-600 text-sm mb-3">Historic country house</p>
+        <span class="inline-block px-3 py-1 bg-cornwall-blush/10 text-cornwall-blush text-xs rounded-full">Country House</span>
+      </div>
+      
+      <div class="bg-white rounded-xl p-6 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+        <div class="w-16 h-16 bg-cornwall-sage/20 rounded-full flex items-center justify-center mx-auto mb-4">
+          <span class="text-2xl">⚓</span>
+        </div>
+        <h3 class="font-serif text-xl text-cornwall-navy mb-2">St Ives</h3>
+        <p class="text-gray-600 text-sm mb-3">Harbour village venue</p>
+        <span class="inline-block px-3 py-1 bg-cornwall-sage/10 text-cornwall-sage text-xs rounded-full">Coastal</span>
+      </div>
+      
+      <div class="bg-white rounded-xl p-6 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+        <div class="w-16 h-16 bg-cornwall-blush/20 rounded-full flex items-center justify-center mx-auto mb-4">
+          <span class="text-2xl">🌾</span>
+        </div>
+        <h3 class="font-serif text-xl text-cornwall-navy mb-2">Country Houses</h3>
+        <p class="text-gray-600 text-sm mb-3">Boconnoc, Trelowarren</p>
+        <span class="inline-block px-3 py-1 bg-cornwall-blush/10 text-cornwall-blush text-xs rounded-full">Country</span>
       </div>
     </div>
-    
-    
   </div>
 </section>
 
 <!-- ============================================
-     PORTFOLIO CTA
+     PORTFOLIO ENQUIRY FORM (Sales Funnel)
      ============================================ -->
-<section class="py-20 bg-gradient-to-br from-cornwall-navy to-cornwall-navy/90 text-white">
+<section id="portfolio-enquiry" class="py-20 bg-gradient-to-br from-cornwall-navy to-cornwall-sage text-white">
   <div class="container mx-auto px-4 text-center">
-    <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6 text-white">
-      Ready to Capture Your<br />
-      <span class="text-cornwall-blush">Cornwall Love Story?</span>
+    <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6">
+      Inspired by These Stories?
+    </h2>
+    <p class="text-xl mb-10 max-w-2xl mx-auto opacity-90">
+      Let's create your own Cornwall wedding story. Share your vision, and we'll show you how we can capture it.
+    </p>
+
+    <div class="max-w-lg mx-auto">
+      <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+        <h3 class="text-2xl font-serif mb-6">Start Your Cornwall Story</h3>
+
+        <!-- Custom Jekyll Form -->
+        <form id="portfolio-contact-form" class="space-y-4" novalidate="">
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <input id="portfolio-name" name="portfolio-name" type="text" placeholder="Your Name" required="" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:border-cornwall-blush transition-colors" />
+            </div>
+            <div>
+              <input id="portfolio-email" name="portfolio-email" type="email" placeholder="Email Address" required="" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:border-cornwall-blush transition-colors" />
+            </div>
+          </div>
+
+          <div>
+            <textarea id="portfolio-vision" name="portfolio-vision" rows="4" placeholder="Tell us about your wedding vision..." class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:border-cornwall-blush transition-colors"></textarea>
+          </div>
+
+          <!-- Hidden fields for Dataverse mapping -->
+          <input type="hidden" id="portfolio-subject" name="portfolio-subject" value="CWP Portfolio Enquiry" />
+          <input type="hidden" id="portfolio-leadsourcecode" name="portfolio-leadsourcecode" value="Website Portfolio" />
+          <input type="hidden" id="portfolio-leadsourcetype" name="portfolio-leadsourcetype" value="Sales" />
+          <input type="hidden" id="portfolio-leadtype" name="portfolio-leadtype" value="Wedding" />
+          <input type="hidden" id="portfolio-leadsubtype" name="portfolio-leadsubtype" value="Portfolio Enquiry" />
+          <input type="hidden" id="portfolio-recaptchaToken" name="portfolio-recaptchaToken" />
+
+          <button type="submit" class="w-full bg-cornwall-blush text-cornwall-navy py-4 rounded-lg font-semibold text-lg hover:bg-white hover:scale-[1.02] transition-all duration-300">
+            Send My Vision
+          </button>
+        </form>
+
+        <div class="mt-6 pt-6 border-t border-white/20">
+          <div class="flex items-center justify-center space-x-4 text-sm opacity-75">
+            <div class="flex items-center">
+              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>24-Hour Response</span>
+            </div>
+            <div class="flex items-center">
+              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Free Consultation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FAQ SECTION (Sales Support)
+     ============================================ -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-serif text-cornwall-navy mb-12 text-center">
+        Frequently Asked Questions
+      </h2>
+      
+      <div class="space-y-6">
+        <div class="border-b border-cornwall-stone pb-6">
+          <h3 class="text-xl font-serif text-cornwall-navy mb-3">How soon should we book you for our wedding?</h3>
+          <p class="text-gray-700">We recommend booking 12-18 months in advance, especially for popular summer dates. However, we sometimes have availability for last-minute bookings.</p>
+        </div>
+        
+        <div class="border-b border-cornwall-stone pb-6">
+          <h3 class="text-xl font-serif text-cornwall-navy mb-3">What's included in your wedding packages?</h3>
+          <p class="text-gray-700">All packages include high-resolution digital images, a 10-page storybook album, and our signature unobtrusive coverage. We offer 3, 6, 8, and 10-hour options.</p>
+        </div>
+        
+        <div class="border-b border-cornwall-stone pb-6">
+          <h3 class="text-xl font-serif text-cornwall-navy mb-3">Do you travel across all of Cornwall?</h3>
+          <p class="text-gray-700">Yes! We cover weddings from Bude to Penzance and everywhere in between. Travel within Cornwall is included in all packages.</p>
+        </div>
+        
+        <div class="pb-6">
+          <h3 class="text-xl font-serif text-cornwall-navy mb-3">What happens if it rains on our wedding day?</h3>
+          <p class="text-gray-700">We're experts at creating beautiful photos in any weather. We always have backup plans and can work magic with Cornwall's famous moody skies.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FINAL CTA
+     ============================================ -->
+<section class="py-20 bg-gradient-to-r from-cornwall-sage to-cornwall-blush/50">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6 text-cornwall-navy">
+      Your Love Story Deserves<br />
+      <span class="text-white drop-shadow">Cornwall's Finest Storytellers</span>
     </h2>
     
-    <p class="text-xl mb-10 max-w-2xl mx-auto opacity-90">
-      Let's discuss how we can tell your unique story against Cornwall's breathtaking backdrop.
+    <p class="text-xl mb-10 max-w-2xl mx-auto text-cornwall-navy/90">
+      With 11+ years of capturing Cornwall's most beautiful weddings, we know how to preserve your unique love story.
     </p>
     
-    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="/contact" class="bg-cornwall-blush text-cornwall-navy px-8 py-4 text-lg font-semibold rounded-lg hover:bg-white transition-colors duration-300">
-        Book a Consultation
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+      <a href="#portfolio-enquiry" class="bg-cornwall-navy text-white px-8 py-4 text-lg font-semibold rounded-lg hover:bg-cornwall-navy/90 hover:scale-105 transition-all duration-300 shadow-xl">
+        Book Your Consultation
       </a>
-      <a href="/packages" class="bg-transparent text-white border-2 border-white/40 hover:border-white px-8 py-4 text-lg font-semibold rounded-lg hover:bg-white/10 transition-colors duration-300">
-        View Packages
+      <a href="tel:07815141779" class="bg-white/20 backdrop-blur-sm text-cornwall-navy px-8 py-4 text-lg font-semibold rounded-lg hover:bg-white/30 hover:scale-105 transition-all duration-300 border border-white/30">
+        📞 07815 141779
       </a>
     </div>
     
-    <p class="text-sm opacity-75 mt-8">
-      📞 07815 141779 • 📍 Covering all Cornwall • ⏱ Response within 24 hours
+    <p class="text-sm text-cornwall-navy/70 mt-8">
+      Mike &amp; Rob • Cornwall Wedding Photography • Covering All Cornwall
     </p>
   </div>
 </section>
 
 <!-- ============================================
-     LIGHTBOX MODAL
+     PORTFOLIO JAVASCRIPT
      ============================================ -->
-<div id="lightbox-modal" class="fixed inset-0 bg-black/90 z-50 hidden items-center justify-center p-4">
-  <div class="relative max-w-6xl w-full max-h-[90vh]">
-    <!-- Close Button -->
-    <button id="lightbox-close" class="absolute -top-12 right-0 text-white text-3xl hover:text-cornwall-blush transition-colors">
-      ✕
-    </button>
-    
-    <!-- Navigation -->
-    <button id="lightbox-prev" class="absolute left-4 top-1/2 -translate-y-1/2 text-white text-3xl hover:text-cornwall-blush transition-colors">
-      ‹
-    </button>
-    <button id="lightbox-next" class="absolute right-4 top-1/2 -translate-y-1/2 text-white text-3xl hover:text-cornwall-blush transition-colors">
-      ›
-    </button>
-    
-    <!-- Image Container -->
-    <div class="bg-black rounded-xl overflow-hidden">
-      <img id="lightbox-image" class="w-full max-h-[70vh] object-contain" src="" alt="" />
-      <div class="p-6 text-white">
-        <h3 id="lightbox-title" class="text-xl font-serif mb-2"></h3>
-        <p id="lightbox-venue" class="text-cornwall-blush font-semibold"></p>
-      </div>
-    </div>
-  </div>
-</div>
-
 <style>
   /* Portfolio Grid Animation */
   .portfolio-item {
@@ -472,16 +736,6 @@
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
-  }
-  
-  /* Lightbox Animation */
-  #lightbox-modal {
-    animation: fadeInModal 0.3s ease-out;
-  }
-  
-  @keyframes fadeInModal {
-    from { opacity: 0; }
-    to { opacity: 1; }
   }
   
   /* Masonry-like effect with different heights */
@@ -496,6 +750,11 @@
       position: sticky;
     }
   }
+  
+  /* Form focus styles */
+  input:focus, textarea:focus {
+    box-shadow: 0 0 0 3px rgba(212, 165, 165, 0.1);
+  }
 </style>
 
 <script>
@@ -505,16 +764,17 @@
     const filterButtons = document.querySelectorAll('.portfolio-filter');
     const portfolioItems = document.querySelectorAll('.portfolio-item');
     const photoCount = document.getElementById('photo-count');
+    const venueCount = document.getElementById('venue-count');
     
     filterButtons.forEach(button => {
       button.addEventListener('click', function() {
         // Update active button
         filterButtons.forEach(btn => {
           btn.classList.remove('active', 'bg-cornwall-navy', 'text-white');
-          btn.classList.add('bg-cornwall-stone', 'text-gray-700');
+          btn.classList.add('bg-white', 'text-gray-700');
         });
         this.classList.add('active', 'bg-cornwall-navy', 'text-white');
-        this.classList.remove('bg-cornwall-stone', 'text-gray-700');
+        this.classList.remove('bg-white', 'text-gray-700');
         
         // Filter items
         const filterValue = this.dataset.filter;
@@ -535,94 +795,46 @@
       });
     });
     
-    // Lightbox functionality
-    const lightboxModal = document.getElementById('lightbox-modal');
-    const lightboxImage = document.getElementById('lightbox-image');
-    const lightboxTitle = document.getElementById('lightbox-title');
-    const lightboxVenue = document.getElementById('lightbox-venue');
-    const lightboxClose = document.getElementById('lightbox-close');
-    const lightboxPrev = document.getElementById('lightbox-prev');
-    const lightboxNext = document.getElementById('lightbox-next');
-    
-    const portfolioImages = document.querySelectorAll('[data-lightbox="portfolio"]');
-    let currentImageIndex = 0;
-    
-    // Open lightbox
-    portfolioImages.forEach((img, index) => {
-      img.addEventListener('click', function() {
-        currentImageIndex = index;
-        updateLightbox();
-        lightboxModal.classList.remove('hidden');
-        lightboxModal.classList.add('flex');
-        document.body.style.overflow = 'hidden';
+    // Smooth scroll to enquiry form
+    const enquiryLinks = document.querySelectorAll('a[href="#portfolio-enquiry"]');
+    enquiryLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
       });
     });
     
-    // Close lightbox
-    lightboxClose.addEventListener('click', closeLightbox);
-    lightboxModal.addEventListener('click', function(e) {
-      if (e.target === this) closeLightbox();
-    });
-    
-    // Navigation
-    lightboxPrev.addEventListener('click', function() {
-      currentImageIndex = (currentImageIndex - 1 + portfolioImages.length) % portfolioImages.length;
-      updateLightbox();
-    });
-    
-    lightboxNext.addEventListener('click', function() {
-      currentImageIndex = (currentImageIndex + 1) % portfolioImages.length;
-      updateLightbox();
-    });
-    
-    // Keyboard navigation
-    document.addEventListener('keydown', function(e) {
-      if (!lightboxModal.classList.contains('hidden')) {
-        if (e.key === 'Escape') closeLightbox();
-        if (e.key === 'ArrowLeft') lightboxPrev.click();
-        if (e.key === 'ArrowRight') lightboxNext.click();
-      }
-    });
-    
-    function updateLightbox() {
-      const currentImage = portfolioImages[currentImageIndex];
-      lightboxImage.src = currentImage.src;
-      lightboxImage.alt = currentImage.alt;
-      lightboxTitle.textContent = currentImage.dataset.title;
-      lightboxVenue.textContent = currentImage.dataset.venue;
+    // Form submission (placeholder)
+    const portfolioForm = document.getElementById('portfolio-contact-form');
+    if (portfolioForm) {
+      portfolioForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Simple validation
+        const name = document.getElementById('portfolio-name').value;
+        const email = document.getElementById('portfolio-email').value;
+        
+        if (!name || !email) {
+          alert('Please fill in your name and email address.');
+          return;
+        }
+        
+        // In production, this would connect to your Dynamics form
+        // For now, show success message
+        alert('Thank you for your enquiry! We will contact you within 24 hours to discuss your Cornwall wedding vision.');
+        portfolioForm.reset();
+        
+        // Scroll to top of form for confirmation
+        portfolioForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
     }
     
-    function closeLightbox() {
-      lightboxModal.classList.add('hidden');
-      lightboxModal.classList.remove('flex');
-      document.body.style.overflow = 'auto';
-    }
-    
-    // Load more functionality (simulated)
-    const loadMoreBtn = document.getElementById('load-more');
-    let loadedCount = 6;
-    
-    loadMoreBtn.addEventListener('click', function() {
-      // In a real implementation, you would load more images via AJAX
-      // For demo, we'll just show a message
-      this.textContent = 'All Photos Loaded';
-      this.disabled = true;
-      this.classList.add('opacity-50', 'cursor-not-allowed');
-      
-      // Update counters
-      document.getElementById('photo-count').textContent = '24';
-      document.getElementById('venue-count').textContent = '8';
-    });
-    
-    // Initialize counters
-    photoCount.textContent = portfolioItems.length;
-    
-    // Venue counter (extract unique venues from data-venue attributes)
-    const venues = new Set();
-    portfolioImages.forEach(img => {
-      if (img.dataset.venue) venues.add(img.dataset.venue);
-    });
-    document.getElementById('venue-count').textContent = venues.size;
+    // Venue counter
+    const venues = new Set(['St Michael\'s Mount', 'Trebah Garden', 'Watergate Bay', 'Tredudwell Manor', 'St Ives', 'Country Houses']);
+    venueCount.textContent = venues.size;
   });
 </script>
 

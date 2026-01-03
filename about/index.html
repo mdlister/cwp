@@ -9,12 +9,12 @@
     <meta name="description" content="Meet Mike & Rob, Cornwall's premium wedding photographers. With 11+ years experience capturing authentic love stories along the Cornish coast. Expert in Cornwall wedding venues and coastal photography.">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="http://localhost:4000/about/">
+    <link rel="canonical" href="https://cornwallweddingphotography.com/about/">
     
     <!-- Open Graph -->
     <meta property="og:title" content="About Cornwall Wedding Photography | Meet Mike & Rob | Cornwall Wedding Photography - authentic wedding stories">
     <meta property="og:description" content="Meet Mike & Rob, Cornwall's premium wedding photographers. With 11+ years experience capturing authentic love stories along the Cornish coast. Expert in Cornwall wedding venues and coastal photography.">
-    <meta property="og:url" content="http://localhost:4000/about/">
+    <meta property="og:url" content="https://cornwallweddingphotography.com/about/">
     <meta property="og:type" content="website">
     
     <!-- Google Fonts -->
@@ -60,16 +60,16 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Meet Mike &amp; Rob, Cornwall’s premium wedding photographers. With 11+ years experience capturing authentic love stories along the Cornish coast. Expert in Cornwall wedding venues and coastal photography." />
 <meta property="og:description" content="Meet Mike &amp; Rob, Cornwall’s premium wedding photographers. With 11+ years experience capturing authentic love stories along the Cornish coast. Expert in Cornwall wedding venues and coastal photography." />
-<link rel="canonical" href="http://localhost:4000/about/" />
-<meta property="og:url" content="http://localhost:4000/about/" />
+<link rel="canonical" href="https://cornwallweddingphotography.com/about/" />
+<meta property="og:url" content="https://cornwallweddingphotography.com/about/" />
 <meta property="og:site_name" content="Cornwall Wedding Photography - authentic wedding stories" />
-<meta property="og:image" content="http://localhost:4000/assets/images/brand/og-default.jpg" />
+<meta property="og:image" content="https://cornwallweddingphotography.com/assets/images/brand/og-default.jpg" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="http://localhost:4000/assets/images/brand/og-default.jpg" />
+<meta property="twitter:image" content="https://cornwallweddingphotography.com/assets/images/brand/og-default.jpg" />
 <meta property="twitter:title" content="About Cornwall Wedding Photography Meet Mike &amp; Rob" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Mike Lister"},"description":"Meet Mike &amp; Rob, Cornwall’s premium wedding photographers. With 11+ years experience capturing authentic love stories along the Cornish coast. Expert in Cornwall wedding venues and coastal photography.","headline":"About Cornwall Wedding Photography Meet Mike &amp; Rob","image":"http://localhost:4000/assets/images/brand/og-default.jpg","name":"Cornwall Wedding Photography","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/brand/logo.png"},"name":"Mike Lister"},"sameAs":["https://facebook.com/mikelisterphotography","https://instagram.com/mikelisterphotography"],"url":"http://localhost:4000/about/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Mike Lister"},"description":"Meet Mike &amp; Rob, Cornwall’s premium wedding photographers. With 11+ years experience capturing authentic love stories along the Cornish coast. Expert in Cornwall wedding venues and coastal photography.","headline":"About Cornwall Wedding Photography Meet Mike &amp; Rob","image":"https://cornwallweddingphotography.com/assets/images/brand/og-default.jpg","name":"Cornwall Wedding Photography","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://cornwallweddingphotography.com/assets/images/brand/logo.png"},"name":"Mike Lister"},"sameAs":["https://facebook.com/mikelisterphotography","https://instagram.com/mikelisterphotography"],"url":"https://cornwallweddingphotography.com/about/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -192,10 +192,18 @@
      HERO - ABOUT PAGE
      ============================================ -->
 <section class="relative py-20 bg-cornwall-navy text-white overflow-hidden">
-  <!-- Background pattern -->
-  <div class="absolute inset-0 opacity-10">
-    <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-cornwall-blush/20 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cornwall-sage/10 rounded-full blur-3xl"></div>
+  <!-- Hero Background Image -->
+  <div class="absolute inset-0 z-0">
+    <picture class="block w-full h-full">
+      <source srcset="/assets/images/webp/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-014.webp" type="image/webp" width="1920" height="1080" />
+      <img src="/assets/images/photos/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-014.jpg" alt="Cornwall wedding photography capturing love stories along the coast at Tredudwell Manor" width="1920" height="1080" loading="eager" class="w-full h-full object-cover opacity-30" decoding="async" />
+    </picture>
+    <!-- Background pattern overlay -->
+    <div class="absolute inset-0 opacity-20 bg-gradient-to-b from-cornwall-navy via-cornwall-navy/70 to-cornwall-navy"></div>
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-cornwall-blush/20 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cornwall-sage/10 rounded-full blur-3xl"></div>
+    </div>
   </div>
   
   <div class="container mx-auto px-4 relative z-10">
@@ -329,7 +337,17 @@
     
     <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
       <!-- Mike -->
-      <div class="bg-white rounded-2xl p-8 shadow-lg">
+      <div class="bg-white rounded-2xl p-8 shadow-lg overflow-hidden">
+        <!-- Photo Section -->
+        <div class="mb-8 rounded-xl overflow-hidden shadow-md">
+          <div class="relative h-64 md:h-80">
+            <picture class="block w-full h-full">
+              <source srcset="/assets/images/webp/cornwall-wedding-photography-mike-portrait.webp" type="image/webp" width="600" height="800" />
+              <img src="/assets/images/photos/cornwall-wedding-photography-mike-portrait.jpg" alt="Mike Lister, lead wedding photographer in Cornwall" width="600" height="800" loading="lazy" class="w-full h-full object-cover object-center" decoding="async" />
+            </picture>
+          </div>
+        </div>
+        
         <div class="flex items-center mb-6">
           <div class="w-20 h-20 bg-gradient-to-br from-cornwall-navy to-cornwall-sage rounded-full flex items-center justify-center mr-6">
             <span class="text-white font-serif font-bold text-2xl">M</span>
@@ -340,68 +358,94 @@
           </div>
         </div>
         <p class="text-gray-700 mb-6">
-          With over 11 years of wedding photography experience across Cornwall, Mike brings 
-          an artist's eye and a storyteller's heart to every wedding. His work has been 
-          featured in regional wedding publications.
+          With over 11 years dedicated exclusively to Cornwall weddings, Mike brings an artist's eye 
+          for composition and a storyteller's heart to every celebration. His work doesn't just 
+          capture moments—it preserves the authentic emotion and atmosphere of your special day.
         </p>
         <div class="space-y-3">
           <div class="flex items-center text-gray-600">
             <svg class="w-5 h-5 text-cornwall-sage mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
             </svg>
-            <span>11+ years Cornwall wedding experience</span>
+            <span>11+ years Cornwall wedding expertise</span>
           </div>
           <div class="flex items-center text-gray-600">
             <svg class="w-5 h-5 text-cornwall-sage mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
             </svg>
-            <span>Specialist in natural light &amp; coastal photography</span>
+            <span>Specialist in natural Cornish light &amp; coastal settings</span>
           </div>
           <div class="flex items-center text-gray-600">
             <svg class="w-5 h-5 text-cornwall-sage mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
             </svg>
-            <span>Featured in OM Magazine</span>
+            <span>Featured in Cornwall's leading wedding publications</span>
           </div>
         </div>
       </div>
       
       <!-- Rob -->
-      <div class="bg-white rounded-2xl p-8 shadow-lg">
+      <div class="bg-white rounded-2xl p-8 shadow-lg overflow-hidden">
+        <!-- Photo Section -->
+        <div class="mb-8 rounded-xl overflow-hidden shadow-md">
+          <div class="relative h-64 md:h-80">
+            <picture class="block w-full h-full">
+              <source srcset="/assets/images/webp/cornwall-wedding-photography-rob-portrait.webp" type="image/webp" width="600" height="800" />
+              <img src="/assets/images/photos/cornwall-wedding-photography-rob-portrait.jpg" alt="Rob, second wedding photographer capturing candid moments in Cornwall" width="600" height="800" loading="lazy" class="w-full h-full object-cover object-center" decoding="async" />
+            </picture>
+          </div>
+        </div>
+        
         <div class="flex items-center mb-6">
           <div class="w-20 h-20 bg-gradient-to-br from-cornwall-blush to-cornwall-sand rounded-full flex items-center justify-center mr-6">
             <span class="text-cornwall-navy font-serif font-bold text-2xl">R</span>
           </div>
           <div>
             <h3 class="text-2xl font-serif text-cornwall-navy">Rob</h3>
-            <p class="text-cornwall-blush font-semibold">Second Photographer</p>
+            <p class="text-cornwall-blush font-semibold">Second Photographer &amp; Detail Specialist</p>
           </div>
         </div>
         <p class="text-gray-700 mb-6">
-        Rob's background in group photography and portraiture brings a unique perspective to wedding photography. 
-        He specialises in capturing those fleeting, emotional moments that tell the true 
-        story of your day.
+          With a decade of professional photography experience ranging from royal engagements to 
+          coordinating groups of up to 1,200 people, Rob brings unparalleled organisational skill 
+          and attention to detail. His background ensures no meaningful moment is missed—from the 
+          smallest glance to the grandest celebration.
         </p>
         <div class="space-y-3">
           <div class="flex items-center text-gray-600">
             <svg class="w-5 h-5 text-cornwall-blush mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
             </svg>
-            <span>Group photography background</span>
+            <span>10+ years in professional portrait &amp; group photography</span>
           </div>
           <div class="flex items-center text-gray-600">
             <svg class="w-5 h-5 text-cornwall-blush mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
             </svg>
-            <span>Expert in candid moments &amp; details</span>
+            <span>Expert in capturing candid emotion and intricate details</span>
           </div>
           <div class="flex items-center text-gray-600">
             <svg class="w-5 h-5 text-cornwall-blush mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
             </svg>
-            <span>Master of 3-week editing turnaround</span>
+            <span>Master of efficient workflow with 3-week gallery turnaround</span>
           </div>
         </div>
+      </div>
+    </div>
+    
+    <!-- Team Value Proposition -->
+    <div class="max-w-3xl mx-auto mt-16 pt-10 border-t border-cornwall-navy/10">
+      <div class="text-center">
+        <h3 class="text-2xl font-serif text-cornwall-navy mb-6">
+          Two Perspectives, One Shared Goal
+        </h3>
+        <p class="text-lg text-gray-700">
+          Together, Mike and Rob provide comprehensive coverage that captures both the sweeping 
+          narrative of your day and the intimate, fleeting moments that make your story uniquely yours. 
+          Their complementary skills ensure every aspect of your Cornwall wedding is preserved 
+          with artistry and precision.
+        </p>
       </div>
     </div>
   </div>
