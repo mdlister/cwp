@@ -628,7 +628,6 @@ On the day, from start to finish, Mike and Rob were incredibly polite, organised
           <input type="hidden" id="cwp-leadsourcetype" name="cwp-leadsourcetype" value="Sales" />
           <input type="hidden" id="cwp-leadtype" name="cwp-leadtype" value="Wedding" />
           <input type="hidden" id="cwp-leadsubtype" name="cwp-leadsubtype" value="Wedding" />
-          <input type="hidden" id="recaptchaToken" name="recaptchaToken" />
           <!-- Hidden field to track form interaction time -->
           <input type="hidden" id="form-load-time" name="form-load-time" />
 
@@ -698,12 +697,7 @@ On the day, from start to finish, Mike and Rob were incredibly polite, organised
       buttonText.classList.add('hidden');
       buttonLoading.classList.remove('hidden');
       
-      // Get reCAPTCHA token
-      grecaptcha.ready(function() {
-        grecaptcha.execute('6LdxMT4sAAAAABmz9eBSv6mqGceS02lT9yhJkXou', { 
-          action: 'submit' 
-        }).then((token) => {
-          document.getElementById('recaptchaToken').value = token;
+     
           
           const mappings = [
             { FormFieldName: "#cwp-name", DataverseFieldName: "lastname" },
@@ -714,7 +708,6 @@ On the day, from start to finish, Mike and Rob were incredibly polite, organised
             { FormFieldName: "#cwp-leadsourcetype", DataverseFieldName: "msdyncrm_leadsourcetype" },
             { FormFieldName: "#cwp-leadtype", DataverseFieldName: "mlp_leadtype" },
             { FormFieldName: "#cwp-leadsubtype", DataverseFieldName: "mlp_leadsubtype" },
-            { FormFieldName: "#recaptchaToken", DataverseFieldName: "mlp_recaptcha" },
             // Optional: Add submission time for analysis in Dynamics
             { FormFieldName: "#form-load-time", DataverseFieldName: "description", Append: true }
           ];
