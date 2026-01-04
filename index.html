@@ -697,65 +697,52 @@ On the day, from start to finish, Mike and Rob were incredibly polite, organised
       buttonText.classList.add('hidden');
       buttonLoading.classList.remove('hidden');
       
-     
+      // Submit to Dynamics WITHOUT reCAPTCHA
+      const mappings = [
+        { FormFieldName: "#cwp-name", DataverseFieldName: "lastname" },
+        { FormFieldName: "#cwp-email", DataverseFieldName: "emailaddress1" },
+        { FormFieldName: "#cwp-description", DataverseFieldName: "description" },
+        { FormFieldName: "#cwp-subject", DataverseFieldName: "subject" },
+        { FormFieldName: "#cwp-leadsourcecode", DataverseFieldName: "leadsourcecode" },
+        { FormFieldName: "#cwp-leadsourcetype", DataverseFieldName: "msdyncrm_leadsourcetype" },
+        { FormFieldName: "#cwp-leadtype", DataverseFieldName: "mlp_leadtype" },
+        { FormFieldName: "#cwp-leadsubtype", DataverseFieldName: "mlp_leadsubtype" }
+        // Removed: form-load-time mapping since it might cause issues
+      ];
+
+      const serializedForm = d365mktformcapture.serializeForm(form, mappings);
+      const payload = serializedForm.SerializedForm.build();
+
+      const captureConfig = {
+        FormId: "3d97b58b-fbe7-f011-8406-6045bd12f634",
+        FormApiUrl: "https://public-gbr.mkt.dynamics.com/api/v1.0/orgs/28d99f2b-d568-f011-858a-0022481a2aa9/landingpageforms"
+      };
+
+      d365mktformcapture.submitForm(captureConfig, payload)
+        .then(() => {
+          // Success
+          alert("Thank you! Your enquiry has been submitted. We'll be in touch within 24 hours.");
+          form.reset(); // Clear the form
           
-          const mappings = [
-            { FormFieldName: "#cwp-name", DataverseFieldName: "lastname" },
-            { FormFieldName: "#cwp-email", DataverseFieldName: "emailaddress1" },
-            { FormFieldName: "#cwp-description", DataverseFieldName: "description" },
-            { FormFieldName: "#cwp-subject", DataverseFieldName: "subject" },
-            { FormFieldName: "#cwp-leadsourcecode", DataverseFieldName: "leadsourcecode" },
-            { FormFieldName: "#cwp-leadsourcetype", DataverseFieldName: "msdyncrm_leadsourcetype" },
-            { FormFieldName: "#cwp-leadtype", DataverseFieldName: "mlp_leadtype" },
-            { FormFieldName: "#cwp-leadsubtype", DataverseFieldName: "mlp_leadsubtype" },
-            // Optional: Add submission time for analysis in Dynamics
-            { FormFieldName: "#form-load-time", DataverseFieldName: "description", Append: true }
-          ];
-
-          const serializedForm = d365mktformcapture.serializeForm(form, mappings);
-          const payload = serializedForm.SerializedForm.build();
-
-          const captureConfig = {
-            FormId: "3d97b58b-fbe7-f011-8406-6045bd12f634",
-            FormApiUrl: "https://public-gbr.mkt.dynamics.com/api/v1.0/orgs/28d99f2b-d568-f011-858a-0022481a2aa9/landingpageforms"
-          };
-
-          d365mktformcapture.submitForm(captureConfig, payload)
-            .then(() => {
-              // Success
-              alert("Thank you! Your enquiry has been submitted. We'll be in touch within 24 hours.");
-              form.reset(); // Clear the form
-              
-              // Reset button state
-              setTimeout(() => {
-                submitButton.disabled = false;
-                buttonText.classList.remove('hidden');
-                buttonLoading.classList.add('hidden');
-              }, 1000);
-            })
-            .catch((error) => {
-              // Error handling
-              console.error('Form submission error:', error);
-              
-              // Reset button state
-              submitButton.disabled = false;
-              buttonText.classList.remove('hidden');
-              buttonLoading.classList.add('hidden');
-              
-              // User-friendly error message
-              alert("Sorry, there was an issue submitting your form. Please try again or email us directly at hello@cornwallweddingphotography.com");
-            });
-        }).catch((recaptchaError) => {
-          console.error('reCAPTCHA error:', recaptchaError);
+          // Reset button state
+          setTimeout(() => {
+            submitButton.disabled = false;
+            buttonText.classList.remove('hidden');
+            buttonLoading.classList.add('hidden');
+          }, 1000);
+        })
+        .catch((error) => {
+          // Error handling
+          console.error('Form submission error:', error);
           
           // Reset button state
           submitButton.disabled = false;
           buttonText.classList.remove('hidden');
           buttonLoading.classList.add('hidden');
           
-          alert("Please complete the security check and try again.");
+          // User-friendly error message
+          alert("Sorry, there was an issue submitting your form. Please try again or email us directly at hello@cornwallweddingphotography.com");
         });
-      });
     }, true);
   }).catch((error) => {
     console.error('Failed to initialize form capture:', error);
