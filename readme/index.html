@@ -129,7 +129,213 @@
 }
 </script>
 
-<script src="https://www.google.com/recaptcha/api.js?render=6LdxMT4sAAAAABmz9eBSv6mqGceS02lT9yhJkXou"></script>
+
+  <!-- Production-only code -->
+ 
+
+
+
+
+
+
+
+<!-- ============================================
+     GOOGLE ANALYTICS 4 TRACKING
+     ============================================ -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1GKCP7F29B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  // ============================================
+  // GA4 CONFIGURATION FOR WEDDING PHOTOGRAPHY
+  // ============================================
+  gtag('config', 'G-1GKCP7F29B', {
+    // Enhanced measurement (you enabled all in GA4 setup)
+    'send_page_view': true,
+    
+    // UK/EU GDPR COMPLIANCE
+    'allow_google_signals': false,
+    'allow_ad_personalization_signals': false,
+    'restricted_data_processing': true,
+    
+    // COOKIE SETTINGS
+    'cookie_expires': 7200, // 2 hours
+    'cookie_update': true,
+    
+    // CUSTOM DIMENSIONS FOR WEDDING BUSINESS INSIGHTS
+    'custom_map': {
+      'dimension1': 'page_type',      // home, portfolio, about, blog
+      'dimension2': 'user_intent',    // browsing, researching, ready-to-book
+      'dimension3': 'content_focus',  // images, testimonials, pricing
+      'dimension4': 'portfolio_depth' // shallow, medium, deep engagement
+    },
+    
+    // INITIAL PAGE TYPE DETECTION
+    'page_type': 'unknown'
+  });
+
+  // ============================================
+  // COOKIE CONSENT HANDLING
+  // ============================================
+  
+  (function handleCookieConsent() {
+    const consent = localStorage.getItem('cookie_consent');
+    const consentDate = localStorage.getItem('cookie_consent_date');
+    
+    // If no consent or consent rejected, deny analytics
+    if (consent === 'rejected' || consent === null) {
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'wait_for_update': 500
+      });
+    }
+    
+    // If consent is older than 6 months, it's expired
+    if (consentDate) {
+      const sixMonthsAgo = new Date();
+      sixMonthsAgo.setMonth(sixMonthsAgo.getMonth() - 6);
+      const lastConsent = new Date(consentDate);
+      
+      if (lastConsent < sixMonthsAgo) {
+        // Consent expired - treat as no consent
+        gtag('consent', 'update', {
+          'analytics_storage': 'denied',
+          'ad_storage': 'denied'
+        });
+      }
+    }
+  })();
+  
+  
+  // ============================================
+  // DEBUG MODE (for testing)
+  // ============================================
+  
+</script>
+
+<!-- ============================================
+     ENHANCED TRACKING FOR WEDDING PHOTOGRAPHY
+     ============================================ -->
+<script src="/assets/js/analytics-enhanced.js" defer></script>
+
+
+
+
+
+
+<div id="cookie-consent-banner" class="fixed bottom-0 left-0 right-0 bg-cornwall-navy/95 text-white p-4 z-50 hidden backdrop-blur-sm border-t border-white/10">
+  <div class="container mx-auto">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="md:flex-1">
+        <p class="text-sm md:text-base">
+          <span class="font-semibold">🍪 We use cookies</span> to improve your experience and analyze site traffic. 
+          By continuing, you agree to our use of cookies. 
+          <a href="/privacy" class="text-cornwall-blush underline hover:no-underline ml-1">Privacy Policy</a>
+        </p>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <button onclick="acceptAllCookies()" 
+                class="px-4 py-2 bg-cornwall-blush text-cornwall-navy rounded-lg font-semibold text-sm hover:bg-cornwall-blush/90 transition-colors whitespace-nowrap">
+          Accept All
+        </button>
+        <button onclick="acceptNecessaryCookies()" 
+                class="px-4 py-2 bg-white/10 rounded-lg text-sm hover:bg-white/20 transition-colors whitespace-nowrap">
+          Necessary Only
+        </button>
+        <button onclick="openCookieSettings()" 
+                class="px-4 py-2 text-sm text-white/70 hover:text-white transition-colors whitespace-nowrap">
+          Preferences
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Cookie consent functions
+function acceptAllCookies() {
+  localStorage.setItem('cookie_consent', 'accepted');
+  localStorage.setItem('cookie_consent_date', new Date().toISOString());
+  
+  // Update GA4 consent
+  if (typeof gtag !== 'undefined') {
+    gtag('consent', 'update', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted'
+    });
+  }
+  
+  document.getElementById('cookie-consent-banner').classList.add('hidden');
+  showToast('Cookie preferences saved. Thank you!');
+}
+
+function acceptNecessaryCookies() {
+  localStorage.setItem('cookie_consent', 'rejected');
+  localStorage.setItem('cookie_consent_date', new Date().toISOString());
+  
+  // Update GA4 consent
+  if (typeof gtag !== 'undefined') {
+    gtag('consent', 'update', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied'
+    });
+  }
+  
+  document.getElementById('cookie-consent-banner').classList.add('hidden');
+  showToast('Only necessary cookies enabled.');
+}
+
+function openCookieSettings() {
+  // Implement cookie settings modal if needed
+  alert('Cookie settings would open here. For now, use "Accept All" or "Necessary Only".');
+}
+
+function showToast(message) {
+  const toast = document.createElement('div');
+  toast.className = 'fixed bottom-4 right-4 bg-cornwall-sage text-white px-4 py-2 rounded-lg shadow-lg z-50 animate-fade-in';
+  toast.textContent = message;
+  document.body.appendChild(toast);
+  
+  setTimeout(() => {
+    toast.remove();
+  }, 3000);
+}
+
+// Check cookie consent on page load
+document.addEventListener('DOMContentLoaded', function() {
+  const consent = localStorage.getItem('cookie_consent');
+  const consentDate = localStorage.getItem('cookie_consent_date');
+  
+  // Show banner if no consent or consent is older than 6 months
+  if (!consent || !consentDate) {
+    document.getElementById('cookie-consent-banner').classList.remove('hidden');
+  } else {
+    const sixMonthsAgo = new Date();
+    sixMonthsAgo.setMonth(sixMonthsAgo.getMonth() - 6);
+    const lastConsent = new Date(consentDate);
+    
+    if (lastConsent < sixMonthsAgo) {
+      document.getElementById('cookie-consent-banner').classList.remove('hidden');
+    }
+  }
+});
+</script>
+
+<style>
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
 
 </head>
 <body>
@@ -1044,6 +1250,219 @@ tags: ["cornwall", "venue", "planning"]  # Optional
           Last updated: January 05, 2026<br />
           Cornwall Wedding Photography • Mike &amp; Rob
         </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     GOOGLE ANALYTICS
+     ============================================ -->
+<section class="py-20 bg-cornwall-stone">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-serif text-cornwall-navy text-center mb-12">
+      📊 Google Analytics Setup
+    </h2>
+    
+    <div class="max-w-4xl mx-auto">
+      <!-- Configuration -->
+      <div class="bg-white rounded-2xl p-8 mb-8 shadow-lg">
+        <h3 class="text-2xl font-serif text-cornwall-sage mb-6">Configuration</h3>
+        
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <div class="bg-cornwall-navy/5 p-6 rounded-lg">
+            <h4 class="font-serif text-lg text-cornwall-navy mb-3">Tracking ID Location</h4>
+            <p class="text-gray-700 mb-3">The Google Analytics tracking code is configured in:</p>
+            <div class="bg-white p-4 rounded border">
+              <code class="text-sm">_includes/analytics.html</code>
+            </div>
+            <p class="text-sm text-gray-600 mt-3">This file is included in every page via the main layout template.</p>
+          </div>
+          
+          <div class="bg-cornwall-navy/5 p-6 rounded-lg">
+            <h4 class="font-serif text-lg text-cornwall-navy mb-3">Google Analytics 4 (GA4)</h4>
+            <p class="text-gray-700 mb-2">Current setup uses GA4 measurement ID format:</p>
+            <div class="bg-white p-3 rounded border">
+              <code class="text-sm">G-XXXXXXXXXX</code>
+            </div>
+            <p class="text-xs text-gray-600 mt-2">Replace with your actual measurement ID when deploying.</p>
+          </div>
+        </div>
+        
+        <!-- Code Example -->
+        <div class="bg-white rounded-lg p-6 border border-cornwall-sage/20 mb-6">
+          <h4 class="font-serif text-lg text-cornwall-navy mb-4">Current Implementation</h4>
+          <pre class="text-sm text-gray-700 overflow-x-auto">
+&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;
+&lt;script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'G-XXXXXXXXXX'); // Replace with your GA4 measurement ID
+  
+  // Optional: Enhanced measurement
+  gtag('config', 'G-XXXXXXXXXX', {
+    'send_page_view': true
+  });
+&lt;/script&gt;</pre>
+        </div>
+      </div>
+      
+      <!-- Access & Reports -->
+      <div class="bg-white rounded-2xl p-8 mb-8 shadow-lg">
+        <h3 class="text-2xl font-serif text-cornwall-sage mb-6">Accessing Analytics Data</h3>
+        
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-cornwall-navy/5 p-6 rounded-lg">
+            <h4 class="font-serif text-lg text-cornwall-navy mb-3">Dashboard Access</h4>
+            <ol class="space-y-3 text-gray-700">
+              <li class="flex items-start">
+                <span class="bg-cornwall-sage text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mr-2">1</span>
+                <span>Visit <a href="https://analytics.google.com" class="text-cornwall-sage hover:underline" target="_blank">analytics.google.com</a></span>
+              </li>
+              <li class="flex items-start">
+                <span class="bg-cornwall-sage text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mr-2">2</span>
+                <span>Sign in with Google account</span>
+              </li>
+              <li class="flex items-start">
+                <span class="bg-cornwall-sage text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mr-2">3</span>
+                <span>Select "Cornwall Wedding Photography" property</span>
+              </li>
+              <li class="flex items-start">
+                <span class="bg-cornwall-sage text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mr-2">4</span>
+                <span>Navigate to "Reports" section</span>
+              </li>
+            </ol>
+          </div>
+          
+          <div class="bg-cornwall-navy/5 p-6 rounded-lg">
+            <h4 class="font-serif text-lg text-cornwall-navy mb-3">Key Metrics to Monitor</h4>
+            <ul class="space-y-2 text-gray-700">
+              <li class="flex items-start">
+                <span class="text-cornwall-sage mr-2">•</span>
+                <span><strong>Users:</strong> Number of unique visitors</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-cornwall-sage mr-2">•</span>
+                <span><strong>Sessions:</strong> Individual visits to the site</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-cornwall-sage mr-2">•</span>
+                <span><strong>Pageviews:</strong> Most viewed pages</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-cornwall-sage mr-2">•</span>
+                <span><strong>Bounce Rate:</strong> Single-page visits</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-cornwall-sage mr-2">•</span>
+                <span><strong>Traffic Sources:</strong> Where visitors come from</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Custom Events -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg">
+        <h3 class="text-2xl font-serif text-cornwall-sage mb-6">Custom Events &amp; Goals</h3>
+        
+        <div class="space-y-6">
+          <!-- Contact Form Tracking -->
+          <div class="bg-cornwall-navy/5 p-6 rounded-lg">
+            <h4 class="font-serif text-lg text-cornwall-navy mb-3">Contact Form Submissions</h4>
+            <p class="text-gray-700 mb-3">Track when visitors submit the contact form:</p>
+            <pre class="text-sm text-gray-700 overflow-x-auto bg-white p-4 rounded border">
+// Example event tracking for form submission
+document.getElementById('contact-form').addEventListener('submit', function() {
+  gtag('event', 'contact_form_submit', {
+    'event_category': 'engagement',
+    'event_label': 'contact_page'
+  });
+});</pre>
+          </div>
+          
+          <!-- Portfolio Interactions -->
+          <div class="bg-cornwall-navy/5 p-6 rounded-lg">
+            <h4 class="font-serif text-lg text-cornwall-navy mb-3">Portfolio Interactions</h4>
+            <p class="text-gray-700 mb-3">Track image clicks and filter usage:</p>
+            <pre class="text-sm text-gray-700 overflow-x-auto bg-white p-4 rounded border">
+// Track portfolio image clicks
+document.querySelectorAll('.portfolio-item').forEach(item =&gt; {
+  item.addEventListener('click', function() {
+    const venue = this.dataset.venue;
+    gtag('event', 'portfolio_image_click', {
+      'event_category': 'engagement',
+      'event_label': venue,
+      'venue': venue
+    });
+  });
+});
+
+// Track filter usage
+document.querySelectorAll('.portfolio-filter').forEach(button =&gt; {
+  button.addEventListener('click', function() {
+    const filter = this.dataset.filter;
+    gtag('event', 'portfolio_filter', {
+      'event_category': 'interaction',
+      'event_label': filter
+    });
+  });
+});</pre>
+          </div>
+          
+          <!-- Setup Checklist -->
+          <div class="bg-white p-6 rounded-lg border border-cornwall-sage/20">
+            <h4 class="font-serif text-lg text-cornwall-navy mb-4">Setup Checklist</h4>
+            <div class="space-y-3">
+              <div class="flex items-center">
+                <input type="checkbox" class="mr-3 h-5 w-5 text-cornwall-sage" checked="" />
+                <span class="text-gray-700">GA4 measurement ID added to analytics.html</span>
+              </div>
+              <div class="flex items-center">
+                <input type="checkbox" class="mr-3 h-5 w-5 text-cornwall-sage" checked="" />
+                <span class="text-gray-700">Analytics include file added to layout</span>
+              </div>
+              <div class="flex items-center">
+                <input type="checkbox" class="mr-3 h-5 w-5 text-cornwall-sage" />
+                <span class="text-gray-700">Real-time tracking verified</span>
+              </div>
+              <div class="flex items-center">
+                <input type="checkbox" class="mr-3 h-5 w-5 text-cornwall-sage" />
+                <span class="text-gray-700">Custom events configured (optional)</span>
+              </div>
+              <div class="flex items-center">
+                <input type="checkbox" class="mr-3 h-5 w-5 text-cornwall-sage" />
+                <span class="text-gray-700">Conversion goals set up in GA dashboard</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Troubleshooting -->
+        <div class="mt-8 bg-cornwall-stone/50 p-6 rounded-lg">
+          <h4 class="font-serif text-lg text-cornwall-navy mb-3">Troubleshooting</h4>
+          <div class="grid md:grid-cols-2 gap-4 text-sm text-gray-700">
+            <div>
+              <p class="font-semibold mb-1">❌ No data appearing?</p>
+              <ul class="list-disc list-inside space-y-1">
+                <li>Check GA4 measurement ID is correct</li>
+                <li>Verify analytics.html is included</li>
+                <li>Wait 24-48 hours for initial data</li>
+              </ul>
+            </div>
+            <div>
+              <p class="font-semibold mb-1">❌ Real-time not working?</p>
+              <ul class="list-disc list-inside space-y-1">
+                <li>Clear browser cache</li>
+                <li>Test in incognito mode</li>
+                <li>Check browser extensions aren't blocking</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

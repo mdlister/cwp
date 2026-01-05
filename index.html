@@ -129,7 +129,213 @@
 }
 </script>
 
-<script src="https://www.google.com/recaptcha/api.js?render=6LdxMT4sAAAAABmz9eBSv6mqGceS02lT9yhJkXou"></script>
+
+  <!-- Production-only code -->
+ 
+
+
+
+
+
+
+
+<!-- ============================================
+     GOOGLE ANALYTICS 4 TRACKING
+     ============================================ -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1GKCP7F29B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  // ============================================
+  // GA4 CONFIGURATION FOR WEDDING PHOTOGRAPHY
+  // ============================================
+  gtag('config', 'G-1GKCP7F29B', {
+    // Enhanced measurement (you enabled all in GA4 setup)
+    'send_page_view': true,
+    
+    // UK/EU GDPR COMPLIANCE
+    'allow_google_signals': false,
+    'allow_ad_personalization_signals': false,
+    'restricted_data_processing': true,
+    
+    // COOKIE SETTINGS
+    'cookie_expires': 7200, // 2 hours
+    'cookie_update': true,
+    
+    // CUSTOM DIMENSIONS FOR WEDDING BUSINESS INSIGHTS
+    'custom_map': {
+      'dimension1': 'page_type',      // home, portfolio, about, blog
+      'dimension2': 'user_intent',    // browsing, researching, ready-to-book
+      'dimension3': 'content_focus',  // images, testimonials, pricing
+      'dimension4': 'portfolio_depth' // shallow, medium, deep engagement
+    },
+    
+    // INITIAL PAGE TYPE DETECTION
+    'page_type': 'unknown'
+  });
+
+  // ============================================
+  // COOKIE CONSENT HANDLING
+  // ============================================
+  
+  (function handleCookieConsent() {
+    const consent = localStorage.getItem('cookie_consent');
+    const consentDate = localStorage.getItem('cookie_consent_date');
+    
+    // If no consent or consent rejected, deny analytics
+    if (consent === 'rejected' || consent === null) {
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'wait_for_update': 500
+      });
+    }
+    
+    // If consent is older than 6 months, it's expired
+    if (consentDate) {
+      const sixMonthsAgo = new Date();
+      sixMonthsAgo.setMonth(sixMonthsAgo.getMonth() - 6);
+      const lastConsent = new Date(consentDate);
+      
+      if (lastConsent < sixMonthsAgo) {
+        // Consent expired - treat as no consent
+        gtag('consent', 'update', {
+          'analytics_storage': 'denied',
+          'ad_storage': 'denied'
+        });
+      }
+    }
+  })();
+  
+  
+  // ============================================
+  // DEBUG MODE (for testing)
+  // ============================================
+  
+</script>
+
+<!-- ============================================
+     ENHANCED TRACKING FOR WEDDING PHOTOGRAPHY
+     ============================================ -->
+<script src="/assets/js/analytics-enhanced.js" defer></script>
+
+
+
+
+
+
+<div id="cookie-consent-banner" class="fixed bottom-0 left-0 right-0 bg-cornwall-navy/95 text-white p-4 z-50 hidden backdrop-blur-sm border-t border-white/10">
+  <div class="container mx-auto">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="md:flex-1">
+        <p class="text-sm md:text-base">
+          <span class="font-semibold">🍪 We use cookies</span> to improve your experience and analyze site traffic. 
+          By continuing, you agree to our use of cookies. 
+          <a href="/privacy" class="text-cornwall-blush underline hover:no-underline ml-1">Privacy Policy</a>
+        </p>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <button onclick="acceptAllCookies()" 
+                class="px-4 py-2 bg-cornwall-blush text-cornwall-navy rounded-lg font-semibold text-sm hover:bg-cornwall-blush/90 transition-colors whitespace-nowrap">
+          Accept All
+        </button>
+        <button onclick="acceptNecessaryCookies()" 
+                class="px-4 py-2 bg-white/10 rounded-lg text-sm hover:bg-white/20 transition-colors whitespace-nowrap">
+          Necessary Only
+        </button>
+        <button onclick="openCookieSettings()" 
+                class="px-4 py-2 text-sm text-white/70 hover:text-white transition-colors whitespace-nowrap">
+          Preferences
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Cookie consent functions
+function acceptAllCookies() {
+  localStorage.setItem('cookie_consent', 'accepted');
+  localStorage.setItem('cookie_consent_date', new Date().toISOString());
+  
+  // Update GA4 consent
+  if (typeof gtag !== 'undefined') {
+    gtag('consent', 'update', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted'
+    });
+  }
+  
+  document.getElementById('cookie-consent-banner').classList.add('hidden');
+  showToast('Cookie preferences saved. Thank you!');
+}
+
+function acceptNecessaryCookies() {
+  localStorage.setItem('cookie_consent', 'rejected');
+  localStorage.setItem('cookie_consent_date', new Date().toISOString());
+  
+  // Update GA4 consent
+  if (typeof gtag !== 'undefined') {
+    gtag('consent', 'update', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied'
+    });
+  }
+  
+  document.getElementById('cookie-consent-banner').classList.add('hidden');
+  showToast('Only necessary cookies enabled.');
+}
+
+function openCookieSettings() {
+  // Implement cookie settings modal if needed
+  alert('Cookie settings would open here. For now, use "Accept All" or "Necessary Only".');
+}
+
+function showToast(message) {
+  const toast = document.createElement('div');
+  toast.className = 'fixed bottom-4 right-4 bg-cornwall-sage text-white px-4 py-2 rounded-lg shadow-lg z-50 animate-fade-in';
+  toast.textContent = message;
+  document.body.appendChild(toast);
+  
+  setTimeout(() => {
+    toast.remove();
+  }, 3000);
+}
+
+// Check cookie consent on page load
+document.addEventListener('DOMContentLoaded', function() {
+  const consent = localStorage.getItem('cookie_consent');
+  const consentDate = localStorage.getItem('cookie_consent_date');
+  
+  // Show banner if no consent or consent is older than 6 months
+  if (!consent || !consentDate) {
+    document.getElementById('cookie-consent-banner').classList.remove('hidden');
+  } else {
+    const sixMonthsAgo = new Date();
+    sixMonthsAgo.setMonth(sixMonthsAgo.getMonth() - 6);
+    const lastConsent = new Date(consentDate);
+    
+    if (lastConsent < sixMonthsAgo) {
+      document.getElementById('cookie-consent-banner').classList.remove('hidden');
+    }
+  }
+});
+</script>
+
+<style>
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
 
 </head>
 <body>
@@ -740,6 +946,14 @@ On the day, from start to finish, Mike and Rob were incredibly polite, organised
           // Success
           alert("Thank you! Your enquiry has been submitted. We'll be in touch within 24 hours.");
           form.reset(); // Clear the form
+
+          //Track
+          if (typeof trackAnalyticsEvent !== 'undefined') {
+          trackAnalyticsEvent('Conversion', 'form_submit_success', 'Contact Form', 1, {
+            'form_type': 'website_enquiry',
+            'lead_source': 'website'
+          });
+          }
           
           // Reset button state
           setTimeout(() => {
