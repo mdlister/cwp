@@ -632,8 +632,8 @@ On the day, from start to finish, Mike and Rob were incredibly polite, organised
   <div id="result" style="margin-top: 15px; padding: 10px; border-radius: 5px; display: none;"></div>
 </form>
 
-<!-- ONLY FormCapture script -->
-<script src="https://cxppusa1formui01cdnsa01-endpoint.azureedge.net/gbr/FormCapture/FormCapture.bundle.js"></script>
+<p>// ONLY FormCapture script
+<script src="https://cxppusa1formui01cdnsa01-endpoint.azureedge.net/gbr/FormCapture/FormCapture.bundle.js"></script></p>
 
 <script>
 // Wait for the test form
@@ -643,68 +643,59 @@ d365mktformcapture.waitForElement("#test-form")
     const submitBtn = document.getElementById('submit-btn');
     const resultDiv = document.getElementById('result');
     
-    // SIMPLIFIED MAPPINGS - only what FormLoader uses
+    // FIXED: Use NAME attributes, not IDs or CSS selectors
     const mappings = [
         {
-            FormFieldName: "#test-name",
+            FormFieldName: "name", // Just the name attribute
             DataverseFieldName: "lastname",
         },
         {
-            FormFieldName: "#test-email",
+            FormFieldName: "email", // Just the name attribute
             DataverseFieldName: "emailaddress1",
         },
         {
-            FormFieldName: "#test-message",
+            FormFieldName: "message", // Just the name attribute
             DataverseFieldName: "description",
         },
         {
-            FormFieldName: "input[name='cwp-subject']",
+            FormFieldName: "cwp-subject", // Hidden field name
             DataverseFieldName: "subject",
         },
         {
-            FormFieldName: "input[name='cwp-leadsourcecode']",
+            FormFieldName: "cwp-leadsourcecode", // Hidden field name
             DataverseFieldName: "leadsourcecode",
             DataverseFieldValue: [
                 { FormValue: "Website Enquiry", DataverseValue: "3" },
             ],
         },
         {
-            FormFieldName: "input[name='cwp-leadsourcetype']",
+            FormFieldName: "cwp-leadsourcetype", // Hidden field name
             DataverseFieldName: "msdyncrm_leadsourcetype",
             DataverseFieldValue: [
                 { FormValue: "Sales", DataverseValue: "192350001" },
             ],
         },
         {
-            FormFieldName: "input[name='cwp-leadtype']",
+            FormFieldName: "cwp-leadtype", // Hidden field name
             DataverseFieldName: "mlp_leadtype",
             DataverseFieldValue: [
                 { FormValue: "Wedding", DataverseValue: "864330002" },
             ],
         },
         {
-            FormFieldName: "input[name='cwp-leadsubtype']",
+            FormFieldName: "cwp-leadsubtype", // Hidden field name
             DataverseFieldName: "mlp_leadsubtype",
             DataverseFieldValue: [
                 { FormValue: "Wedding", DataverseValue: "864330000" },
             ],
         },
-        // CONSENT MAPPING - try different field names
+        // CONSENT - use name attribute
         {
-            FormFieldName: "#test-consent",
-            DataverseFieldName: "msdyn_consentgiven", // Common consent field
+            FormFieldName: "consent", // Just the name attribute
+            DataverseFieldName: "msdyn_consentgiven",
             DataverseFieldValue: [
                 { FormValue: "true", DataverseValue: "true" },
                 { FormValue: "false", DataverseValue: "false" }
-            ]
-        },
-        // Alternative consent fields if above doesn't work
-        {
-            FormFieldName: "#test-consent",
-            DataverseFieldName: "donotemail", // Sometimes consent is inverse
-            DataverseFieldValue: [
-                { FormValue: "true", DataverseValue: "false" }, // Consent = do not email = false
-                { FormValue: "false", DataverseValue: "true" }
             ]
         }
     ];
@@ -719,6 +710,12 @@ d365mktformcapture.waitForElement("#test-form")
         }
         
         console.log("Form submitted, preparing data...");
+        console.log("Form values:", {
+            name: form.querySelector('[name="name"]').value,
+            email: form.querySelector('[name="email"]').value,
+            message: form.querySelector('[name="message"]').value,
+            consent: form.querySelector('[name="consent"]').checked
+        });
         
         // Show loading state
         submitBtn.disabled = true;
