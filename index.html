@@ -619,6 +619,9 @@ On the day, from start to finish, Mike and Rob were incredibly polite, organised
   <div id="result-noconsent" style="margin-top: 15px; padding: 10px; border-radius: 5px; display: none;"></div>
 </form>
 
+<!-- ⭐⭐ CRITICAL: ADD THIS SCRIPT INCLUDE ⭐⭐ -->
+<script src="https://cxppusa1formui01cdnsa01-endpoint.azureedge.net/gbr/FormCapture/FormCapture.bundle.js"></script>
+
 <script>
 // Wait for the no-consent form
 d365mktformcapture.waitForElement("#test-form-no-consent")
@@ -716,6 +719,8 @@ d365mktformcapture.waitForElement("#test-form-no-consent")
 })
 .catch(error => {
     console.error("NO-consent form init failed:", error);
+    document.getElementById('result-noconsent').innerHTML = "Failed to load FormCapture. Check script include.";
+    document.getElementById('result-noconsent').style.display = 'block';
 });
 </script>
 
