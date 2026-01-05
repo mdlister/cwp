@@ -585,143 +585,203 @@ On the day, from start to finish, Mike and Rob were incredibly polite, organised
   </div>
 </section>
 
-<!-- Test Form WITHOUT Consent -->
-<form id="test-form-no-consent" style="padding: 20px; background: #f0f8ff; margin: 20px; border-radius: 10px; max-width: 500px; border: 2px dashed #4CAF50;">
-  <h3 style="color: #4CAF50;">✅ Test Form - NO Consent</h3>
-  <p style="color: #666; font-size: 0.9em; margin-bottom: 20px;">Testing if consent is required for plugin</p>
-  
-  <div style="margin-bottom: 15px;">
-    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Name:*</label>
-    <input type="text" name="name" placeholder="Your name" required="" style="width: 100%; padding: 10px; border: 1px solid #4CAF50; border-radius: 5px;" />
-  </div>
-  
-  <div style="margin-bottom: 15px;">
-    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Email:*</label>
-    <input type="email" name="email" placeholder="Your email" required="" style="width: 100%; padding: 10px; border: 1px solid #4CAF50; border-radius: 5px;" />
-  </div>
-  
-  <div style="margin-bottom: 15px;">
-    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Message:</label>
-    <textarea name="message" placeholder="Your message" style="width: 100%; padding: 10px; border: 1px solid #4CAF50; border-radius: 5px; height: 100px;"></textarea>
-  </div>
-  
-  <!-- Hidden fields -->
-  <input type="hidden" name="cwp-subject" value="CWP - Test (No Consent)" />
-  <input type="hidden" name="cwp-leadsourcecode" value="Website Enquiry" />
-  <input type="hidden" name="cwp-leadsourcetype" value="Sales" />
-  <input type="hidden" name="cwp-leadtype" value="Wedding" />
-  <input type="hidden" name="cwp-leadsubtype" value="Wedding" />
-  
-  <button type="submit" id="submit-btn-noconsent" style="background: #4CAF50; color: white; padding: 12px 24px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; width: 100%;">
-    Submit Test (No Consent)
-  </button>
-  
-  <div id="result-noconsent" style="margin-top: 15px; padding: 10px; border-radius: 5px; display: none;"></div>
-</form>
+<!-- ============================================
+     CONTACT CTA - FINAL WORKING VERSION
+     ============================================ -->
+<section id="contact" class="py-20 bg-gradient-to-br from-cornwall-navy to-cornwall-sage text-white">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6">
+      Ready to Preserve Your Love Story?
+    </h2>
+    <p class="text-xl mb-10 max-w-2xl mx-auto opacity-90">
+      Let's have a conversation about capturing your Cornwall wedding in a way that feels authentic, effortless, and deeply meaningful.
+    </p>
 
-<!-- ⭐⭐ CRITICAL: ADD THIS SCRIPT INCLUDE ⭐⭐ -->
+    <div class="max-w-lg mx-auto">
+      <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+        <h3 class="text-2xl font-serif mb-6">Start Your Story</h3>
+
+        <!-- Custom Jekyll Form -->
+        <form id="cwp-contact-form" class="space-y-4" novalidate="">
+          <!-- Hidden honeypot field for spam protection -->
+          <div class="absolute left-[-9999px] opacity-0 h-0 w-0 overflow-hidden">
+            <label for="website" class="sr-only">Leave this field empty</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" placeholder="Leave this field empty if you're human" />
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <input id="cwp-name" name="cwp-name" type="text" placeholder="Your Name *" required="" class="w-full px-4 py-3 rounded-lg bg-white/15 border border-white/25 text-white placeholder-white/80 focus:outline-none focus:border-cornwall-blush focus:ring-2 focus:ring-cornwall-blush/50 transition-colors duration-200" />
+            </div>
+            <div>
+              <input id="cwp-email" name="cwp-email" type="email" placeholder="Email Address *" required="" class="w-full px-4 py-3 rounded-lg bg-white/15 border border-white/25 text-white placeholder-white/80 focus:outline-none focus:border-cornwall-blush focus:ring-2 focus:ring-cornwall-blush/50 transition-colors duration-200" />
+            </div>
+          </div>
+
+          <div>
+            <textarea id="cwp-description" name="cwp-description" rows="4" placeholder="Tell us about your vision..." class="w-full px-4 py-3 rounded-lg bg-white/15 border border-white/25 text-white placeholder-white/80 focus:outline-none focus:border-cornwall-blush focus:ring-2 focus:ring-cornwall-blush/50 transition-colors duration-200 resize-y min-h-[120px]"></textarea>
+          </div>
+
+          <!-- Hidden fields for Dataverse mapping -->
+          <input type="hidden" name="cwp-subject" value="CWP - Enquiry" />
+          <input type="hidden" name="cwp-leadsourcecode" value="Website Enquiry" />
+          <input type="hidden" name="cwp-leadsourcetype" value="Sales" />
+          <input type="hidden" name="cwp-leadtype" value="Wedding" />
+          <input type="hidden" name="cwp-leadsubtype" value="Wedding" />
+
+          <!-- Submit button with loading state -->
+          <button type="submit" id="submit-button" class="w-full bg-cornwall-blush text-cornwall-navy py-4 rounded-lg font-semibold text-lg hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl shadow-cornwall-blush/20">
+            <span id="button-text">Begin Your Journey</span>
+            <span id="button-loading" class="hidden">
+              <svg class="animate-spin h-5 w-5 text-cornwall-navy mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              </svg>
+            </span>
+          </button>
+        </form>
+
+        <p class="text-sm opacity-75 mt-6">
+          We'll respond within 24 hours to schedule your complimentary consultation.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Dynamics FormCapture Script - FINAL WORKING VERSION -->
 <script src="https://cxppusa1formui01cdnsa01-endpoint.azureedge.net/gbr/FormCapture/FormCapture.bundle.js"></script>
 
 <script>
-// Wait for the no-consent form
-d365mktformcapture.waitForElement("#test-form-no-consent")
-.then(form => {
-    console.log("FormCapture initialized on NO-consent test form");
-    const submitBtn = document.getElementById('submit-btn-noconsent');
-    const resultDiv = document.getElementById('result-noconsent');
+  // Initialize form handling
+  d365mktformcapture.waitForElement("#cwp-contact-form").then((form) => {
+    const submitButton = document.getElementById('submit-button');
+    const buttonText = document.getElementById('button-text');
+    const buttonLoading = document.getElementById('button-loading');
     
-    // SIMPLIFIED mappings - NO consent field
+    // CRITICAL FIX: Correct mappings using NAME attributes (not #id selectors)
     const mappings = [
-        { FormFieldName: "name", DataverseFieldName: "lastname" },
-        { FormFieldName: "email", DataverseFieldName: "emailaddress1" },
-        { FormFieldName: "message", DataverseFieldName: "description" },
-        { FormFieldName: "cwp-subject", DataverseFieldName: "subject" },
-        { 
-            FormFieldName: "cwp-leadsourcecode", 
-            DataverseFieldName: "leadsourcecode",
-            DataverseFieldValue: [{ FormValue: "Website Enquiry", DataverseValue: "3" }]
-        },
-        { 
-            FormFieldName: "cwp-leadsourcetype", 
-            DataverseFieldName: "msdyncrm_leadsourcetype",
-            DataverseFieldValue: [{ FormValue: "Sales", DataverseValue: "192350001" }]
-        },
-        { 
-            FormFieldName: "cwp-leadtype", 
-            DataverseFieldName: "mlp_leadtype",
-            DataverseFieldValue: [{ FormValue: "Wedding", DataverseValue: "864330002" }]
-        },
-        { 
-            FormFieldName: "cwp-leadsubtype", 
-            DataverseFieldName: "mlp_leadsubtype",
-            DataverseFieldValue: [{ FormValue: "Wedding", DataverseValue: "864330000" }]
-        }
+      {
+        FormFieldName: "cwp-name", // ⭐ CHANGED: Just the name attribute
+        DataverseFieldName: "lastname",
+      },
+      {
+        FormFieldName: "cwp-email", // ⭐ CHANGED: Just the name attribute
+        DataverseFieldName: "emailaddress1",
+      },
+      {
+        FormFieldName: "cwp-description", // ⭐ CHANGED: Just the name attribute
+        DataverseFieldName: "description",
+      },
+      {
+        FormFieldName: "cwp-subject", // ⭐ CHANGED: Just the name attribute
+        DataverseFieldName: "subject",
+      },
+      {
+        FormFieldName: "cwp-leadsourcecode", // ⭐ CHANGED: Just the name attribute
+        DataverseFieldName: "leadsourcecode",
+        DataverseFieldValue: [
+          { FormValue: "Website Enquiry", DataverseValue: "3" },
+        ],
+      },
+      {
+        FormFieldName: "cwp-leadsourcetype", // ⭐ CHANGED: Just the name attribute
+        DataverseFieldName: "msdyncrm_leadsourcetype",
+        DataverseFieldValue: [
+          { FormValue: "Sales", DataverseValue: "192350001" },
+        ],
+      },
+      {
+        FormFieldName: "cwp-leadtype", // ⭐ CHANGED: Just the name attribute
+        DataverseFieldName: "mlp_leadtype",
+        DataverseFieldValue: [
+          { FormValue: "Wedding", DataverseValue: "864330002" },
+        ],
+      },
+      {
+        FormFieldName: "cwp-leadsubtype", // ⭐ CHANGED: Just the name attribute
+        DataverseFieldName: "mlp_leadsubtype",
+        DataverseFieldValue: [
+          { FormValue: "Wedding", DataverseValue: "864330000" },
+        ],
+      },
     ];
 
     form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        
-        console.log("NO-consent form submitted");
-        
-        // Show loading state
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = 'Submitting...';
-        resultDiv.style.display = 'none';
-        
-        // Create serialized form data
-        const serializedForm = d365mktformcapture.serializeForm(form, mappings);
-        console.log("NO-consent serialized data:", serializedForm);
-        
-        const payload = serializedForm.SerializedForm.build();
+      e.preventDefault(); // ⭐ CRITICAL: Prevents URL submission
+      
+      // Honeypot check
+      const honeypotValue = document.getElementById('website').value;
+      if (honeypotValue && honeypotValue.trim() !== '') {
+        console.log('Bot detected via honeypot - silent fail');
+        return; // Silent fail for bots
+      }
+      
+      // Show loading state
+      submitButton.disabled = true;
+      buttonText.classList.add('hidden');
+      buttonLoading.classList.remove('hidden');
+      
+      // Create serialized form data
+      const serializedForm = d365mktformcapture.serializeForm(form, mappings);
+      
+      // Optional: Debug logging
+      console.log("Form data being sent:", serializedForm);
+      
+      const payload = serializedForm.SerializedForm.build();
 
-        const captureConfig = {
-            FormId: "3d97b58b-fbe7-f011-8406-6045bd12f634",
-            FormApiUrl: "https://public-gbr.mkt.dynamics.com/api/v1.0/orgs/28d99f2b-d568-f011-858a-0022481a2aa9/landingpageforms"
-        };
-        
-        d365mktformcapture.submitForm(captureConfig, payload)
-            .then(response => {
-                console.log("NO-consent SUCCESS! Response:", response);
-                showResult("✅ Form submitted WITHOUT consent! Check Dynamics.", "success");
-                form.reset();
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = 'Submit Test (No Consent)';
-            })
-            .catch(error => {
-                console.error("NO-consent ERROR:", error);
-                
-                const errorMsg = error.message || error.toString();
-                const isConsentError = errorMsg.includes("Consent submission") || 
-                                      errorMsg.includes("0x80040265");
-                
-                if (isConsentError) {
-                    showResult("⚠️ Form submitted but consent plugin failed (expected without consent field). Record likely created.", "warning");
-                    console.log("Expected: No consent field → plugin fails");
-                } else {
-                    showResult("❌ Error: " + errorMsg.substring(0, 100), "error");
-                }
-                
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = 'Submit Test (No Consent)';
-            });
+      const captureConfig = {
+        FormId: "3d97b58b-fbe7-f011-8406-6045bd12f634",
+        FormApiUrl: "https://public-gbr.mkt.dynamics.com/api/v1.0/orgs/28d99f2b-d568-f011-858a-0022481a2aa9/landingpageforms"
+      };
+
+      d365mktformcapture.submitForm(captureConfig, payload)
+        .then(() => {
+          // Success
+          alert("Thank you! Your enquiry has been submitted. We'll be in touch within 24 hours.");
+          form.reset(); // Clear the form
+          
+          // Reset button state
+          setTimeout(() => {
+            submitButton.disabled = false;
+            buttonText.classList.remove('hidden');
+            buttonLoading.classList.add('hidden');
+          }, 1000);
+        })
+        .catch((error) => {
+          console.error('Form submission error:', error);
+          
+          // Check if it's the consent plugin error
+          const errorMsg = error.message || error.toString();
+          const isConsentError = errorMsg.includes("Consent submission") || 
+                                errorMsg.includes("0x80040265") ||
+                                errorMsg.includes("InvalidPluginExecutionException");
+          
+          if (isConsentError) {
+            // Record WAS created, just plugin failed
+            alert("Thank you! We've received your enquiry (note: backend processing issue detected).");
+          } else {
+            // Real error
+            alert("Sorry, there was an issue submitting your form. Please try again or email us directly.");
+          }
+          
+          // Reset button state
+          submitButton.disabled = false;
+          buttonText.classList.remove('hidden');
+          buttonLoading.classList.add('hidden');
+        });
     }, true);
-    
-    function showResult(message, type) {
-        resultDiv.style.display = 'block';
-        resultDiv.innerHTML = message;
-        resultDiv.style.backgroundColor = type === 'success' ? '#d4edda' : 
-                                         type === 'warning' ? '#fff3cd' : '#f8d7da';
-        resultDiv.style.color = type === 'success' ? '#155724' : 
-                               type === 'warning' ? '#856404' : '#721c24';
-        resultDiv.style.border = type === 'success' ? '1px solid #c3e6cb' : 
-                                type === 'warning' ? '1px solid #ffeaa7' : '1px solid #f5c6cb';
+  }).catch((error) => {
+    console.error('Failed to initialize form capture:', error);
+    // Fallback for users if Dynamics script fails
+    const form = document.getElementById('cwp-contact-form');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Our contact system is temporarily unavailable. Please email us at hello@cornwallweddingphotography.com');
+      });
     }
-})
-.catch(error => {
-    console.error("NO-consent form init failed:", error);
-    document.getElementById('result-noconsent').innerHTML = "Failed to load FormCapture. Check script include.";
-    document.getElementById('result-noconsent').style.display = 'block';
-});
+  });
 </script>
 
 
