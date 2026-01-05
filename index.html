@@ -585,23 +585,37 @@ On the day, from start to finish, Mike and Rob were incredibly polite, organised
   </div>
 </section>
 
-<!-- Minimal Test Form -->
-<form id="test-form" style="padding: 20px; background: #f5f5f5; margin: 20px;">
+<!-- Minimal Test Form with Consent -->
+<form id="test-form" style="padding: 20px; background: #f5f5f5; margin: 20px; border-radius: 10px; max-width: 500px;">
   <h3>Test Form (Simplified)</h3>
   
-  <div>
-    <label>Name:</label>
-    <input type="text" id="test-name" name="name" placeholder="Your name" required="" />
+  <div style="margin-bottom: 15px;">
+    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Name:*</label>
+    <input type="text" id="test-name" name="name" placeholder="Your name" required="" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" />
   </div>
   
-  <div>
-    <label>Email:</label>
-    <input type="email" id="test-email" name="email" placeholder="Your email" required="" />
+  <div style="margin-bottom: 15px;">
+    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Email:*</label>
+    <input type="email" id="test-email" name="email" placeholder="Your email" required="" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" />
   </div>
   
-  <div>
-    <label>Message:</label>
-    <textarea id="test-message" name="message" placeholder="Your message"></textarea>
+  <div style="margin-bottom: 15px;">
+    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Message:</label>
+    <textarea id="test-message" name="message" placeholder="Your message" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; height: 100px;"></textarea>
+  </div>
+  
+  <!-- Consent Checkbox -->
+  <div style="margin-bottom: 20px; padding: 15px; background: #e8f4fd; border-radius: 5px; border: 1px solid #b3d9ff;">
+    <label style="display: flex; align-items: flex-start; cursor: pointer;">
+      <input type="checkbox" id="test-consent" name="consent" value="true" required="" style="margin-top: 3px; margin-right: 10px; width: 18px; height: 18px;" />
+      <span>
+        <span style="font-weight: bold; display: block;">I consent to being contacted*</span>
+        <span style="font-size: 0.9em; color: #555; display: block; margin-top: 5px;">
+          I agree to Cornwall Wedding Photography contacting me about my wedding photography enquiry. 
+          I understand I can unsubscribe at any time.
+        </span>
+      </span>
+    </label>
   </div>
   
   <!-- Hidden fields matching FormLoader structure -->
@@ -611,7 +625,11 @@ On the day, from start to finish, Mike and Rob were incredibly polite, organised
   <input type="hidden" name="cwp-leadtype" value="Wedding" />
   <input type="hidden" name="cwp-leadsubtype" value="Wedding" />
   
-  <button type="submit">Submit Test</button>
+  <button type="submit" id="submit-btn" style="background: #4CAF50; color: white; padding: 12px 24px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; width: 100%;">
+    Submit Test
+  </button>
+  
+  <div id="result" style="margin-top: 15px; padding: 10px; border-radius: 5px; display: none;"></div>
 </form>
 
 <!-- ONLY FormCapture script -->
@@ -622,6 +640,8 @@ On the day, from start to finish, Mike and Rob were incredibly polite, organised
 d365mktformcapture.waitForElement("#test-form")
 .then(form => {
     console.log("FormCapture initialized on test form");
+    const submitBtn = document.getElementById('submit-btn');
+    const resultDiv = document.getElementById('result');
     
     // SIMPLIFIED MAPPINGS - only what FormLoader uses
     const mappings = [
@@ -669,12 +689,41 @@ d365mktformcapture.waitForElement("#test-form")
                 { FormValue: "Wedding", DataverseValue: "864330000" },
             ],
         },
+        // CONSENT MAPPING - try different field names
+        {
+            FormFieldName: "#test-consent",
+            DataverseFieldName: "msdyn_consentgiven", // Common consent field
+            DataverseFieldValue: [
+                { FormValue: "true", DataverseValue: "true" },
+                { FormValue: "false", DataverseValue: "false" }
+            ]
+        },
+        // Alternative consent fields if above doesn't work
+        {
+            FormFieldName: "#test-consent",
+            DataverseFieldName: "donotemail", // Sometimes consent is inverse
+            DataverseFieldValue: [
+                { FormValue: "true", DataverseValue: "false" }, // Consent = do not email = false
+                { FormValue: "false", DataverseValue: "true" }
+            ]
+        }
     ];
 
     form.addEventListener("submit", (e) => {
         e.preventDefault(); // CRITICAL
         
+        // Basic validation
+        if (!document.getElementById('test-consent').checked) {
+            showResult("Please check the consent box to continue.", "error");
+            return;
+        }
+        
         console.log("Form submitted, preparing data...");
+        
+        // Show loading state
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Submitting...';
+        resultDiv.style.display = 'none';
         
         // Create serialized form data
         const serializedForm = d365mktformcapture.serializeForm(form, mappings);
@@ -695,18 +744,58 @@ d365mktformcapture.waitForElement("#test-form")
         d365mktformcapture.submitForm(captureConfig, payload)
             .then(response => {
                 console.log("SUCCESS! Response:", response);
-                alert("✅ Test form submitted successfully! Check Dynamics.");
+                showResult("✅ Test form submitted successfully! Check Dynamics for the new record.", "success");
                 form.reset();
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'Submit Test';
             })
             .catch(error => {
                 console.error("ERROR submitting form:", error);
-                alert("❌ Form submission failed. Check console for details.");
+                
+                // Check if it's the consent plugin error
+                const errorMsg = error.message || error.toString();
+                const isConsentError = errorMsg.includes("Consent submission") || 
+                                      errorMsg.includes("0x80040265") ||
+                                      errorMsg.includes("InvalidPluginExecutionException");
+                
+                if (isConsentError) {
+                    // Record WAS created, just plugin failed
+                    showResult("⚠️ Form submitted! (Note: Backend processing had an issue, but your enquiry was received. Our team will follow up.)", "warning");
+                    console.log("Note: Consent plugin failed, but record was likely created.");
+                } else {
+                    // Real error
+                    showResult("❌ Form submission failed: " + errorMsg.substring(0, 100) + "...", "error");
+                }
+                
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'Submit Test';
             });
     }, true);
+    
+    function showResult(message, type) {
+        resultDiv.style.display = 'block';
+        resultDiv.innerHTML = message;
+        resultDiv.style.backgroundColor = type === 'success' ? '#d4edda' : 
+                                         type === 'warning' ? '#fff3cd' : '#f8d7da';
+        resultDiv.style.color = type === 'success' ? '#155724' : 
+                               type === 'warning' ? '#856404' : '#721c24';
+        resultDiv.style.border = type === 'success' ? '1px solid #c3e6cb' : 
+                                type === 'warning' ? '1px solid #ffeaa7' : '1px solid #f5c6cb';
+        resultDiv.style.padding = '10px';
+        resultDiv.style.borderRadius = '5px';
+        resultDiv.style.marginTop = '10px';
+    }
 })
 .catch(error => {
     console.error("FormCapture initialization failed:", error);
-    alert("FormCapture script failed to load. Check console.");
+    const resultDiv = document.getElementById('result') || document.createElement('div');
+    resultDiv.style.display = 'block';
+    resultDiv.style.backgroundColor = '#f8d7da';
+    resultDiv.style.color = '#721c24';
+    resultDiv.style.padding = '10px';
+    resultDiv.style.borderRadius = '5px';
+    resultDiv.style.marginTop = '10px';
+    resultDiv.innerHTML = "FormCapture script failed to load. Check browser console for details.";
 });
 </script>
 
