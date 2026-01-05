@@ -632,90 +632,80 @@ On the day, from start to finish, Mike and Rob were incredibly polite, organised
   <div id="result" style="margin-top: 15px; padding: 10px; border-radius: 5px; display: none;"></div>
 </form>
 
-<p>// ONLY FormCapture script
-<script src="https://cxppusa1formui01cdnsa01-endpoint.azureedge.net/gbr/FormCapture/FormCapture.bundle.js"></script></p>
+<!-- Test Form WITHOUT Consent -->
+<form id="test-form-no-consent" style="padding: 20px; background: #f0f8ff; margin: 20px; border-radius: 10px; max-width: 500px; border: 2px dashed #4CAF50;">
+  <h3 style="color: #4CAF50;">✅ Test Form - NO Consent</h3>
+  <p style="color: #666; font-size: 0.9em; margin-bottom: 20px;">Testing if consent is required for plugin</p>
+  
+  <div style="margin-bottom: 15px;">
+    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Name:*</label>
+    <input type="text" name="name" placeholder="Your name" required="" style="width: 100%; padding: 10px; border: 1px solid #4CAF50; border-radius: 5px;" />
+  </div>
+  
+  <div style="margin-bottom: 15px;">
+    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Email:*</label>
+    <input type="email" name="email" placeholder="Your email" required="" style="width: 100%; padding: 10px; border: 1px solid #4CAF50; border-radius: 5px;" />
+  </div>
+  
+  <div style="margin-bottom: 15px;">
+    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Message:</label>
+    <textarea name="message" placeholder="Your message" style="width: 100%; padding: 10px; border: 1px solid #4CAF50; border-radius: 5px; height: 100px;"></textarea>
+  </div>
+  
+  <!-- Hidden fields -->
+  <input type="hidden" name="cwp-subject" value="CWP - Test (No Consent)" />
+  <input type="hidden" name="cwp-leadsourcecode" value="Website Enquiry" />
+  <input type="hidden" name="cwp-leadsourcetype" value="Sales" />
+  <input type="hidden" name="cwp-leadtype" value="Wedding" />
+  <input type="hidden" name="cwp-leadsubtype" value="Wedding" />
+  
+  <button type="submit" id="submit-btn-noconsent" style="background: #4CAF50; color: white; padding: 12px 24px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; width: 100%;">
+    Submit Test (No Consent)
+  </button>
+  
+  <div id="result-noconsent" style="margin-top: 15px; padding: 10px; border-radius: 5px; display: none;"></div>
+</form>
 
 <script>
-// Wait for the test form
-d365mktformcapture.waitForElement("#test-form")
+// Wait for the no-consent form
+d365mktformcapture.waitForElement("#test-form-no-consent")
 .then(form => {
-    console.log("FormCapture initialized on test form");
-    const submitBtn = document.getElementById('submit-btn');
-    const resultDiv = document.getElementById('result');
+    console.log("FormCapture initialized on NO-consent test form");
+    const submitBtn = document.getElementById('submit-btn-noconsent');
+    const resultDiv = document.getElementById('result-noconsent');
     
-    // FIXED: Use NAME attributes, not IDs or CSS selectors
+    // SIMPLIFIED mappings - NO consent field
     const mappings = [
-        {
-            FormFieldName: "name", // Just the name attribute
-            DataverseFieldName: "lastname",
-        },
-        {
-            FormFieldName: "email", // Just the name attribute
-            DataverseFieldName: "emailaddress1",
-        },
-        {
-            FormFieldName: "message", // Just the name attribute
-            DataverseFieldName: "description",
-        },
-        {
-            FormFieldName: "cwp-subject", // Hidden field name
-            DataverseFieldName: "subject",
-        },
-        {
-            FormFieldName: "cwp-leadsourcecode", // Hidden field name
+        { FormFieldName: "name", DataverseFieldName: "lastname" },
+        { FormFieldName: "email", DataverseFieldName: "emailaddress1" },
+        { FormFieldName: "message", DataverseFieldName: "description" },
+        { FormFieldName: "cwp-subject", DataverseFieldName: "subject" },
+        { 
+            FormFieldName: "cwp-leadsourcecode", 
             DataverseFieldName: "leadsourcecode",
-            DataverseFieldValue: [
-                { FormValue: "Website Enquiry", DataverseValue: "3" },
-            ],
+            DataverseFieldValue: [{ FormValue: "Website Enquiry", DataverseValue: "3" }]
         },
-        {
-            FormFieldName: "cwp-leadsourcetype", // Hidden field name
+        { 
+            FormFieldName: "cwp-leadsourcetype", 
             DataverseFieldName: "msdyncrm_leadsourcetype",
-            DataverseFieldValue: [
-                { FormValue: "Sales", DataverseValue: "192350001" },
-            ],
+            DataverseFieldValue: [{ FormValue: "Sales", DataverseValue: "192350001" }]
         },
-        {
-            FormFieldName: "cwp-leadtype", // Hidden field name
+        { 
+            FormFieldName: "cwp-leadtype", 
             DataverseFieldName: "mlp_leadtype",
-            DataverseFieldValue: [
-                { FormValue: "Wedding", DataverseValue: "864330002" },
-            ],
+            DataverseFieldValue: [{ FormValue: "Wedding", DataverseValue: "864330002" }]
         },
-        {
-            FormFieldName: "cwp-leadsubtype", // Hidden field name
+        { 
+            FormFieldName: "cwp-leadsubtype", 
             DataverseFieldName: "mlp_leadsubtype",
-            DataverseFieldValue: [
-                { FormValue: "Wedding", DataverseValue: "864330000" },
-            ],
-        },
-        // CONSENT - use name attribute
-        {
-            FormFieldName: "consent", // Just the name attribute
-            DataverseFieldName: "msdyn_consentgiven",
-            DataverseFieldValue: [
-                { FormValue: "true", DataverseValue: "true" },
-                { FormValue: "false", DataverseValue: "false" }
-            ]
+            DataverseFieldValue: [{ FormValue: "Wedding", DataverseValue: "864330000" }]
         }
     ];
 
     form.addEventListener("submit", (e) => {
-        e.preventDefault(); // CRITICAL
+        e.preventDefault();
         
-        // Basic validation
-        if (!document.getElementById('test-consent').checked) {
-            showResult("Please check the consent box to continue.", "error");
-            return;
-        }
-        
-        console.log("Form submitted, preparing data...");
-        console.log("Form values:", {
-            name: form.querySelector('[name="name"]').value,
-            email: form.querySelector('[name="email"]').value,
-            message: form.querySelector('[name="message"]').value,
-            consent: form.querySelector('[name="consent"]').checked
-        });
+        console.log("NO-consent form submitted");
         
         // Show loading state
         submitBtn.disabled = true;
@@ -724,48 +714,39 @@ d365mktformcapture.waitForElement("#test-form")
         
         // Create serialized form data
         const serializedForm = d365mktformcapture.serializeForm(form, mappings);
-        
-        // DEBUG: Log what's being sent
-        console.log("Serialized form data:", JSON.stringify(serializedForm, null, 2));
+        console.log("NO-consent serialized data:", serializedForm);
         
         const payload = serializedForm.SerializedForm.build();
-        console.log("Final payload:", payload);
 
         const captureConfig = {
             FormId: "3d97b58b-fbe7-f011-8406-6045bd12f634",
             FormApiUrl: "https://public-gbr.mkt.dynamics.com/api/v1.0/orgs/28d99f2b-d568-f011-858a-0022481a2aa9/landingpageforms"
         };
         
-        console.log("Submitting to Dynamics...");
-        
         d365mktformcapture.submitForm(captureConfig, payload)
             .then(response => {
-                console.log("SUCCESS! Response:", response);
-                showResult("✅ Test form submitted successfully! Check Dynamics for the new record.", "success");
+                console.log("NO-consent SUCCESS! Response:", response);
+                showResult("✅ Form submitted WITHOUT consent! Check Dynamics.", "success");
                 form.reset();
                 submitBtn.disabled = false;
-                submitBtn.innerHTML = 'Submit Test';
+                submitBtn.innerHTML = 'Submit Test (No Consent)';
             })
             .catch(error => {
-                console.error("ERROR submitting form:", error);
+                console.error("NO-consent ERROR:", error);
                 
-                // Check if it's the consent plugin error
                 const errorMsg = error.message || error.toString();
                 const isConsentError = errorMsg.includes("Consent submission") || 
-                                      errorMsg.includes("0x80040265") ||
-                                      errorMsg.includes("InvalidPluginExecutionException");
+                                      errorMsg.includes("0x80040265");
                 
                 if (isConsentError) {
-                    // Record WAS created, just plugin failed
-                    showResult("⚠️ Form submitted! (Note: Backend processing had an issue, but your enquiry was received. Our team will follow up.)", "warning");
-                    console.log("Note: Consent plugin failed, but record was likely created.");
+                    showResult("⚠️ Form submitted but consent plugin failed (expected without consent field). Record likely created.", "warning");
+                    console.log("Expected: No consent field → plugin fails");
                 } else {
-                    // Real error
-                    showResult("❌ Form submission failed: " + errorMsg.substring(0, 100) + "...", "error");
+                    showResult("❌ Error: " + errorMsg.substring(0, 100), "error");
                 }
                 
                 submitBtn.disabled = false;
-                submitBtn.innerHTML = 'Submit Test';
+                submitBtn.innerHTML = 'Submit Test (No Consent)';
             });
     }, true);
     
@@ -778,21 +759,10 @@ d365mktformcapture.waitForElement("#test-form")
                                type === 'warning' ? '#856404' : '#721c24';
         resultDiv.style.border = type === 'success' ? '1px solid #c3e6cb' : 
                                 type === 'warning' ? '1px solid #ffeaa7' : '1px solid #f5c6cb';
-        resultDiv.style.padding = '10px';
-        resultDiv.style.borderRadius = '5px';
-        resultDiv.style.marginTop = '10px';
     }
 })
 .catch(error => {
-    console.error("FormCapture initialization failed:", error);
-    const resultDiv = document.getElementById('result') || document.createElement('div');
-    resultDiv.style.display = 'block';
-    resultDiv.style.backgroundColor = '#f8d7da';
-    resultDiv.style.color = '#721c24';
-    resultDiv.style.padding = '10px';
-    resultDiv.style.borderRadius = '5px';
-    resultDiv.style.marginTop = '10px';
-    resultDiv.innerHTML = "FormCapture script failed to load. Check browser console for details.";
+    console.error("NO-consent form init failed:", error);
 });
 </script>
 
