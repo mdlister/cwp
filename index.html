@@ -585,13 +585,130 @@ On the day, from start to finish, Mike and Rob were incredibly polite, organised
   </div>
 </section>
 
-<!-- Remove your current form HTML -->
-<!-- Add this div where you want the form to appear -->
-<div data-form-id="3d97b58b-fbe7-f011-8406-6045bd12f634" data-form-api-url="https://public-gbr.mkt.dynamics.com/api/v1.0/orgs/28d99f2b-d568-f011-858a-0022481a2aa9/landingpageforms" data-cached-form-url="https://assets1-gbr.mkt.dynamics.com/28d99f2b-d568-f011-858a-0022481a2aa9/digitalassets/forms/3d97b58b-fbe7-f011-8406-6045bd12f634">
-</div>
+<!-- Minimal Test Form -->
+<form id="test-form" style="padding: 20px; background: #f5f5f5; margin: 20px;">
+  <h3>Test Form (Simplified)</h3>
+  
+  <div>
+    <label>Name:</label>
+    <input type="text" id="test-name" name="name" placeholder="Your name" required="" />
+  </div>
+  
+  <div>
+    <label>Email:</label>
+    <input type="email" id="test-email" name="email" placeholder="Your email" required="" />
+  </div>
+  
+  <div>
+    <label>Message:</label>
+    <textarea id="test-message" name="message" placeholder="Your message"></textarea>
+  </div>
+  
+  <!-- Hidden fields matching FormLoader structure -->
+  <input type="hidden" name="cwp-subject" value="CWP - Test Enquiry" />
+  <input type="hidden" name="cwp-leadsourcecode" value="Website Enquiry" />
+  <input type="hidden" name="cwp-leadsourcetype" value="Sales" />
+  <input type="hidden" name="cwp-leadtype" value="Wedding" />
+  <input type="hidden" name="cwp-leadsubtype" value="Wedding" />
+  
+  <button type="submit">Submit Test</button>
+</form>
 
-<!-- Load FormLoader ONLY (not FormCapture) -->
-<script src="https://cxppusa1formui01cdnsa01-endpoint.azureedge.net/gbr/FormLoader/FormLoader.bundle.js"></script>
+<!-- ONLY FormCapture script -->
+<script src="https://cxppusa1formui01cdnsa01-endpoint.azureedge.net/gbr/FormCapture/FormCapture.bundle.js"></script>
+
+<script>
+// Wait for the test form
+d365mktformcapture.waitForElement("#test-form")
+.then(form => {
+    console.log("FormCapture initialized on test form");
+    
+    // SIMPLIFIED MAPPINGS - only what FormLoader uses
+    const mappings = [
+        {
+            FormFieldName: "#test-name",
+            DataverseFieldName: "lastname",
+        },
+        {
+            FormFieldName: "#test-email",
+            DataverseFieldName: "emailaddress1",
+        },
+        {
+            FormFieldName: "#test-message",
+            DataverseFieldName: "description",
+        },
+        {
+            FormFieldName: "input[name='cwp-subject']",
+            DataverseFieldName: "subject",
+        },
+        {
+            FormFieldName: "input[name='cwp-leadsourcecode']",
+            DataverseFieldName: "leadsourcecode",
+            DataverseFieldValue: [
+                { FormValue: "Website Enquiry", DataverseValue: "3" },
+            ],
+        },
+        {
+            FormFieldName: "input[name='cwp-leadsourcetype']",
+            DataverseFieldName: "msdyncrm_leadsourcetype",
+            DataverseFieldValue: [
+                { FormValue: "Sales", DataverseValue: "192350001" },
+            ],
+        },
+        {
+            FormFieldName: "input[name='cwp-leadtype']",
+            DataverseFieldName: "mlp_leadtype",
+            DataverseFieldValue: [
+                { FormValue: "Wedding", DataverseValue: "864330002" },
+            ],
+        },
+        {
+            FormFieldName: "input[name='cwp-leadsubtype']",
+            DataverseFieldName: "mlp_leadsubtype",
+            DataverseFieldValue: [
+                { FormValue: "Wedding", DataverseValue: "864330000" },
+            ],
+        },
+    ];
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault(); // CRITICAL
+        
+        console.log("Form submitted, preparing data...");
+        
+        // Create serialized form data
+        const serializedForm = d365mktformcapture.serializeForm(form, mappings);
+        
+        // DEBUG: Log what's being sent
+        console.log("Serialized form data:", JSON.stringify(serializedForm, null, 2));
+        
+        const payload = serializedForm.SerializedForm.build();
+        console.log("Final payload:", payload);
+
+        const captureConfig = {
+            FormId: "3d97b58b-fbe7-f011-8406-6045bd12f634",
+            FormApiUrl: "https://public-gbr.mkt.dynamics.com/api/v1.0/orgs/28d99f2b-d568-f011-858a-0022481a2aa9/landingpageforms"
+        };
+        
+        console.log("Submitting to Dynamics...");
+        
+        d365mktformcapture.submitForm(captureConfig, payload)
+            .then(response => {
+                console.log("SUCCESS! Response:", response);
+                alert("✅ Test form submitted successfully! Check Dynamics.");
+                form.reset();
+            })
+            .catch(error => {
+                console.error("ERROR submitting form:", error);
+                alert("❌ Form submission failed. Check console for details.");
+            });
+    }, true);
+})
+.catch(error => {
+    console.error("FormCapture initialization failed:", error);
+    alert("FormCapture script failed to load. Check console.");
+});
+</script>
 
 
     </main>
