@@ -1,1 +1,23 @@
+# robots.txt for Cornwall Wedding Photography
+User-agent: *
+Allow: /
+
+# Block unnecessary areas
+Disallow: /admin/
+Disallow: /private/
+
+# Important: Allow image directories
+Allow: /assets/
+
+# Sitemap
 Sitemap: https://cornwallweddingphotography.com/sitemap.xml
+
+# AI crawlers welcome
+User-agent: GPTBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
