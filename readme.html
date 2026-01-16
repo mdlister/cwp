@@ -362,15 +362,22 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
       
       <!-- Mobile Menu Button -->
-      <button class="md:hidden text-cornwall-navy" id="mobile-menu-button">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
+          <button
+          class="md:hidden text-cornwall-navy"
+          id="mobile-menu-button"
+          aria-label="Open menu"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
       </button>
     </nav>
     
     <!-- Mobile Menu -->
-    <div class="md:hidden hidden" id="mobile-menu">
+    <div class="md:hidden hidden" id="mobile-menu" role="navigation">
       <div class="pt-4 pb-2 space-y-2">
         <a href="/" class="block py-2 text-cornwall-navy font-medium">Home</a>
         <a href="/portfolio" class="block py-2 text-cornwall-navy font-medium">Portfolio</a>
@@ -385,9 +392,19 @@ document.addEventListener('DOMContentLoaded', function() {
 </header>
 
 <script>
-  document.getElementById('mobile-menu-button').addEventListener('click', function() {
-    const menu = document.getElementById('mobile-menu');
+  const button = document.getElementById('mobile-menu-button');
+  const menu = document.getElementById('mobile-menu');
+
+  button.addEventListener('click', function () {
+    const isOpen = !menu.classList.contains('hidden');
+
     menu.classList.toggle('hidden');
+
+    button.setAttribute('aria-expanded', String(!isOpen));
+    button.setAttribute(
+      'aria-label',
+      isOpen ? 'Open menu' : 'Close menu'
+    );
   });
 </script>   
     <main>
@@ -1244,7 +1261,7 @@ tags: ["cornwall", "venue", "planning"]  # Optional
       
       <div class="mt-8 pt-8 border-t border-white/20">
         <p class="text-sm opacity-75">
-          Last updated: January 15, 2026<br />
+          Last updated: January 16, 2026<br />
           Cornwall Wedding Photography • Mike &amp; Rob
         </p>
       </div>
