@@ -17,8 +17,13 @@ steps:
 
 - task: UseRubyVersion@0
   inputs:
-    versionSpec: '3.2.9'
-  displayName: 'Use Ruby 3.2.9'
+    versionSpec: '>=3.2'
+  displayName: 'Use Ruby 3.2 or higher'
+
+- task: NodeTool@0
+  inputs:
+    versionSpec: '20.x'
+  displayName: 'Use Node.js 20'
 
 - script: |
     gem install bundler
@@ -26,8 +31,27 @@ steps:
   displayName: 'Install Ruby gems'
 
 - script: |
+    gem install bundler-audit
+    bundler-audit check --update
+  displayName: 'Security scan Ruby dependencies'
+
+- script: |
     bundle exec jekyll build
   displayName: 'Build Jekyll site'
+
+- script: |
+    gem install html-proofer
+    htmlproofer ./_site \
+      --checks html,links \
+      --assume-extension \
+      --allow-hash-href
+  displayName: 'Validate HTML and links'
+
+- script: |
+    docker run --rm \
+      -v $(Build.SourcesDirectory):/repo \
+      trufflesecurity/trufflehog filesystem /repo
+  displayName: 'Scan for secrets'
 
 - script: |
     echo "Cloning GitHub Pages repo"
