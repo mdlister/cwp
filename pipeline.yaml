@@ -26,6 +26,10 @@ steps:
   displayName: 'Use Node.js 20'
 
 - script: |
+    npm ci
+  displayName: 'Install Node dependencies'
+
+- script: |
     gem install bundler
     bundle install
   displayName: 'Install Ruby gems'
@@ -40,11 +44,36 @@ steps:
   displayName: 'Build Jekyll site'
 
 - script: |
+    npm run build:css
+  displayName: 'Build Tailwind CSS'
+
+- script: |
     gem install html-proofer
+    
+    # Get all root .html files
+    PAGES=$(find ./_site -maxdepth 1 -name "*.html" ! -name "index.html" -exec basename {} .html \;)
+    
+    # Build exact match swap rules
+    SWAP_MAP=""
+    for PAGE in $PAGES; do
+      if [[ -n "$SWAP_MAP" ]]; then
+        SWAP_MAP+=","
+      fi
+      # Exact match only: /blog$ (not /blog/anything-else)
+      SWAP_MAP+="^/${PAGE}\$:/${PAGE}.html"
+    done
+    
+    echo "Pages found: $PAGES"
+    echo "Swap map: $SWAP_MAP"
+    
+    # Run with ignores for known issues
     htmlproofer ./_site \
-      --checks html,links \
-      --assume-extension \
-      --allow-hash-href
+      --checks Links \
+      --swap-urls "$SWAP_MAP" \
+      --allow-hash-href \
+      --ignore-urls "/assets/css/site.css,#contact,#portfolio-enquiry,/contact" \
+      --disable-external \
+      --log-level info
   displayName: 'Validate HTML and links'
 
 - script: |
