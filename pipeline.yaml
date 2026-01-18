@@ -20,15 +20,6 @@ steps:
     versionSpec: '>=3.2'
   displayName: 'Use Ruby 3.2 or higher'
 
-- task: NodeTool@0
-  inputs:
-    versionSpec: '20.x'
-  displayName: 'Use Node.js 20'
-
-- script: |
-    npm ci
-  displayName: 'Install Node dependencies'
-
 - script: |
     gem install bundler
     bundle install
@@ -42,10 +33,6 @@ steps:
 - script: |
     bundle exec jekyll build
   displayName: 'Build Jekyll site'
-
-- script: |
-    npm run build:css
-  displayName: 'Build Tailwind CSS'
 
 - script: |
     gem install html-proofer
