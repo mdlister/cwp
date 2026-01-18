@@ -71,7 +71,7 @@ steps:
       --checks Links \
       --swap-urls "$SWAP_MAP" \
       --allow-hash-href \
-      --ignore-urls "#contact,#portfolio-enquiry,/contact" \
+      --ignore-urls "#contact" \
       --disable-external \
       --log-level debug
   displayName: 'Validate HTML and links'
