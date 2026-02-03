@@ -110,9 +110,22 @@
   "@type": "WebSite",
   "name": "Cornwall Wedding Photography",
   "url": "https://cornwallweddingphotography.com/",
+  "description": "Wedding photography across Cornwall's coastal towns, countryside venues and manor houses.",
   "publisher": {
-    "@type": "ProfessionalService",
-    "name": "Cornwall Wedding Photography"
+    "@type": "Organization",
+    "name": "Cornwall Wedding Photography",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://cornwallweddingphotography.com/assets/images/brand/cwp-logo-large-Cornwall Navy.png"
+    }
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://cornwallweddingphotography.com/search?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
   }
 }
 </script>
@@ -359,6 +372,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <a href="/" class="text-cornwall-navy font-medium hover:text-cornwall-sage transition-colors duration-200">Home</a>
         <a href="/portfolio" class="text-cornwall-navy font-medium hover:text-cornwall-sage transition-colors duration-200">Portfolio</a>
         <a href="/about" class="text-cornwall-navy font-medium hover:text-cornwall-sage transition-colors duration-200">About</a>
+        <a href="/packages" class="text-cornwall-navy font-medium hover:text-cornwall-sage transition-colors duration-200">Packages</a>
         <a href="/blog" class="text-cornwall-navy font-medium hover:text-cornwall-sage transition-colors duration-200">Blog</a>
         <a href="#contact" class="btn-primary px-6 py-2 rounded-lg">Contact</a>
       </div>
@@ -425,7 +439,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </p>
         <div class="mt-8">
           <span class="inline-flex items-center px-4 py-2 bg-white/20 rounded-full text-sm">
-            🍪 Last Updated: January 23, 2026
+            🍪 Last Updated: February 03, 2026
           </span>
         </div>
       </div>
@@ -894,7 +908,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <div class="mt-16 p-6 bg-cornwall-stone/20 rounded-xl text-center">
             <h3 class="font-serif text-lg text-cornwall-navy mb-2">Policy Updates</h3>
             <p class="text-sm text-gray-600">
-              This cookie policy was last updated on <strong>January 23, 2026</strong>. 
+              This cookie policy was last updated on <strong>February 03, 2026</strong>. 
               We may update it to reflect changes in technology, regulation, or our services. 
               Significant changes will be announced on our website.
             </p>
@@ -1061,7 +1075,7 @@ details[open] summary ~ * {
       </li>
     
   </ul>
-  <a href="/locations/" class="inline-block mt-4 text-sm opacity-75 hover:text-cornwall-blush">
+  <a href="/locations" class="inline-block mt-4 text-sm opacity-75 hover:text-cornwall-blush">
     View all locations →
   </a>
 </div>

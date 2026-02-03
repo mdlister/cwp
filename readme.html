@@ -110,9 +110,22 @@
   "@type": "WebSite",
   "name": "Cornwall Wedding Photography",
   "url": "https://cornwallweddingphotography.com/",
+  "description": "Wedding photography across Cornwall's coastal towns, countryside venues and manor houses.",
   "publisher": {
-    "@type": "ProfessionalService",
-    "name": "Cornwall Wedding Photography"
+    "@type": "Organization",
+    "name": "Cornwall Wedding Photography",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://cornwallweddingphotography.com/assets/images/brand/cwp-logo-large-Cornwall Navy.png"
+    }
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://cornwallweddingphotography.com/search?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
   }
 }
 </script>
@@ -359,6 +372,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <a href="/" class="text-cornwall-navy font-medium hover:text-cornwall-sage transition-colors duration-200">Home</a>
         <a href="/portfolio" class="text-cornwall-navy font-medium hover:text-cornwall-sage transition-colors duration-200">Portfolio</a>
         <a href="/about" class="text-cornwall-navy font-medium hover:text-cornwall-sage transition-colors duration-200">About</a>
+        <a href="/packages" class="text-cornwall-navy font-medium hover:text-cornwall-sage transition-colors duration-200">Packages</a>
         <a href="/blog" class="text-cornwall-navy font-medium hover:text-cornwall-sage transition-colors duration-200">Blog</a>
         <a href="#contact" class="btn-primary px-6 py-2 rounded-lg">Contact</a>
       </div>
@@ -1980,7 +1994,7 @@ document.querySelectorAll('.portfolio-filter').forEach(button =&gt; {
       
       <div class="mt-8 pt-8 border-t border-white/20">
         <p class="text-sm opacity-75">
-          Last updated: January 23, 2026<br />
+          Last updated: February 03, 2026<br />
           Cornwall Wedding Photography • Mike &amp; Rob
         </p>
       </div>
@@ -2091,7 +2105,7 @@ document.querySelectorAll('.portfolio-filter').forEach(button =&gt; {
       </li>
     
   </ul>
-  <a href="/locations/" class="inline-block mt-4 text-sm opacity-75 hover:text-cornwall-blush">
+  <a href="/locations" class="inline-block mt-4 text-sm opacity-75 hover:text-cornwall-blush">
     View all locations →
   </a>
 </div>

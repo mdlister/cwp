@@ -110,9 +110,22 @@
   "@type": "WebSite",
   "name": "Cornwall Wedding Photography",
   "url": "https://cornwallweddingphotography.com/",
+  "description": "Wedding photography across Cornwall's coastal towns, countryside venues and manor houses.",
   "publisher": {
-    "@type": "ProfessionalService",
-    "name": "Cornwall Wedding Photography"
+    "@type": "Organization",
+    "name": "Cornwall Wedding Photography",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://cornwallweddingphotography.com/assets/images/brand/cwp-logo-large-Cornwall Navy.png"
+    }
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://cornwallweddingphotography.com/search?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
   }
 }
 </script>
@@ -359,6 +372,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <a href="/" class="text-cornwall-navy font-medium hover:text-cornwall-sage transition-colors duration-200">Home</a>
         <a href="/portfolio" class="text-cornwall-navy font-medium hover:text-cornwall-sage transition-colors duration-200">Portfolio</a>
         <a href="/about" class="text-cornwall-navy font-medium hover:text-cornwall-sage transition-colors duration-200">About</a>
+        <a href="/packages" class="text-cornwall-navy font-medium hover:text-cornwall-sage transition-colors duration-200">Packages</a>
         <a href="/blog" class="text-cornwall-navy font-medium hover:text-cornwall-sage transition-colors duration-200">Blog</a>
         <a href="#contact" class="btn-primary px-6 py-2 rounded-lg">Contact</a>
       </div>
@@ -428,7 +442,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            <span>Last Updated: January 23, 2026</span>
+            <span>Last Updated: February 03, 2026</span>
           </div>
           <div class="flex items-center gap-2">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -922,7 +936,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <!-- Last Updated -->
           <div class="mt-12 pt-8 border-t border-cornwall-stone text-center">
             <p class="text-sm text-gray-600">
-              This policy was last updated on January 23, 2026. 
+              This policy was last updated on February 03, 2026. 
               We may update it periodically to reflect changes in our practices or legal requirements.
             </p>
           </div>
@@ -1034,7 +1048,7 @@ document.addEventListener('DOMContentLoaded', function() {
       </li>
     
   </ul>
-  <a href="/locations/" class="inline-block mt-4 text-sm opacity-75 hover:text-cornwall-blush">
+  <a href="/locations" class="inline-block mt-4 text-sm opacity-75 hover:text-cornwall-blush">
     View all locations →
   </a>
 </div>
