@@ -423,7 +423,14 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 </script>   
     <main>
-        <!-- ============================================
+        <script>
+  gtag('event', 'page_not_found', {
+    page_location: window.location.href,
+    page_referrer: document.referrer
+  });
+</script>
+
+<!-- ============================================
      404 PAGE
      ============================================ -->
 <section class="min-h-screen bg-gradient-to-br from-cornwall-navy/95 to-cornwall-navy flex items-center justify-center py-20 px-4">
