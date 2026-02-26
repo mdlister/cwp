@@ -430,7 +430,8 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 </script>   
     <main>
-        <!-- ============================================
+        
+<!-- ============================================
      HERO - PORTFOLIO PAGE
      ============================================ -->
 <section class="relative py-20 bg-cornwall-navy text-white overflow-hidden">
@@ -548,20 +549,14 @@ document.addEventListener('DOMContentLoaded', function() {
         <button data-filter="venues" class="portfolio-filter px-4 py-2 bg-white text-gray-700 rounded-full text-sm font-semibold hover:bg-cornwall-sage hover:text-white transition-colors">
           🏰 Venues
         </button>
-        <button data-filter="details" class="portfolio-filter px-4 py-2 bg-white text-gray-700 rounded-full text-sm font-semibold hover:bg-cornwall-blush hover:text-white transition-colors">
-          💝 Details
-        </button>
         <button data-filter="couples" class="portfolio-filter px-4 py-2 bg-white text-gray-700 rounded-full text-sm font-semibold hover:bg-cornwall-blush hover:text-white transition-colors">
           👰 Couples
-        </button>
-        <button data-filter="golden-hour" class="portfolio-filter px-4 py-2 bg-white text-gray-700 rounded-full text-sm font-semibold hover:bg-cornwall-sand hover:text-cornwall-navy transition-colors">
-          🌅 Golden Hour
         </button>
       </div>
       
       <!-- Counter -->
       <div class="text-gray-600 text-sm font-medium">
-        <span id="photo-count">24</span> Photos • <span id="venue-count">6</span> Venues
+        <span id="photo-count">55</span> Photos • <span id="venue-count">6</span> Venues
       </div>
     </div>
   </div>
@@ -572,38 +567,209 @@ document.addEventListener('DOMContentLoaded', function() {
      ============================================ -->
 <section class="py-12 bg-white">
   <div class="container mx-auto px-4">
+ <!-- ============================================
+     DYNAMIC MASONRY PORTFOLIO GRID
+     ============================================ -->
+<section class="py-12 bg-white">
+  <div class="container mx-auto px-4">
     <!-- Portfolio Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolio-grid">
       
-      <!-- Image 1: St Ives Harbour Hotel - Large Feature -->
-      <div class="portfolio-item group" data-category="coastal venues golden-hour couples">
-        <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-96">
-          <!-- _includes/picture.html -->
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 1: Cornish Church -->
+        <div class="portfolio-item group h-80" data-category="venues" data-venue="cornish-church" data-moment="ceremony">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
 
 
 <picture class="block w-full h-full">
   <!-- WebP version (modern browsers) -->
-  <source srcset="/assets/images/webp/cornwall-wedding-photography-st-ives-harbour-hotel-and-spa-st-ives-cornwall-011.webp" type="image/webp" width="800" height="600" />
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-church-ceremony-farm-reception-cornwall-009.webp" type="image/webp" width="800" height="600" />
   
   <!-- JPEG fallback (all browsers) -->
-  <img src="/assets/images/photos/cornwall-wedding-photography-st-ives-harbour-hotel-and-spa-st-ives-cornwall-011.jpg" alt="Bride and groom embracing with Cornish sea backdrop at St Ives Harbour Hotel" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+  <img src="/assets/images/photos/cornwall-wedding-photography-church-ceremony-farm-reception-cornwall-009.jpg" alt="Cornwall Wedding Photography Church Ceremony Farm Reception Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
 </picture>
-          <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-            <div class="flex items-center gap-2 mb-2">
-              <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Golden Hour</span>
-              <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Coastal</span>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["venues"]
+                </span>
+              
             </div>
-            <h3 class="font-serif text-xl mb-1">St Ives Harbour Hotel</h3>
-            <p class="text-sm opacity-90">Sunset embrace with sea backdrop</p>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Ceremony</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Cornish Church</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">Cornish Church</h3>
+              <p class="text-sm opacity-90">Ceremony at Cornish Church, Cornwall</p>
+            </div>
           </div>
         </div>
-      </div>
       
-      <!-- Image 2: Church Ceremony Details -->
-      <div class="portfolio-item group" data-category="details venues">
-        <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-64">
-          <!-- _includes/picture.html -->
+        
+        
+        
+        
+        
+        
+        <!-- Image 2: Cornish Church -->
+        <div class="portfolio-item group h-72" data-category="venues" data-venue="cornish-church" data-moment="ceremony">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-church-ceremony-farm-reception-cornwall-010.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-church-ceremony-farm-reception-cornwall-010.jpg" alt="Cornwall Wedding Photography Church Ceremony Farm Reception Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["venues"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Ceremony</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Cornish Church</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">Cornish Church</h3>
+              <p class="text-sm opacity-90">Ceremony at Cornish Church, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 3: Cornish Church -->
+        <div class="portfolio-item group h-64" data-category="venues" data-venue="cornish-church" data-moment="ceremony">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-church-ceremony-farm-reception-cornwall-011.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-church-ceremony-farm-reception-cornwall-011.jpg" alt="Cornwall Wedding Photography Church Ceremony Farm Reception Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["venues"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Ceremony</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Cornish Church</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">Cornish Church</h3>
+              <p class="text-sm opacity-90">Ceremony at Cornish Church, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 4: Cornish Church -->
+        <div class="portfolio-item group h-96" data-category="venues" data-venue="cornish-church" data-moment="ceremony">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-church-ceremony-farm-reception-cornwall-012.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-church-ceremony-farm-reception-cornwall-012.jpg" alt="Cornwall Wedding Photography Church Ceremony Farm Reception Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["venues"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Ceremony</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Cornish Church</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">Cornish Church</h3>
+              <p class="text-sm opacity-90">Ceremony at Cornish Church, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 5: Cornish Church -->
+        <div class="portfolio-item group h-80" data-category="venues" data-venue="cornish-church" data-moment="ceremony">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
 
 
 <picture class="block w-full h-full">
@@ -611,78 +777,45 @@ document.addEventListener('DOMContentLoaded', function() {
   <source srcset="/assets/images/webp/cornwall-wedding-photography-church-ceremony-farm-reception-cornwall-013.webp" type="image/webp" width="800" height="600" />
   
   <!-- JPEG fallback (all browsers) -->
-  <img src="/assets/images/photos/cornwall-wedding-photography-church-ceremony-farm-reception-cornwall-013.jpg" alt="Confetti celebration outside Cornish church ceremony" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+  <img src="/assets/images/photos/cornwall-wedding-photography-church-ceremony-farm-reception-cornwall-013.jpg" alt="Cornwall Wedding Photography Church Ceremony Farm Reception Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
 </picture>
-          <div class="absolute top-4 right-4">
-            <span class="px-3 py-1.5 bg-white/90 text-cornwall-navy rounded-full text-xs font-semibold shadow">
-              🎉 Celebration
-            </span>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["venues"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Ceremony</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Cornish Church</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">Cornish Church</h3>
+              <p class="text-sm opacity-90">Ceremony at Cornish Church, Cornwall</p>
+            </div>
           </div>
         </div>
-      </div>
       
-      <!-- Image 3: Tredudwell Manor First Dance -->
-      <div class="portfolio-item group" data-category="couples venues golden-hour">
-        <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-80">
-          <!-- _includes/picture.html -->
-
-
-<picture class="block w-full h-full">
-  <!-- WebP version (modern browsers) -->
-  <source srcset="/assets/images/webp/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-020.webp" type="image/webp" width="800" height="600" />
-  
-  <!-- JPEG fallback (all browsers) -->
-  <img src="/assets/images/photos/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-020.jpg" alt="First dance at Tredudwell Manor with dress swirling" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
-</picture>
-          <div class="absolute top-4 left-4">
-            <span class="px-3 py-1.5 bg-white/90 text-cornwall-navy rounded-full text-xs font-semibold shadow">
-              💃 First Dance
-            </span>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Image 4: St Ives Harbour Hotel Couple -->
-      <div class="portfolio-item group" data-category="couples coastal">
-        <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-72">
-          <!-- _includes/picture.html -->
-
-
-<picture class="block w-full h-full">
-  <!-- WebP version (modern browsers) -->
-  <source srcset="/assets/images/webp/cornwall-wedding-photography-st-ives-harbour-hotel-and-spa-st-ives-cornwall-017.webp" type="image/webp" width="800" height="600" />
-  
-  <!-- JPEG fallback (all browsers) -->
-  <img src="/assets/images/photos/cornwall-wedding-photography-st-ives-harbour-hotel-and-spa-st-ives-cornwall-017.jpg" alt="Couple sharing intimate moment at St Ives Harbour Hotel" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
-</picture>
-        </div>
-      </div>
-      
-      <!-- Image 5: Tredudwell Manor Confetti -->
-      <div class="portfolio-item group" data-category="details golden-hour">
-        <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-64">
-          <!-- _includes/picture.html -->
-
-
-<picture class="block w-full h-full">
-  <!-- WebP version (modern browsers) -->
-  <source srcset="/assets/images/webp/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-023.webp" type="image/webp" width="800" height="600" />
-  
-  <!-- JPEG fallback (all browsers) -->
-  <img src="/assets/images/photos/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-023.jpg" alt="Confetti celebration at Tredudwell Manor" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
-</picture>
-          <div class="absolute bottom-4 left-4">
-            <span class="px-3 py-1.5 bg-white/90 text-cornwall-navy rounded-full text-xs font-semibold shadow">
-              ✨ Golden Hour
-            </span>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Image 6: Church Ceremony Couple - Large Feature -->
-      <div class="portfolio-item group" data-category="couples venues">
-        <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-96">
-          <!-- _includes/picture.html -->
+        
+        
+        
+        
+        
+        
+        <!-- Image 6: Cornish Church -->
+        <div class="portfolio-item group h-72" data-category="venues" data-venue="cornish-church" data-moment="ceremony">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
 
 
 <picture class="block w-full h-full">
@@ -690,23 +823,663 @@ document.addEventListener('DOMContentLoaded', function() {
   <source srcset="/assets/images/webp/cornwall-wedding-photography-church-ceremony-farm-reception-cornwall-014.webp" type="image/webp" width="800" height="600" />
   
   <!-- JPEG fallback (all browsers) -->
-  <img src="/assets/images/photos/cornwall-wedding-photography-church-ceremony-farm-reception-cornwall-014.jpg" alt="Bride and groom walking down church path in Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+  <img src="/assets/images/photos/cornwall-wedding-photography-church-ceremony-farm-reception-cornwall-014.jpg" alt="Cornwall Wedding Photography Church Ceremony Farm Reception Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
 </picture>
-          <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-            <div class="flex items-center gap-2 mb-2">
-              <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Country House</span>
-              <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Emotional</span>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["venues"]
+                </span>
+              
             </div>
-            <h3 class="font-serif text-xl mb-1">Cornish Countryside</h3>
-            <p class="text-sm opacity-90">Church ceremony in rural Cornwall</p>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Ceremony</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Cornish Church</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">Cornish Church</h3>
+              <p class="text-sm opacity-90">Ceremony at Cornish Church, Cornwall</p>
+            </div>
           </div>
         </div>
-      </div>
       
-      <!-- Image 7: St Agnes Quiet Moment -->
-      <div class="portfolio-item group" data-category="couples coastal golden-hour">
-        <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-80">
-          <!-- _includes/picture.html -->
+        
+        
+        
+        
+        
+        
+        <!-- Image 7: Cornish Church -->
+        <div class="portfolio-item group h-64" data-category="venues" data-venue="cornish-church" data-moment="ceremony">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-church-ceremony-farm-reception-cornwall-015.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-church-ceremony-farm-reception-cornwall-015.jpg" alt="Cornwall Wedding Photography Church Ceremony Farm Reception Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["venues"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Ceremony</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Cornish Church</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">Cornish Church</h3>
+              <p class="text-sm opacity-90">Ceremony at Cornish Church, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 8: Cornish Church -->
+        <div class="portfolio-item group h-96" data-category="venues" data-venue="cornish-church" data-moment="ceremony">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-church-ceremony-farm-reception-cornwall-016.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-church-ceremony-farm-reception-cornwall-016.jpg" alt="Cornwall Wedding Photography Church Ceremony Farm Reception Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["venues"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Ceremony</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Cornish Church</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">Cornish Church</h3>
+              <p class="text-sm opacity-90">Ceremony at Cornish Church, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 9: Cornish Venue -->
+        <div class="portfolio-item group h-80" data-category="couples" data-venue="cornish-venue" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-st-agnes-cornwall-001.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-st-agnes-cornwall-001.jpg" alt="Cornwall Wedding Photography St Agnes Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["couples"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Cornish Venue</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">Cornish Venue</h3>
+              <p class="text-sm opacity-90">Wedding Moment at Cornish Venue, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 10: Cornish Venue -->
+        <div class="portfolio-item group h-72" data-category="couples" data-venue="cornish-venue" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-st-agnes-cornwall-002.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-st-agnes-cornwall-002.jpg" alt="Cornwall Wedding Photography St Agnes Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["couples"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Cornish Venue</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">Cornish Venue</h3>
+              <p class="text-sm opacity-90">Wedding Moment at Cornish Venue, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 11: Cornish Venue -->
+        <div class="portfolio-item group h-64" data-category="couples" data-venue="cornish-venue" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-st-agnes-cornwall-003.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-st-agnes-cornwall-003.jpg" alt="Cornwall Wedding Photography St Agnes Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["couples"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Cornish Venue</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">Cornish Venue</h3>
+              <p class="text-sm opacity-90">Wedding Moment at Cornish Venue, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 12: Cornish Venue -->
+        <div class="portfolio-item group h-96" data-category="couples" data-venue="cornish-venue" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-st-agnes-cornwall-004.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-st-agnes-cornwall-004.jpg" alt="Cornwall Wedding Photography St Agnes Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["couples"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Cornish Venue</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">Cornish Venue</h3>
+              <p class="text-sm opacity-90">Wedding Moment at Cornish Venue, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 13: Cornish Venue -->
+        <div class="portfolio-item group h-80" data-category="couples" data-venue="cornish-venue" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-st-agnes-cornwall-005.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-st-agnes-cornwall-005.jpg" alt="Cornwall Wedding Photography St Agnes Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["couples"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Cornish Venue</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">Cornish Venue</h3>
+              <p class="text-sm opacity-90">Wedding Moment at Cornish Venue, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 14: Cornish Venue -->
+        <div class="portfolio-item group h-72" data-category="couples" data-venue="cornish-venue" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-st-agnes-cornwall-006.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-st-agnes-cornwall-006.jpg" alt="Cornwall Wedding Photography St Agnes Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["couples"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Cornish Venue</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">Cornish Venue</h3>
+              <p class="text-sm opacity-90">Wedding Moment at Cornish Venue, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 15: Cornish Venue -->
+        <div class="portfolio-item group h-64" data-category="couples" data-venue="cornish-venue" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-st-agnes-cornwall-007.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-st-agnes-cornwall-007.jpg" alt="Cornwall Wedding Photography St Agnes Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["couples"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Cornish Venue</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">Cornish Venue</h3>
+              <p class="text-sm opacity-90">Wedding Moment at Cornish Venue, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 16: St Ives Harbour Hotel -->
+        <div class="portfolio-item group h-96" data-category="couples coastal" data-venue="st-ives-harbour-hotel" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-st-ives-harbour-hotel-and-spa-st-ives-cornwall-010.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-st-ives-harbour-hotel-and-spa-st-ives-cornwall-010.jpg" alt="Cornwall Wedding Photography St Ives Harbour Hotel And Spa St Ives Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["couples"
+                </span>
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  "coastal"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">St Ives Harbour H...</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">St Ives Harbour Hotel</h3>
+              <p class="text-sm opacity-90">Wedding Moment at St Ives Harbour Hotel, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 17: St Ives Harbour Hotel -->
+        <div class="portfolio-item group h-80" data-category="couples coastal" data-venue="st-ives-harbour-hotel" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-st-ives-harbour-hotel-and-spa-st-ives-cornwall-011.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-st-ives-harbour-hotel-and-spa-st-ives-cornwall-011.jpg" alt="Cornwall Wedding Photography St Ives Harbour Hotel And Spa St Ives Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["couples"
+                </span>
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  "coastal"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">St Ives Harbour H...</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">St Ives Harbour Hotel</h3>
+              <p class="text-sm opacity-90">Wedding Moment at St Ives Harbour Hotel, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 18: St Ives Harbour Hotel -->
+        <div class="portfolio-item group h-72" data-category="couples coastal" data-venue="st-ives-harbour-hotel" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-st-ives-harbour-hotel-and-spa-st-ives-cornwall-012.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-st-ives-harbour-hotel-and-spa-st-ives-cornwall-012.jpg" alt="Cornwall Wedding Photography St Ives Harbour Hotel And Spa St Ives Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["couples"
+                </span>
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  "coastal"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">St Ives Harbour H...</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">St Ives Harbour Hotel</h3>
+              <p class="text-sm opacity-90">Wedding Moment at St Ives Harbour Hotel, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 19: St Ives Harbour Hotel -->
+        <div class="portfolio-item group h-64" data-category="couples coastal" data-venue="st-ives-harbour-hotel" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-st-ives-harbour-hotel-and-spa-st-ives-cornwall-013.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-st-ives-harbour-hotel-and-spa-st-ives-cornwall-013.jpg" alt="Cornwall Wedding Photography St Ives Harbour Hotel And Spa St Ives Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["couples"
+                </span>
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  "coastal"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">St Ives Harbour H...</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">St Ives Harbour Hotel</h3>
+              <p class="text-sm opacity-90">Wedding Moment at St Ives Harbour Hotel, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 20: St Ives Harbour Hotel -->
+        <div class="portfolio-item group h-96" data-category="couples coastal" data-venue="st-ives-harbour-hotel" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
 
 
 <picture class="block w-full h-full">
@@ -714,20 +1487,576 @@ document.addEventListener('DOMContentLoaded', function() {
   <source srcset="/assets/images/webp/cornwall-wedding-photography-st-ives-harbour-hotel-and-spa-st-ives-cornwall-014.webp" type="image/webp" width="800" height="600" />
   
   <!-- JPEG fallback (all browsers) -->
-  <img src="/assets/images/photos/cornwall-wedding-photography-st-ives-harbour-hotel-and-spa-st-ives-cornwall-014.jpg" alt="Couple enjoying quiet moment together in St Agnes" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+  <img src="/assets/images/photos/cornwall-wedding-photography-st-ives-harbour-hotel-and-spa-st-ives-cornwall-014.jpg" alt="Cornwall Wedding Photography St Ives Harbour Hotel And Spa St Ives Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
 </picture>
-          <div class="absolute bottom-4 left-4">
-            <span class="px-3 py-1.5 bg-white/90 text-cornwall-navy rounded-full text-xs font-semibold shadow">
-              💕 Intimate
-            </span>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["couples"
+                </span>
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  "coastal"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">St Ives Harbour H...</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">St Ives Harbour Hotel</h3>
+              <p class="text-sm opacity-90">Wedding Moment at St Ives Harbour Hotel, Cornwall</p>
+            </div>
           </div>
         </div>
-      </div>
       
-      <!-- Image 8: Tredudwell Manor Details -->
-      <div class="portfolio-item group" data-category="details venues">
-        <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-72">
-          <!-- _includes/picture.html -->
+        
+        
+        
+        
+        
+        
+        <!-- Image 21: St Ives Harbour Hotel -->
+        <div class="portfolio-item group h-80" data-category="couples coastal" data-venue="st-ives-harbour-hotel" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-st-ives-harbour-hotel-and-spa-st-ives-cornwall-015.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-st-ives-harbour-hotel-and-spa-st-ives-cornwall-015.jpg" alt="Cornwall Wedding Photography St Ives Harbour Hotel And Spa St Ives Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["couples"
+                </span>
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  "coastal"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">St Ives Harbour H...</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">St Ives Harbour Hotel</h3>
+              <p class="text-sm opacity-90">Wedding Moment at St Ives Harbour Hotel, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 22: St Ives Harbour Hotel -->
+        <div class="portfolio-item group h-72" data-category="couples coastal" data-venue="st-ives-harbour-hotel" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-st-ives-harbour-hotel-and-spa-st-ives-cornwall-016.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-st-ives-harbour-hotel-and-spa-st-ives-cornwall-016.jpg" alt="Cornwall Wedding Photography St Ives Harbour Hotel And Spa St Ives Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["couples"
+                </span>
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  "coastal"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">St Ives Harbour H...</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">St Ives Harbour Hotel</h3>
+              <p class="text-sm opacity-90">Wedding Moment at St Ives Harbour Hotel, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 23: St Ives Harbour Hotel -->
+        <div class="portfolio-item group h-64" data-category="couples coastal" data-venue="st-ives-harbour-hotel" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-st-ives-harbour-hotel-and-spa-st-ives-cornwall-017.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-st-ives-harbour-hotel-and-spa-st-ives-cornwall-017.jpg" alt="Cornwall Wedding Photography St Ives Harbour Hotel And Spa St Ives Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["couples"
+                </span>
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  "coastal"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">St Ives Harbour H...</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">St Ives Harbour Hotel</h3>
+              <p class="text-sm opacity-90">Wedding Moment at St Ives Harbour Hotel, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 24: St Ives Harbour Hotel -->
+        <div class="portfolio-item group h-96" data-category="couples coastal" data-venue="st-ives-harbour-hotel" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-st-ives-harbour-hotel-and-spa-st-ives-cornwall-018.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-st-ives-harbour-hotel-and-spa-st-ives-cornwall-018.jpg" alt="Cornwall Wedding Photography St Ives Harbour Hotel And Spa St Ives Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["couples"
+                </span>
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  "coastal"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">St Ives Harbour H...</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">St Ives Harbour Hotel</h3>
+              <p class="text-sm opacity-90">Wedding Moment at St Ives Harbour Hotel, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 25: The Green, Liskeard -->
+        <div class="portfolio-item group h-80" data-category="couples" data-venue="the-green-liskeard" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-the-green-liskeard-cornwall-008.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-the-green-liskeard-cornwall-008.jpg" alt="Cornwall Wedding Photography The Green Liskeard Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["couples"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">The Green, Liskeard</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">The Green, Liskeard</h3>
+              <p class="text-sm opacity-90">Wedding Moment at The Green, Liskeard, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 26: The Green, Liskeard -->
+        <div class="portfolio-item group h-72" data-category="couples" data-venue="the-green-liskeard" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-the-green-liskeard-cornwall-009.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-the-green-liskeard-cornwall-009.jpg" alt="Cornwall Wedding Photography The Green Liskeard Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["couples"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">The Green, Liskeard</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">The Green, Liskeard</h3>
+              <p class="text-sm opacity-90">Wedding Moment at The Green, Liskeard, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 27: The Green, Liskeard -->
+        <div class="portfolio-item group h-64" data-category="couples" data-venue="the-green-liskeard" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-the-green-liskeard-cornwall-010.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-the-green-liskeard-cornwall-010.jpg" alt="Cornwall Wedding Photography The Green Liskeard Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["couples"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">The Green, Liskeard</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">The Green, Liskeard</h3>
+              <p class="text-sm opacity-90">Wedding Moment at The Green, Liskeard, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 28: The Green, Liskeard -->
+        <div class="portfolio-item group h-96" data-category="couples" data-venue="the-green-liskeard" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-the-green-liskeard-cornwall-011.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-the-green-liskeard-cornwall-011.jpg" alt="Cornwall Wedding Photography The Green Liskeard Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["couples"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">The Green, Liskeard</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">The Green, Liskeard</h3>
+              <p class="text-sm opacity-90">Wedding Moment at The Green, Liskeard, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 29: The Green, Liskeard -->
+        <div class="portfolio-item group h-80" data-category="couples" data-venue="the-green-liskeard" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-the-green-liskeard-cornwall-012.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-the-green-liskeard-cornwall-012.jpg" alt="Cornwall Wedding Photography The Green Liskeard Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["couples"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">The Green, Liskeard</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">The Green, Liskeard</h3>
+              <p class="text-sm opacity-90">Wedding Moment at The Green, Liskeard, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 30: The Green, Liskeard -->
+        <div class="portfolio-item group h-72" data-category="couples" data-venue="the-green-liskeard" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-the-green-liskeard-cornwall-013.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-the-green-liskeard-cornwall-013.jpg" alt="Cornwall Wedding Photography The Green Liskeard Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["couples"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">The Green, Liskeard</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">The Green, Liskeard</h3>
+              <p class="text-sm opacity-90">Wedding Moment at The Green, Liskeard, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 31: The Green, Liskeard -->
+        <div class="portfolio-item group h-64" data-category="couples" data-venue="the-green-liskeard" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-the-green-liskeard-cornwall-014.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-the-green-liskeard-cornwall-014.jpg" alt="Cornwall Wedding Photography The Green Liskeard Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["couples"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">The Green, Liskeard</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">The Green, Liskeard</h3>
+              <p class="text-sm opacity-90">Wedding Moment at The Green, Liskeard, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 32: Tredudwell Manor -->
+        <div class="portfolio-item group h-96" data-category="couples venues" data-venue="tredudwell-manor" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
 
 
 <picture class="block w-full h-full">
@@ -735,10 +2064,1213 @@ document.addEventListener('DOMContentLoaded', function() {
   <source srcset="/assets/images/webp/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-014.webp" type="image/webp" width="800" height="600" />
   
   <!-- JPEG fallback (all browsers) -->
-  <img src="/assets/images/photos/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-014.jpg" alt="Tredudwell Manor wedding details and venue" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+  <img src="/assets/images/photos/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-014.jpg" alt="Cornwall Wedding Photography Tredudwell Manor Fowey Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
 </picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["couples"
+                </span>
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  "venues"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Tredudwell Manor</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">Tredudwell Manor</h3>
+              <p class="text-sm opacity-90">Wedding Moment at Tredudwell Manor, Cornwall</p>
+            </div>
+          </div>
         </div>
-      </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 33: Tredudwell Manor -->
+        <div class="portfolio-item group h-80" data-category="couples venues" data-venue="tredudwell-manor" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-015.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-015.jpg" alt="Cornwall Wedding Photography Tredudwell Manor Fowey Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["couples"
+                </span>
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  "venues"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Tredudwell Manor</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">Tredudwell Manor</h3>
+              <p class="text-sm opacity-90">Wedding Moment at Tredudwell Manor, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 34: Tredudwell Manor -->
+        <div class="portfolio-item group h-72" data-category="couples venues" data-venue="tredudwell-manor" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-016.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-016.jpg" alt="Cornwall Wedding Photography Tredudwell Manor Fowey Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["couples"
+                </span>
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  "venues"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Tredudwell Manor</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">Tredudwell Manor</h3>
+              <p class="text-sm opacity-90">Wedding Moment at Tredudwell Manor, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 35: Tredudwell Manor -->
+        <div class="portfolio-item group h-64" data-category="couples venues" data-venue="tredudwell-manor" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-017.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-017.jpg" alt="Cornwall Wedding Photography Tredudwell Manor Fowey Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["couples"
+                </span>
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  "venues"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Tredudwell Manor</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">Tredudwell Manor</h3>
+              <p class="text-sm opacity-90">Wedding Moment at Tredudwell Manor, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 36: Tredudwell Manor -->
+        <div class="portfolio-item group h-96" data-category="couples venues" data-venue="tredudwell-manor" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-018.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-018.jpg" alt="Cornwall Wedding Photography Tredudwell Manor Fowey Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["couples"
+                </span>
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  "venues"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Tredudwell Manor</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">Tredudwell Manor</h3>
+              <p class="text-sm opacity-90">Wedding Moment at Tredudwell Manor, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 37: Tredudwell Manor -->
+        <div class="portfolio-item group h-80" data-category="couples venues" data-venue="tredudwell-manor" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-019.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-019.jpg" alt="Cornwall Wedding Photography Tredudwell Manor Fowey Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["couples"
+                </span>
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  "venues"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Tredudwell Manor</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">Tredudwell Manor</h3>
+              <p class="text-sm opacity-90">Wedding Moment at Tredudwell Manor, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 38: Tredudwell Manor -->
+        <div class="portfolio-item group h-72" data-category="couples venues" data-venue="tredudwell-manor" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-020.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-020.jpg" alt="Cornwall Wedding Photography Tredudwell Manor Fowey Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["couples"
+                </span>
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  "venues"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Tredudwell Manor</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">Tredudwell Manor</h3>
+              <p class="text-sm opacity-90">Wedding Moment at Tredudwell Manor, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 39: Tredudwell Manor -->
+        <div class="portfolio-item group h-64" data-category="couples venues" data-venue="tredudwell-manor" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-021.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-021.jpg" alt="Cornwall Wedding Photography Tredudwell Manor Fowey Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["couples"
+                </span>
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  "venues"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Tredudwell Manor</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">Tredudwell Manor</h3>
+              <p class="text-sm opacity-90">Wedding Moment at Tredudwell Manor, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 40: Tredudwell Manor -->
+        <div class="portfolio-item group h-96" data-category="couples venues" data-venue="tredudwell-manor" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-022.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-022.jpg" alt="Cornwall Wedding Photography Tredudwell Manor Fowey Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["couples"
+                </span>
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  "venues"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Tredudwell Manor</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">Tredudwell Manor</h3>
+              <p class="text-sm opacity-90">Wedding Moment at Tredudwell Manor, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 41: Tredudwell Manor -->
+        <div class="portfolio-item group h-80" data-category="couples venues" data-venue="tredudwell-manor" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-023.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-023.jpg" alt="Cornwall Wedding Photography Tredudwell Manor Fowey Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["couples"
+                </span>
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  "venues"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Tredudwell Manor</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">Tredudwell Manor</h3>
+              <p class="text-sm opacity-90">Wedding Moment at Tredudwell Manor, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 42: Tredudwell Manor -->
+        <div class="portfolio-item group h-72" data-category="couples venues" data-venue="tredudwell-manor" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-024.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-024.jpg" alt="Cornwall Wedding Photography Tredudwell Manor Fowey Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["couples"
+                </span>
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  "venues"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Tredudwell Manor</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">Tredudwell Manor</h3>
+              <p class="text-sm opacity-90">Wedding Moment at Tredudwell Manor, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 43: Tredudwell Manor -->
+        <div class="portfolio-item group h-64" data-category="couples venues" data-venue="tredudwell-manor" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-025.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-025.jpg" alt="Cornwall Wedding Photography Tredudwell Manor Fowey Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["couples"
+                </span>
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  "venues"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Tredudwell Manor</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">Tredudwell Manor</h3>
+              <p class="text-sm opacity-90">Wedding Moment at Tredudwell Manor, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 44: Tredudwell Manor -->
+        <div class="portfolio-item group h-96" data-category="couples venues" data-venue="tredudwell-manor" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-026.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-tredudwell-manor-fowey-cornwall-026.jpg" alt="Cornwall Wedding Photography Tredudwell Manor Fowey Cornwall" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["couples"
+                </span>
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  "venues"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Tredudwell Manor</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">Tredudwell Manor</h3>
+              <p class="text-sm opacity-90">Wedding Moment at Tredudwell Manor, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 45: Trevenna Barns -->
+        <div class="portfolio-item group h-80" data-category="wedding venues" data-venue="trevenna-barns" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-trevenna-farm-st-neot-1.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-trevenna-farm-st-neot-1.jpg" alt="Cornwall Wedding Photography Trevenna Farm St Neot" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["wedding"
+                </span>
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  "venues"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Trevenna Barns</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">Trevenna Barns</h3>
+              <p class="text-sm opacity-90">Wedding Moment at Trevenna Barns, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 46: Trevenna Barns -->
+        <div class="portfolio-item group h-72" data-category="wedding venues" data-venue="trevenna-barns" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-trevenna-farm-st-neot-10.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-trevenna-farm-st-neot-10.jpg" alt="Cornwall Wedding Photography Trevenna Farm St Neot" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["wedding"
+                </span>
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  "venues"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Trevenna Barns</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">Trevenna Barns</h3>
+              <p class="text-sm opacity-90">Wedding Moment at Trevenna Barns, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 47: Trevenna Barns -->
+        <div class="portfolio-item group h-64" data-category="wedding venues" data-venue="trevenna-barns" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-trevenna-farm-st-neot-11.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-trevenna-farm-st-neot-11.jpg" alt="Cornwall Wedding Photography Trevenna Farm St Neot" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["wedding"
+                </span>
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  "venues"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Trevenna Barns</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">Trevenna Barns</h3>
+              <p class="text-sm opacity-90">Wedding Moment at Trevenna Barns, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 48: Trevenna Barns -->
+        <div class="portfolio-item group h-96" data-category="wedding venues" data-venue="trevenna-barns" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-trevenna-farm-st-neot-2.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-trevenna-farm-st-neot-2.jpg" alt="Cornwall Wedding Photography Trevenna Farm St Neot" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["wedding"
+                </span>
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  "venues"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Trevenna Barns</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">Trevenna Barns</h3>
+              <p class="text-sm opacity-90">Wedding Moment at Trevenna Barns, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 49: Trevenna Barns -->
+        <div class="portfolio-item group h-80" data-category="wedding venues" data-venue="trevenna-barns" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-trevenna-farm-st-neot-3.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-trevenna-farm-st-neot-3.jpg" alt="Cornwall Wedding Photography Trevenna Farm St Neot" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["wedding"
+                </span>
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  "venues"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Trevenna Barns</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">Trevenna Barns</h3>
+              <p class="text-sm opacity-90">Wedding Moment at Trevenna Barns, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 50: Trevenna Barns -->
+        <div class="portfolio-item group h-72" data-category="wedding venues" data-venue="trevenna-barns" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-trevenna-farm-st-neot-4.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-trevenna-farm-st-neot-4.jpg" alt="Cornwall Wedding Photography Trevenna Farm St Neot" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["wedding"
+                </span>
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  "venues"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Trevenna Barns</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">Trevenna Barns</h3>
+              <p class="text-sm opacity-90">Wedding Moment at Trevenna Barns, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 51: Trevenna Barns -->
+        <div class="portfolio-item group h-64" data-category="wedding venues" data-venue="trevenna-barns" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-trevenna-farm-st-neot-5.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-trevenna-farm-st-neot-5.jpg" alt="Cornwall Wedding Photography Trevenna Farm St Neot" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["wedding"
+                </span>
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  "venues"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Trevenna Barns</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">Trevenna Barns</h3>
+              <p class="text-sm opacity-90">Wedding Moment at Trevenna Barns, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 52: Trevenna Barns -->
+        <div class="portfolio-item group h-96" data-category="wedding venues" data-venue="trevenna-barns" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-trevenna-farm-st-neot-6.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-trevenna-farm-st-neot-6.jpg" alt="Cornwall Wedding Photography Trevenna Farm St Neot" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["wedding"
+                </span>
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  "venues"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Trevenna Barns</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">Trevenna Barns</h3>
+              <p class="text-sm opacity-90">Wedding Moment at Trevenna Barns, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 53: Trevenna Barns -->
+        <div class="portfolio-item group h-80" data-category="wedding venues" data-venue="trevenna-barns" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-trevenna-farm-st-neot-7.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-trevenna-farm-st-neot-7.jpg" alt="Cornwall Wedding Photography Trevenna Farm St Neot" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["wedding"
+                </span>
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  "venues"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Trevenna Barns</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">Trevenna Barns</h3>
+              <p class="text-sm opacity-90">Wedding Moment at Trevenna Barns, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 54: Trevenna Barns -->
+        <div class="portfolio-item group h-72" data-category="wedding venues" data-venue="trevenna-barns" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-trevenna-farm-st-neot-8.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-trevenna-farm-st-neot-8.jpg" alt="Cornwall Wedding Photography Trevenna Farm St Neot" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["wedding"
+                </span>
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  "venues"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Trevenna Barns</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">Trevenna Barns</h3>
+              <p class="text-sm opacity-90">Wedding Moment at Trevenna Barns, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        
+        <!-- Image 55: Trevenna Barns -->
+        <div class="portfolio-item group h-64" data-category="wedding venues" data-venue="trevenna-barns" data-moment="wedding-moment">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-full">
+            <!-- _includes/picture.html -->
+
+
+<picture class="block w-full h-full">
+  <!-- WebP version (modern browsers) -->
+  <source srcset="/assets/images/webp/cornwall-wedding-photography-trevenna-farm-st-neot-9.webp" type="image/webp" width="800" height="600" />
+  
+  <!-- JPEG fallback (all browsers) -->
+  <img src="/assets/images/photos/cornwall-wedding-photography-trevenna-farm-st-neot-9.jpg" alt="Cornwall Wedding Photography Trevenna Farm St Neot" width="800" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" />
+</picture>
+            
+            <!-- Overlay with metadata -->
+            <div class="absolute inset-0 bg-gradient-to-t from-cornwall-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Top badges -->
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  ["wedding"
+                </span>
+              
+                <span class="px-2 py-1 bg-white/90 text-cornwall-navy rounded-full text-xs font-medium shadow">
+                  
+                  "venues"]
+                </span>
+              
+            </div>
+            
+            <!-- Bottom info panel -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 bg-cornwall-blush/80 text-white rounded text-xs font-medium">Wedding Moment</span>
+                <span class="px-2 py-1 bg-cornwall-sage/80 text-white rounded text-xs font-medium">Trevenna Barns</span>
+              </div>
+              <h3 class="font-serif text-xl mb-1">Trevenna Barns</h3>
+              <p class="text-sm opacity-90">Wedding Moment at Trevenna Barns, Cornwall</p>
+            </div>
+          </div>
+        </div>
+      
       
     </div>
     
@@ -762,6 +3294,7 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
   </div>
 </section>
+
 
 <!-- ============================================
      FEATURED VENUES (From Your References)
@@ -839,214 +3372,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </section>
 
-<p><!-- ============================================
-     CONTACT CTA - FINAL WORKING VERSION
-     ============================================ --></p>
-<section id="contact" class="py-20 bg-gradient-to-br from-cornwall-navy to-cornwall-sage text-white">
-  <div class="container mx-auto px-4 text-center">
-    <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6 text-white">
-      Ready to Preserve Your Love Story?
-    </h2>
-    <p class="text-xl mb-10 max-w-2xl mx-auto opacity-90">
-      Let's have a conversation about capturing your Cornwall wedding in a way that feels authentic, effortless, and deeply meaningful.
-    </p>
-
-    <div class="max-w-lg mx-auto">
-      <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-        <h3 class="text-2xl font-serif mb-6">Start Your Story</h3>
-
-        <!-- Custom Jekyll Form -->
-        <form id="cwp-contact-form" class="space-y-4" novalidate="">
-          <!-- Hidden honeypot field for spam protection -->
-          <div class="absolute left-[-9999px] opacity-0 h-0 w-0 overflow-hidden">
-            <label for="website" class="sr-only">Leave this field empty</label>
-            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" placeholder="Leave this field empty if you're human" />
-          </div>
-          
-          <div class="grid md:grid-cols-2 gap-4">
-            <div>
-              <input id="cwp-name" name="cwp-name" type="text" placeholder="Your Name *" required="" class="w-full px-4 py-3 rounded-lg bg-white/15 border border-white/25 text-white placeholder-white/80 focus:outline-none focus:border-cornwall-blush focus:ring-2 focus:ring-cornwall-blush/50 transition-colors duration-200" />
-            </div>
-            <div>
-              <input id="cwp-email" name="cwp-email" type="email" placeholder="Email Address *" required="" class="w-full px-4 py-3 rounded-lg bg-white/15 border border-white/25 text-white placeholder-white/80 focus:outline-none focus:border-cornwall-blush focus:ring-2 focus:ring-cornwall-blush/50 transition-colors duration-200" />
-            </div>
-          </div>
-
-          <div>
-            <textarea id="cwp-description" name="cwp-description" rows="4" placeholder="Tell us about your vision..." class="w-full px-4 py-3 rounded-lg bg-white/15 border border-white/25 text-white placeholder-white/80 focus:outline-none focus:border-cornwall-blush focus:ring-2 focus:ring-cornwall-blush/50 transition-colors duration-200 resize-y min-h-[120px]"></textarea>
-          </div>
-
-          <!-- Hidden fields for Dataverse mapping -->
-          <input type="hidden" name="cwp-subject" value="CWP - Enquiry" />
-          <input type="hidden" name="cwp-leadsourcecode" value="Website Enquiry" />
-          <input type="hidden" name="cwp-leadsourcetype" value="Sales" />
-          <input type="hidden" name="cwp-leadtype" value="Wedding" />
-          <input type="hidden" name="cwp-leadsubtype" value="Wedding" />
-
-          <!-- Submit button with loading state -->
-          <button type="submit" id="submit-button" class="w-full bg-cornwall-blush text-cornwall-navy py-4 rounded-lg font-semibold text-lg hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl shadow-cornwall-blush/20">
-            <span id="button-text">Begin Your Journey</span>
-            <span id="button-loading" class="hidden">
-              <svg class="animate-spin h-5 w-5 text-cornwall-navy mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-              </svg>
-            </span>
-          </button>
-        </form>
-
-        <p class="text-sm opacity-75 mt-6">
-          We'll respond within 24 hours to schedule your complimentary consultation.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Dynamics FormCapture Script - FINAL WORKING VERSION -->
-<script src="https://cxppusa1formui01cdnsa01-endpoint.azureedge.net/gbr/FormCapture/FormCapture.bundle.js"></script>
-
-<script>
-  // Initialize form handling
-  d365mktformcapture.waitForElement("#cwp-contact-form").then((form) => {
-    const submitButton = document.getElementById('submit-button');
-    const buttonText = document.getElementById('button-text');
-    const buttonLoading = document.getElementById('button-loading');
-    
-    // CRITICAL FIX: Correct mappings using NAME attributes (not #id selectors)
-    const mappings = [
-      {
-        FormFieldName: "cwp-name", // ⭐ CHANGED: Just the name attribute
-        DataverseFieldName: "lastname",
-      },
-      {
-        FormFieldName: "cwp-email", // ⭐ CHANGED: Just the name attribute
-        DataverseFieldName: "emailaddress1",
-      },
-      {
-        FormFieldName: "cwp-description", // ⭐ CHANGED: Just the name attribute
-        DataverseFieldName: "description",
-      },
-      {
-        FormFieldName: "cwp-subject", // ⭐ CHANGED: Just the name attribute
-        DataverseFieldName: "subject",
-      },
-      {
-        FormFieldName: "cwp-leadsourcecode", // ⭐ CHANGED: Just the name attribute
-        DataverseFieldName: "leadsourcecode",
-        DataverseFieldValue: [
-          { FormValue: "Website Enquiry", DataverseValue: "3" },
-        ],
-      },
-      {
-        FormFieldName: "cwp-leadsourcetype", // ⭐ CHANGED: Just the name attribute
-        DataverseFieldName: "msdyncrm_leadsourcetype",
-        DataverseFieldValue: [
-          { FormValue: "Sales", DataverseValue: "192350001" },
-        ],
-      },
-      {
-        FormFieldName: "cwp-leadtype", // ⭐ CHANGED: Just the name attribute
-        DataverseFieldName: "mlp_leadtype",
-        DataverseFieldValue: [
-          { FormValue: "Wedding", DataverseValue: "864330002" },
-        ],
-      },
-      {
-        FormFieldName: "cwp-leadsubtype", // ⭐ CHANGED: Just the name attribute
-        DataverseFieldName: "mlp_leadsubtype",
-        DataverseFieldValue: [
-          { FormValue: "Wedding", DataverseValue: "864330000" },
-        ],
-      },
-    ];
-
-    form.addEventListener("submit", (e) => {
-      e.preventDefault(); // ⭐ CRITICAL: Prevents URL submission
-      
-      // Honeypot check
-      const honeypotValue = document.getElementById('website').value;
-      if (honeypotValue && honeypotValue.trim() !== '') {
-        console.log('Bot detected via honeypot - silent fail');
-        return; // Silent fail for bots
-      }
-      
-      // Show loading state
-      submitButton.disabled = true;
-      buttonText.classList.add('hidden');
-      buttonLoading.classList.remove('hidden');
-      
-      // Create serialized form data
-      const serializedForm = d365mktformcapture.serializeForm(form, mappings);
-      
-      // Optional: Debug logging
-      console.log("Form data being sent:", serializedForm);
-      
-      const payload = serializedForm.SerializedForm.build();
-
-      const captureConfig = {
-        FormId: "3d97b58b-fbe7-f011-8406-6045bd12f634",
-        FormApiUrl: "https://public-gbr.mkt.dynamics.com/api/v1.0/orgs/28d99f2b-d568-f011-858a-0022481a2aa9/landingpageforms"
-      };
-
-      d365mktformcapture.submitForm(captureConfig, payload)
-        .then(() => {
-          // Success
-          alert("Thank you! Your enquiry has been submitted. We'll be in touch within 24 hours.");
-          form.reset(); // Clear the form
-
-          //Track
-          if (typeof trackAnalyticsEvent !== 'undefined') {
-          trackAnalyticsEvent('Conversion', 'form_submit_success', 'Contact Form', 1, {
-            'form_type': 'website_enquiry',
-            'lead_source': 'website'
-          });
-          }
-          
-          // Reset button state
-          setTimeout(() => {
-            submitButton.disabled = false;
-            buttonText.classList.remove('hidden');
-            buttonLoading.classList.add('hidden');
-          }, 1000);
-        })
-        .catch((error) => {
-          console.error('Form submission error:', error);
-          
-          // Check if it's the consent plugin error
-          const errorMsg = error.message || error.toString();
-          const isConsentError = errorMsg.includes("Consent submission") || 
-                                errorMsg.includes("0x80040265") ||
-                                errorMsg.includes("InvalidPluginExecutionException");
-          
-          if (isConsentError) {
-            // Record WAS created, just plugin failed
-            alert("Thank you! We've received your enquiry (note: backend processing issue detected).");
-          } else {
-            // Real error
-            alert("Sorry, there was an issue submitting your form. Please try again or email us directly.");
-          }
-          
-          // Reset button state
-          submitButton.disabled = false;
-          buttonText.classList.remove('hidden');
-          buttonLoading.classList.add('hidden');
-        });
-    }, true);
-  }).catch((error) => {
-    console.error('Failed to initialize form capture:', error);
-    // Fallback for users if Dynamics script fails
-    const form = document.getElementById('cwp-contact-form');
-    if (form) {
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Our contact system is temporarily unavailable. Please email us at hello@cornwallweddingphotography.com');
-      });
-    }
-  });
-</script>
-
-<!-- ============================================
+ <!-- ============================================
      FAQ SECTION (Sales Support)
      ============================================ -->
 <section class="py-20 bg-white">
@@ -1224,6 +3550,212 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 </script>
 
+<!-- ============================================
+     CONTACT CTA - FINAL WORKING VERSION
+     ============================================ -->
+<section id="contact" class="py-20 bg-gradient-to-br from-cornwall-navy to-cornwall-sage text-white">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6 text-white">
+      Ready to Preserve Your Love Story?
+    </h2>
+    <p class="text-xl mb-10 max-w-2xl mx-auto opacity-90">
+      Let's have a conversation about capturing your Cornwall wedding in a way that feels authentic, effortless, and deeply meaningful.
+    </p>
+
+    <div class="max-w-lg mx-auto">
+      <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+        <h3 class="text-2xl font-serif mb-6">Start Your Story</h3>
+
+        <!-- Custom Jekyll Form -->
+        <form id="cwp-contact-form" class="space-y-4" novalidate="">
+          <!-- Hidden honeypot field for spam protection -->
+          <div class="absolute left-[-9999px] opacity-0 h-0 w-0 overflow-hidden">
+            <label for="website" class="sr-only">Leave this field empty</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" placeholder="Leave this field empty if you're human" />
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <input id="cwp-name" name="cwp-name" type="text" placeholder="Your Name *" required="" class="w-full px-4 py-3 rounded-lg bg-white/15 border border-white/25 text-white placeholder-white/80 focus:outline-none focus:border-cornwall-blush focus:ring-2 focus:ring-cornwall-blush/50 transition-colors duration-200" />
+            </div>
+            <div>
+              <input id="cwp-email" name="cwp-email" type="email" placeholder="Email Address *" required="" class="w-full px-4 py-3 rounded-lg bg-white/15 border border-white/25 text-white placeholder-white/80 focus:outline-none focus:border-cornwall-blush focus:ring-2 focus:ring-cornwall-blush/50 transition-colors duration-200" />
+            </div>
+          </div>
+
+          <div>
+            <textarea id="cwp-description" name="cwp-description" rows="4" placeholder="Tell us about your vision..." class="w-full px-4 py-3 rounded-lg bg-white/15 border border-white/25 text-white placeholder-white/80 focus:outline-none focus:border-cornwall-blush focus:ring-2 focus:ring-cornwall-blush/50 transition-colors duration-200 resize-y min-h-[120px]"></textarea>
+          </div>
+
+          <!-- Hidden fields for Dataverse mapping -->
+          <input type="hidden" name="cwp-subject" value="CWP - Enquiry" />
+          <input type="hidden" name="cwp-leadsourcecode" value="Website Enquiry" />
+          <input type="hidden" name="cwp-leadsourcetype" value="Sales" />
+          <input type="hidden" name="cwp-leadtype" value="Wedding" />
+          <input type="hidden" name="cwp-leadsubtype" value="Wedding" />
+
+          <!-- Submit button with loading state -->
+          <button type="submit" id="submit-button" class="w-full bg-cornwall-blush text-cornwall-navy py-4 rounded-lg font-semibold text-lg hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl shadow-cornwall-blush/20">
+            <span id="button-text">Begin Your Journey</span>
+            <span id="button-loading" class="hidden">
+              <svg class="animate-spin h-5 w-5 text-cornwall-navy mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              </svg>
+            </span>
+          </button>
+        </form>
+
+        <p class="text-sm opacity-75 mt-6">
+          We'll respond within 24 hours to schedule your complimentary consultation.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Dynamics FormCapture Script - FINAL WORKING VERSION -->
+<script src="https://cxppusa1formui01cdnsa01-endpoint.azureedge.net/gbr/FormCapture/FormCapture.bundle.js"></script>
+<script>
+  // Initialize form handling
+  d365mktformcapture.waitForElement("#cwp-contact-form").then((form) => {
+    const submitButton = document.getElementById('submit-button');
+    const buttonText = document.getElementById('button-text');
+    const buttonLoading = document.getElementById('button-loading');
+    
+    // CRITICAL FIX: Correct mappings using NAME attributes (not #id selectors)
+    const mappings = [
+      {
+        FormFieldName: "cwp-name", // ⭐ CHANGED: Just the name attribute
+        DataverseFieldName: "lastname",
+      },
+      {
+        FormFieldName: "cwp-email", // ⭐ CHANGED: Just the name attribute
+        DataverseFieldName: "emailaddress1",
+      },
+      {
+        FormFieldName: "cwp-description", // ⭐ CHANGED: Just the name attribute
+        DataverseFieldName: "description",
+      },
+      {
+        FormFieldName: "cwp-subject", // ⭐ CHANGED: Just the name attribute
+        DataverseFieldName: "subject",
+      },
+      {
+        FormFieldName: "cwp-leadsourcecode", // ⭐ CHANGED: Just the name attribute
+        DataverseFieldName: "leadsourcecode",
+        DataverseFieldValue: [
+          { FormValue: "Website Enquiry", DataverseValue: "3" },
+        ],
+      },
+      {
+        FormFieldName: "cwp-leadsourcetype", // ⭐ CHANGED: Just the name attribute
+        DataverseFieldName: "msdyncrm_leadsourcetype",
+        DataverseFieldValue: [
+          { FormValue: "Sales", DataverseValue: "192350001" },
+        ],
+      },
+      {
+        FormFieldName: "cwp-leadtype", // ⭐ CHANGED: Just the name attribute
+        DataverseFieldName: "mlp_leadtype",
+        DataverseFieldValue: [
+          { FormValue: "Wedding", DataverseValue: "864330002" },
+        ],
+      },
+      {
+        FormFieldName: "cwp-leadsubtype", // ⭐ CHANGED: Just the name attribute
+        DataverseFieldName: "mlp_leadsubtype",
+        DataverseFieldValue: [
+          { FormValue: "Wedding", DataverseValue: "864330000" },
+        ],
+      },
+    ];
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault(); // ⭐ CRITICAL: Prevents URL submission
+      
+      // Honeypot check
+      const honeypotValue = document.getElementById('website').value;
+      if (honeypotValue && honeypotValue.trim() !== '') {
+        console.log('Bot detected via honeypot - silent fail');
+        return; // Silent fail for bots
+      }
+      
+      // Show loading state
+      submitButton.disabled = true;
+      buttonText.classList.add('hidden');
+      buttonLoading.classList.remove('hidden');
+      
+      // Create serialized form data
+      const serializedForm = d365mktformcapture.serializeForm(form, mappings);
+      
+      // Optional: Debug logging
+      console.log("Form data being sent:", serializedForm);
+      
+      const payload = serializedForm.SerializedForm.build();
+
+      const captureConfig = {
+        FormId: "3d97b58b-fbe7-f011-8406-6045bd12f634",
+        FormApiUrl: "https://public-gbr.mkt.dynamics.com/api/v1.0/orgs/28d99f2b-d568-f011-858a-0022481a2aa9/landingpageforms"
+      };
+
+      d365mktformcapture.submitForm(captureConfig, payload)
+        .then(() => {
+          // Success
+          alert("Thank you! Your enquiry has been submitted. We'll be in touch within 24 hours.");
+          form.reset(); // Clear the form
+
+          //Track
+          if (typeof trackAnalyticsEvent !== 'undefined') {
+          trackAnalyticsEvent('Conversion', 'form_submit_success', 'Contact Form', 1, {
+            'form_type': 'website_enquiry',
+            'lead_source': 'website'
+          });
+          }
+          
+          // Reset button state
+          setTimeout(() => {
+            submitButton.disabled = false;
+            buttonText.classList.remove('hidden');
+            buttonLoading.classList.add('hidden');
+          }, 1000);
+        })
+        .catch((error) => {
+          console.error('Form submission error:', error);
+          
+          // Check if it's the consent plugin error
+          const errorMsg = error.message || error.toString();
+          const isConsentError = errorMsg.includes("Consent submission") || 
+                                errorMsg.includes("0x80040265") ||
+                                errorMsg.includes("InvalidPluginExecutionException");
+          
+          if (isConsentError) {
+            // Record WAS created, just plugin failed
+            alert("Thank you! We've received your enquiry (note: backend processing issue detected).");
+          } else {
+            // Real error
+            alert("Sorry, there was an issue submitting your form. Please try again or email us directly.");
+          }
+          
+          // Reset button state
+          submitButton.disabled = false;
+          buttonText.classList.remove('hidden');
+          buttonLoading.classList.add('hidden');
+        });
+    }, true);
+  }).catch((error) => {
+    console.error('Failed to initialize form capture:', error);
+    // Fallback for users if Dynamics script fails
+    const form = document.getElementById('cwp-contact-form');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Our contact system is temporarily unavailable. Please email us at hello@cornwallweddingphotography.com');
+      });
+    }
+  });
+</script>
+</div></section>
 
     </main>
 
@@ -1323,6 +3855,13 @@ document.addEventListener('DOMContentLoaded', function() {
         <a href="/wedding-photographer-fowey"
            class="opacity-75 hover:opacity-100 hover:text-cornwall-blush transition-colors duration-200">
           Fowey
+        </a>
+      </li>
+    
+      <li>
+        <a href="/wedding-photographer-trevenna-barns"
+           class="opacity-75 hover:opacity-100 hover:text-cornwall-blush transition-colors duration-200">
+          Trevenna Barns
         </a>
       </li>
     
