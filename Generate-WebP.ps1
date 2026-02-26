@@ -6,6 +6,9 @@ $ProjectRoot = "C:\Repos\Cornwall Wedding Photography"
 $JpegSource = "$ProjectRoot\assets\images\photos"
 $WebpOutput = "$ProjectRoot\assets\images\webp"
 $Quality = 85  # Quality setting (1-100, 80-90 is usually good)
+$MaxSizePx = 2000          # Max long edge
+$JpegQuality = 82       # JPEG web quality sweet spot
+$MaxSizeKB   = 1024     # 1MB
 
 Write-Host "=========================================" -ForegroundColor Cyan
 Write-Host "  Cornwall Wedding Photography WebP Generator" -ForegroundColor Cyan
@@ -74,6 +77,44 @@ foreach ($jpeg in $jpegFiles) {
     # Calculate relative path from source directory
     $relativePath = $jpeg.FullName.Substring($JpegSource.Length + 1)
     
+Write-Host "`n🖼  Processing: $relativePath" -ForegroundColor Cyan
+
+    # --- STEP 1: Check image dimensions ---
+    $identify = magick identify -format "%w %h" $jpeg.FullName
+    $width, $height = $identify -split " " | ForEach-Object { [int]$_ }
+
+    $longEdge = [Math]::Max($width, $height)
+
+    # --- STEP 2: Resize and/or recompress JPEG if needed ---
+$jpegSizeKB = $jpeg.Length / 1KB
+
+$needsResize   = $longEdge -gt $MaxSizePx
+$needsCompress = $jpegSizeKB -gt $MaxSizeKB
+
+if ($needsResize -or $needsCompress) {
+
+    Write-Host "  ↳ Optimising JPEG:" -ForegroundColor Yellow
+
+    if ($needsResize) {
+        Write-Host "    • Resizing ($width x $height → max $MaxSizePx px)" -ForegroundColor Yellow
+    }
+
+    if ($needsCompress) {
+        Write-Host "    • Recompressing (Size: $([math]::Round($jpegSizeKB,1))KB → ≤ $MaxSizeKB KB)" -ForegroundColor Yellow
+    }
+
+    magick $jpeg.FullName `
+        -resize "$($MaxSizePx)x$($MaxSizePx)>" `
+        -strip `
+        -interlace Plane `
+        -quality $JpegQuality `
+        $jpeg.FullName
+}
+else {
+    Write-Host "  ↳ JPEG already optimised ($width x $height, $([math]::Round($jpegSizeKB,1))KB)" -ForegroundColor DarkGray
+}
+
+
     # Change extension to .webp
     $webpName = [System.IO.Path]::ChangeExtension($relativePath, ".webp")
     $webpFullPath = Join-Path $WebpOutput $webpName
